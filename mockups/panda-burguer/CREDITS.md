@@ -1,20 +1,16 @@
 # Credits: Panda Burguer concept
 
-These photos are samples. The finished site will use the venue's own photos.
+Sample photos — we'll use yours. None of these photos shows Panda Burguer, its food or its staff. The panda drawing is original to this concept.
 
-All photos come from Unsplash and are used under the Unsplash License (https://unsplash.com/license): free for commercial use, no permission needed. None of them shows this venue, its food or its staff. They were downloaded from the Unsplash image CDN as WebP, cropped and kept under 250 KB each.
+| Used for | Shows | Photo by | Licence | Source |
+|---|---|---|---|---|
+| Hero panel | Double cheeseburger on a dark surface | Eiliv Aceron | Unsplash License | https://unsplash.com/photos/pu6b4yIlQF4 |
+| Rings panel | Onion rings with ketchup | Jess Sawrey | CC BY 2.0 (cropped, greyscale) | https://commons.wikimedia.org/wiki/File:Flickr_pancakejess_677476794--Onion_rings.jpg |
+| Menu | Sesame burger and fries on a board | Minja Kalrić | CC BY-SA 4.0 (cropped) | https://commons.wikimedia.org/wiki/File:Hamburger_and_French_fries_Gastro_Pub_Gonzales_Mostar,_Bosnia_and_Herzegovina_(2026)-bs.jpg |
+| Menu | Burger and fries on a wooden board | Jonathan Borba | Unsplash License | https://unsplash.com/photos/8l8Yl2ruUsg |
 
-| Used for | Shows | Photo by | Source |
-|---|---|---|---|
-| Hero | Double cheeseburger with pickles on a dark surface | Eiliv Aceron | https://unsplash.com/photos/pu6b4yIlQF4 |
-| Menu photo 1 | Burger and fries on a wooden board | Jonathan Borba | https://unsplash.com/photos/8l8Yl2ruUsg |
+Licences: Unsplash License https://unsplash.com/license; CC BY 2.0 https://creativecommons.org/licenses/by/2.0/; CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/.
 
-## Map and venue details
+Venue facts: OpenStreetMap https://www.openstreetmap.org/node/13460247774 (address, phone, email, socials, hours). Menu categories, onion rings, delivery to the north zone and frequent combo deals come from public listings and reviews; see BRIEF.md. The street number (8 or 9) and Monday opening are to be confirmed.
 
-`img/map.webp` is made from OpenStreetMap tiles. Map data © OpenStreetMap contributors, ODbL (https://www.openstreetmap.org/copyright).
-
-Address, hours, phone, email and cuisine come from the public OpenStreetMap listing https://www.openstreetmap.org/node/13460247774, read on 2026-11-18. Nothing else about the venue is claimed: no prices, dishes, reviews or awards.
-
-## Fonts
-
-Google Fonts, SIL Open Font License.
+Fonts: Bangers and Lexend, Google Fonts, SIL Open Font License.

@@ -1,84 +1,47 @@
-/* Concept site script: one entrance sequence, today's hours, open/closed status.
-   Times are computed in the venue's own time zone (data-tz on <body>). */
+/* Peixe Frito: order slip. +/− steppers, a running count, and "Send on WhatsApp" opens a chat with
+   the list already written. Also an evening status line in Brazil time. */
 (function () {
-  var root = document.documentElement;
-  root.classList.add('js');
+  var WA = '5518997330252';
+  var slip = document.getElementById('slip');
+  var count = document.getElementById('count');
+  var error = document.getElementById('error');
+  var rows = Array.prototype.slice.call(slip.querySelectorAll('[data-item]'));
 
-  var DAY_INDEX = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
-
-  function venueNow(tz) {
-    var d = new Date();
-    try {
-      var parts = new Intl.DateTimeFormat('en-GB', {
-        timeZone: tz, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
-      }).formatToParts(d);
-      var o = {};
-      parts.forEach(function (p) { o[p.type] = p.value; });
-      return { day: DAY_INDEX[o.weekday], min: parseInt(o.hour, 10) * 60 + parseInt(o.minute, 10) };
-    } catch (err) {
-      return { day: (d.getDay() + 6) % 7, min: d.getHours() * 60 + d.getMinutes() };
-    }
+  function total() { return rows.reduce(function (n, r) { return n + +r.querySelector('output').value; }, 0); }
+  function render() {
+    var n = total();
+    count.textContent = n === 0 ? 'Nothing on the slip yet.' : n + (n === 1 ? ' item' : ' items') + ' on the slip.';
+    count.classList.remove('is-bump'); void count.offsetWidth; count.classList.add('is-bump');
+    if (n > 0) error.hidden = true;
   }
-
-  function toMin(t) {
-    var p = t.split(':');
-    return parseInt(p[0], 10) * 60 + parseInt(p[1], 10);
-  }
-
-  function isOpenAt(slots, minute) {
-    if (!slots) return false;
-    return slots.split(',').some(function (s) {
-      var ab = s.split('-');
-      return minute >= toMin(ab[0]) && minute < toMin(ab[1]);
+  rows.forEach(function (r) {
+    var out = r.querySelector('output');
+    out.value = 0;
+    r.querySelectorAll('.qty__b').forEach(function (b) {
+      b.addEventListener('click', function () {
+        out.value = Math.max(0, Math.min(20, +out.value + +b.getAttribute('data-step')));
+        render();
+      });
     });
-  }
+  });
 
-  function markToday(rows, today, label) {
-    rows.forEach(function (row) {
-      if (row.day !== today) return;
-      row.el.classList.add('is-today');
-      var th = row.el.querySelector('th');
-      if (th && !th.querySelector('.today-tag')) {
-        var tag = document.createElement('span');
-        tag.className = 'today-tag';
-        tag.textContent = label;
-        th.appendChild(tag);
-      }
-    });
-  }
+  slip.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (total() === 0) { error.hidden = false; return; }
+    var how = slip.querySelector('input[name="how"]:checked').value;
+    var lines = rows.filter(function (r) { return +r.querySelector('output').value > 0; })
+      .map(function (r) { return r.querySelector('output').value + ' x ' + r.getAttribute('data-item'); });
+    var text = 'Hi Peixe Frito! I would like to order (' + how + '):\n' + lines.join('\n');
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+  });
 
-  function collect(attr) {
-    return Array.prototype.map.call(document.querySelectorAll('[' + attr + ']'), function (el) {
-      return { el: el, day: parseInt(el.getAttribute(attr), 10), slots: el.getAttribute('data-slots') || '' };
-    });
-  }
-
-  function init() {
-    var body = document.body;
-    var now = venueNow(body.getAttribute('data-tz'));
-    var label = body.getAttribute('data-today') || 'Today';
-    var rows = collect('data-day');
-    markToday(rows, now.day, label);
-    markToday(collect('data-kday'), now.day, label);
-
-    var status = document.querySelector('.status');
-    if (status && rows.length) {
-      var open = rows.some(function (r) { return r.day === now.day && isOpenAt(r.slots, now.min); });
-      status.querySelector('.status__text').textContent = status.getAttribute(open ? 'data-open' : 'data-closed');
-      status.classList.add(open ? 'is-open' : 'is-closed');
-      status.hidden = false;
-    }
-
-    /* Entrance: CSS hides [data-enter] only when motion is allowed; two frames let the
-       browser paint the start state before the transition runs. */
-    window.requestAnimationFrame(function () {
-      window.requestAnimationFrame(function () { root.classList.add('is-in'); });
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
+  var status = document.getElementById('status');
+  if (status) {
+    var o = {};
+    new Intl.DateTimeFormat('en-GB', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+      .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
+    var m = +o.hour * 60 + +o.minute;
+    if (o.weekday === 'Mon') status.textContent = 'Closed on Mondays.';
+    else status.textContent = m >= 1050 && m < 1380 ? 'Open now.' : (m < 1050 ? 'Opens later today.' : 'Closed for tonight.');
   }
 })();

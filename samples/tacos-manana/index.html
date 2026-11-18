@@ -3,157 +3,257 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tacos Mañana - Taquería (sample site)</title>
-<meta name="description" content="Sample website for Tacos Mañana, an invented taquería: menu, salsas, pick-up orders, opening hours and map.">
+<title>Tacos Mañana, taqueria on Market Row (sample site)</title>
+<meta name="description" content="Sample website for Tacos Mañana, an invented taqueria: tacos, salsa bar, order for pick-up, opening hours and map.">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#e4007c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bungee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..600&family=Bagel+Fat+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/main.js" defer></script>
 </head>
 <body id="top">
 
-<p class="sample-note">Sample site for an invented business. <a href="../../index.html#samples">Back to George Mikaelson</a></p>
+<svg class="visually-hidden" aria-hidden="true" focusable="false">
+  <symbol id="chile" viewBox="0 0 24 24">
+    <path d="M15.5 7.2c2.9.6 4.3 3.6 2.7 7.3-1.8 4.2-7.4 7.4-13.6 7.2 3.6-1.9 6.4-5 7.5-8.9.6-2.3 1.3-4.6 3.4-5.6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M15.4 7.3c-.2-1.9.6-3.6 2.4-4.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="squiggle" viewBox="0 0 240 24">
+    <path d="M2 14c12-12 22 10 34 0s22-10 34 0 22 10 34 0 22-10 34 0 22 10 34 0 22-10 34 0 20 8 30 0" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="burst" viewBox="0 0 100 100">
+    <path d="M50 2l9 18 19-9-3 21 21 5-16 14 13 17-21 2 1 21-18-11-10 19-9-19-18 11 1-21-21-2 13-17L2 37l21-5-3-21 19 9z" fill="currentColor"/>
+  </symbol>
+</svg>
 
-<header class="bar">
-  <div class="wrap">
-    <a class="name" href="#top">Tacos Mañana</a>
-    <nav aria-label="Sections">
-      <a href="#menu">Menu</a>
-      <a href="#order">Order</a>
-      <a href="#find">Find us</a>
-    </nav>
-  </div>
+<a class="skip" href="#order">Skip to ordering</a>
+
+<header class="top">
+  <a class="logo" href="#top" aria-label="Tacos Mañana, back to the top"><span>Tacos</span><span>Mañana</span></a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#menu">Tacos</a>
+    <a href="#salsas">Salsas</a>
+    <a href="#order">Order</a>
+    <a href="#hours">Hours</a>
+    <a href="#find">Map</a>
+  </nav>
+  <p class="sample-tag">Sample site for an invented business. <a href="../../index.html#samples">Back to George Mikaelson</a></p>
 </header>
 
 <main>
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <h1>Tortillas pressed to order. Salsas made every morning.</h1>
-      <p class="lede">A counter, eight stools and a window onto Market Row. Eat here, or call ahead and pick up in 15 minutes.</p>
-      <p class="status" data-status aria-live="polite">Every day, 12:00 to 22:00</p>
-      <div class="actions">
-        <a class="btn" href="#contact">Call</a>
-        <a class="btn alt" href="#order">Order</a>
-      </div>
+<section class="hero" aria-labelledby="title">
+  <div class="hero-copy">
+    <h1 id="title">Tortillas off the press, all day long</h1>
+    <p class="hero-text">A counter, eight stools and a window onto Market Row. Corn masa ground every morning, six tacos, four salsas and a pot of beans that never runs out.</p>
+    <div class="actions">
+      <a class="btn" href="#order">Order for pick-up</a>
+      <button class="btn btn-line" type="button" data-call>Call the counter</button>
     </div>
-    <figure class="plate">
-      <img src="../../img/tacos-900.webp" srcset="../../img/tacos-480.webp 480w, ../../img/tacos-900.webp 900w" sizes="(min-width: 900px) 440px, 90vw" alt="Three beef tacos topped with onion and cilantro" width="900" height="1125" fetchpriority="high">
-      <figcaption>Three carne asada, the order most people start with.</figcaption>
+    <p class="status" data-status aria-live="polite">Open every day, 12:00 to 22:00</p>
+  </div>
+  <figure class="hero-pic">
+    <img src="../../img/tm-hero-1400.webp" srcset="../../img/tm-hero-800.webp 800w, ../../img/tm-hero-1400.webp 1400w" sizes="(min-width: 900px) 46vw, 92vw" alt="Three tacos with grilled meat, onion and coriander on a wooden board with lime wedges" width="1400" height="1050" fetchpriority="high">
+    <figcaption class="scribble">
+      <svg class="arrow" viewBox="0 0 90 60" aria-hidden="true"><path d="M86 6C60 4 30 14 16 44M16 44l-2-16M16 44l15-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Al pastor, the one most people start with
+    </figcaption>
+  </figure>
+</section>
+
+<svg class="edge edge-rosa" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v14c-60 18-120 18-180 0s-120-18-180 0-120 18-180 0-120-18-180 0-120 18-180 0-120-18-180 0-120 18-180 0-120-18-180 0z"/></svg>
+
+<section id="menu" class="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <h2 id="menu-title">Six tacos</h2>
+    <p class="lead">Two corn tortillas each, pressed when you order. Gluten free unless marked. The chiles show how hot it is.</p>
+    <ul class="tiles">
+      <li class="tile">
+        <h3>Al pastor</h3>
+        <p>Pork in achiote and guajillo, cut from the spit, with pineapple</p>
+        <p class="heat" aria-label="Heat 2 out of 4"><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></p>
+        <p class="stamp">$3.50</p>
+      </li>
+      <li class="tile">
+        <h3>Carne asada</h3>
+        <p>Grilled flank steak, lime and salsa verde</p>
+        <p class="heat" aria-label="Heat 1 out of 4"><svg><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></p>
+        <p class="stamp">$3.80</p>
+      </li>
+      <li class="tile">
+        <h3>Chorizo y papa</h3>
+        <p>House chorizo, crisp potato and pickled red onion</p>
+        <p class="heat" aria-label="Heat 3 out of 4"><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></p>
+        <p class="stamp">$3.60</p>
+      </li>
+      <li class="tile">
+        <h3>Pescado</h3>
+        <p>Beer-battered white fish, cabbage and chipotle mayo. Batter has wheat.</p>
+        <p class="heat" aria-label="Heat 1 out of 4"><svg><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></p>
+        <p class="stamp">$4.20</p>
+      </li>
+      <li class="tile">
+        <h3>Hongos</h3>
+        <p>Mushrooms with epazote, garlic and queso fresco. Vegetarian.</p>
+        <p class="heat" aria-label="Heat 1 out of 4"><svg><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></p>
+        <p class="stamp">$3.20</p>
+      </li>
+      <li class="tile">
+        <h3>Frijoles</h3>
+        <p>Refried black beans, avocado and pickled onion. Vegan.</p>
+        <p class="heat" aria-label="Not hot"><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></p>
+        <p class="stamp">$3.00</p>
+      </li>
+    </ul>
+    <p class="sides">On the side: chips and two salsas $4.50, rice and beans $3.50, agua fresca of hibiscus or horchata $3.00.</p>
+  </div>
+</section>
+
+<section id="salsas" class="salsas" aria-labelledby="salsas-title">
+  <div class="wrap salsa-grid">
+    <div>
+      <h2 id="salsas-title">The salsa bar</h2>
+      <p class="lead">Four salsas made every morning, free with every taco. Help yourself at the end of the counter.</p>
+      <ul class="salsa-list">
+        <li><b>Pico de gallo</b><span>Tomato, onion, coriander, lime</span><span class="heat" aria-label="Heat 1 out of 4"><svg><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></span></li>
+        <li><b>Verde</b><span>Roasted tomatillo and serrano</span><span class="heat" aria-label="Heat 2 out of 4"><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></span></li>
+        <li><b>Roja</b><span>Charred tomato and chile de árbol</span><span class="heat" aria-label="Heat 3 out of 4"><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg><svg class="off"><use href="#chile"/></svg></span></li>
+        <li><b>Macha</b><span>Peanuts, garlic and dried chiles in oil</span><span class="heat" aria-label="Heat 4 out of 4"><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg><svg><use href="#chile"/></svg></span></li>
+      </ul>
+    </div>
+    <figure class="salsa-pic">
+      <img src="../../img/tm-salsa-1000.webp" srcset="../../img/tm-salsa-600.webp 600w, ../../img/tm-salsa-1000.webp 1000w" sizes="(min-width: 900px) 400px, 80vw" alt="A wooden plate with dark salsa and tortilla chips on a yellow and red table" width="1000" height="1000" loading="lazy">
+      <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><use href="#burst"/></svg>
+      <figcaption class="burst-text">Free with every taco</figcaption>
     </figure>
   </div>
 </section>
 
-<section id="menu" class="menu">
-  <div class="wrap">
-    <h2>Menu</h2>
-    <p class="intro">Every taco comes on two corn tortillas with onion and cilantro. Gluten free unless marked.</p>
-    <ul class="tacos">
-      <li><h3>Al pastor</h3><p>Pork in achiote and chile, cut from the spit, with pineapple.</p><span class="price">$3.50</span></li>
-      <li><h3>Carne asada</h3><p>Grilled flank steak, lime and salsa verde.</p><span class="price">$3.80</span></li>
-      <li><h3>Hongos</h3><p>Mushrooms with epazote, garlic and queso fresco. Vegetarian.</p><span class="price">$3.20</span></li>
-      <li><h3>Pescado</h3><p>Beer-battered white fish, cabbage and chipotle mayo. Batter has wheat.</p><span class="price">$4.20</span></li>
-      <li><h3>Frijoles</h3><p>Refried black beans, avocado and pickled onion. Vegan.</p><span class="price">$3.00</span></li>
-      <li><h3>Chips and salsa</h3><p>A bag of fresh tortilla chips with two salsas of your choice.</p><span class="price">$4.50</span></li>
-    </ul>
-    <div class="salsas">
-      <h3>Today's salsas</h3>
-      <ul>
-        <li><b>Verde</b> tomatillo and serrano <span class="heat heat-1">Mild</span></li>
-        <li><b>Roja</b> roasted tomato and árbol <span class="heat heat-2">Medium</span></li>
-        <li><b>Macha</b> peanuts, garlic and dried chiles in oil <span class="heat heat-3">Hot</span></li>
-      </ul>
+<section id="order" class="order" aria-labelledby="order-title">
+  <div class="wrap order-grid">
+    <div class="order-copy">
+      <h2 id="order-title">Order for pick-up</h2>
+      <p class="lead">Build your order, pick a time and collect it at the window. You pay at the counter. Most orders are ready in fifteen minutes.</p>
+      <svg class="squiggle" viewBox="0 0 240 24" aria-hidden="true"><use href="#squiggle"/></svg>
     </div>
-  </div>
-</section>
-
-<section id="order" class="order">
-  <div class="wrap">
-    <div>
-      <h2>Order for pick-up</h2>
-      <p class="intro">Call the counter or build your order here. It is ready in about 15 minutes, and you pay when you collect.</p>
-    </div>
-    <form class="builder" data-order hidden>
+    <form class="builder" data-builder>
+      <p class="ticket-head">Ticket</p>
       <ul class="lines">
-        <li data-item="Al pastor" data-price="3.50"><span class="what">Al pastor <small>$3.50</small></span><span class="qty"><button type="button" class="step" data-step="-1" aria-label="One less al pastor">&minus;</button><output aria-label="Al pastor, quantity">0</output><button type="button" class="step" data-step="1" aria-label="One more al pastor">+</button></span></li>
-        <li data-item="Carne asada" data-price="3.80"><span class="what">Carne asada <small>$3.80</small></span><span class="qty"><button type="button" class="step" data-step="-1" aria-label="One less carne asada">&minus;</button><output aria-label="Carne asada, quantity">0</output><button type="button" class="step" data-step="1" aria-label="One more carne asada">+</button></span></li>
-        <li data-item="Hongos" data-price="3.20"><span class="what">Hongos <small>$3.20</small></span><span class="qty"><button type="button" class="step" data-step="-1" aria-label="One less hongos">&minus;</button><output aria-label="Hongos, quantity">0</output><button type="button" class="step" data-step="1" aria-label="One more hongos">+</button></span></li>
-        <li data-item="Pescado" data-price="4.20"><span class="what">Pescado <small>$4.20</small></span><span class="qty"><button type="button" class="step" data-step="-1" aria-label="One less pescado">&minus;</button><output aria-label="Pescado, quantity">0</output><button type="button" class="step" data-step="1" aria-label="One more pescado">+</button></span></li>
-        <li data-item="Chips and salsa" data-price="4.50"><span class="what">Chips and salsa <small>$4.50</small></span><span class="qty"><button type="button" class="step" data-step="-1" aria-label="One less chips and salsa">&minus;</button><output aria-label="Chips and salsa, quantity">0</output><button type="button" class="step" data-step="1" aria-label="One more chips and salsa">+</button></span></li>
+        <li data-name="Al pastor" data-price="3.50"><span class="line-name">Al pastor <small>$3.50</small></span><span class="stepper"><button type="button" data-step="-1" aria-label="One less al pastor">&minus;</button><output aria-live="polite">0</output><button type="button" data-step="1" aria-label="One more al pastor">+</button></span></li>
+        <li data-name="Carne asada" data-price="3.80"><span class="line-name">Carne asada <small>$3.80</small></span><span class="stepper"><button type="button" data-step="-1" aria-label="One less carne asada">&minus;</button><output aria-live="polite">0</output><button type="button" data-step="1" aria-label="One more carne asada">+</button></span></li>
+        <li data-name="Chorizo y papa" data-price="3.60"><span class="line-name">Chorizo y papa <small>$3.60</small></span><span class="stepper"><button type="button" data-step="-1" aria-label="One less chorizo y papa">&minus;</button><output aria-live="polite">0</output><button type="button" data-step="1" aria-label="One more chorizo y papa">+</button></span></li>
+        <li data-name="Pescado" data-price="4.20"><span class="line-name">Pescado <small>$4.20</small></span><span class="stepper"><button type="button" data-step="-1" aria-label="One less pescado">&minus;</button><output aria-live="polite">0</output><button type="button" data-step="1" aria-label="One more pescado">+</button></span></li>
+        <li data-name="Hongos" data-price="3.20"><span class="line-name">Hongos <small>$3.20</small></span><span class="stepper"><button type="button" data-step="-1" aria-label="One less hongos">&minus;</button><output aria-live="polite">0</output><button type="button" data-step="1" aria-label="One more hongos">+</button></span></li>
+        <li data-name="Frijoles" data-price="3.00"><span class="line-name">Frijoles <small>$3.00</small></span><span class="stepper"><button type="button" data-step="-1" aria-label="One less frijoles">&minus;</button><output aria-live="polite">0</output><button type="button" data-step="1" aria-label="One more frijoles">+</button></span></li>
+        <li data-name="Chips and salsa" data-price="4.50"><span class="line-name">Chips and salsa <small>$4.50</small></span><span class="stepper"><button type="button" data-step="-1" aria-label="One less chips and salsa">&minus;</button><output aria-live="polite">0</output><button type="button" data-step="1" aria-label="One more chips and salsa">+</button></span></li>
       </ul>
-      <p class="total">Total <output data-total>$0.00</output></p>
-      <button class="btn" type="submit">Send order</button>
-      <output class="done" aria-live="polite"></output>
+      <p class="total"><span>Total</span><output data-total>$0.00</output></p>
+      <div class="ticket-fields">
+        <label class="field">Pick-up
+          <select name="when" data-when>
+            <option value="asap">As soon as it's ready</option>
+          </select>
+        </label>
+        <label class="field">Name on the ticket <span class="optional">(optional)</span>
+          <input name="name" autocomplete="given-name">
+        </label>
+      </div>
+      <p class="error" data-error aria-live="polite" hidden>Add at least one taco with the + buttons first.</p>
+      <button class="btn btn-big" type="submit">Send order</button>
+      <p class="done" aria-live="polite" hidden></p>
     </form>
   </div>
 </section>
 
-<section id="hours" class="hours">
-  <div class="wrap">
-    <h2>Hours</h2>
-    <table class="week" data-hours>
-      <caption class="visually-hidden">Opening hours by day</caption>
-      <tbody>
-        <tr data-day="1" data-open="12:00" data-close="22:00"><th scope="row">Monday</th><td>12:00 to 22:00</td></tr>
-        <tr data-day="2" data-open="12:00" data-close="22:00"><th scope="row">Tuesday</th><td>12:00 to 22:00</td></tr>
-        <tr data-day="3" data-open="12:00" data-close="22:00"><th scope="row">Wednesday</th><td>12:00 to 22:00</td></tr>
-        <tr data-day="4" data-open="12:00" data-close="22:00"><th scope="row">Thursday</th><td>12:00 to 22:00</td></tr>
-        <tr data-day="5" data-open="12:00" data-close="22:00"><th scope="row">Friday</th><td>12:00 to 22:00</td></tr>
-        <tr data-day="6" data-open="12:00" data-close="22:00"><th scope="row">Saturday</th><td>12:00 to 22:00</td></tr>
-        <tr data-day="0" data-open="12:00" data-close="22:00"><th scope="row">Sunday</th><td>12:00 to 22:00</td></tr>
-      </tbody>
-    </table>
-    <p class="aside-note">The kitchen takes its last order at 21:45.</p>
-  </div>
+<section class="strip" aria-label="Photos from the counter">
+  <figure><img src="../../img/tm-grill-780.webp" srcset="../../img/tm-grill-480.webp 480w, ../../img/tm-grill-780.webp 780w" sizes="(min-width: 768px) 24vw, 46vw" alt="A cook in an apron working a grill at an outdoor market stall" width="780" height="1040" loading="lazy"></figure>
+  <figure><img src="../../img/tm-chips-1100.webp" srcset="../../img/tm-chips-640.webp 640w, ../../img/tm-chips-1100.webp 1100w" sizes="(min-width: 768px) 24vw, 46vw" alt="Tortilla chips with bowls of salsa verde, guacamole and crema" width="1100" height="825" loading="lazy"></figure>
+  <figure><img src="../../img/tm-coral-1000.webp" srcset="../../img/tm-coral-600.webp 600w, ../../img/tm-coral-1000.webp 1000w" sizes="(min-width: 768px) 24vw, 46vw" alt="Two tacos with lime on a dark plate against a coral background" width="1000" height="1000" loading="lazy"></figure>
+  <figure><img src="../../img/tm-pink-840.webp" srcset="../../img/tm-pink-480.webp 480w, ../../img/tm-pink-840.webp 840w" sizes="(min-width: 768px) 24vw, 46vw" alt="Chicken tacos with pickled onion and lime on a pink plate, seen from above" width="840" height="1050" loading="lazy"></figure>
 </section>
 
-<section id="find" class="find">
-  <div class="wrap">
-    <div>
-      <h2>Find us</h2>
-      <address>88 Market Row<br>On the corner with Bell Street</address>
-      <p>Look for the yellow awning across from the covered market. Buses 4 and 12 stop right outside.</p>
-      <p class="aside-note">On a real site, the map opens directions in your phone's map app.</p>
+<section class="visit" aria-label="Opening hours and map">
+  <div class="wrap visit-grid">
+    <div id="hours" class="hours">
+      <h2>Open every day</h2>
+      <table class="week" data-hours>
+        <caption class="visually-hidden">Opening hours by day</caption>
+        <tbody>
+          <tr data-day="1" data-open="12:00" data-close="22:00"><th scope="row">Mon</th><td>12 to 22</td></tr>
+          <tr data-day="2" data-open="12:00" data-close="22:00"><th scope="row">Tue</th><td>12 to 22</td></tr>
+          <tr data-day="3" data-open="12:00" data-close="22:00"><th scope="row">Wed</th><td>12 to 22</td></tr>
+          <tr data-day="4" data-open="12:00" data-close="22:00"><th scope="row">Thu</th><td>12 to 22</td></tr>
+          <tr data-day="5" data-open="12:00" data-close="23:00"><th scope="row">Fri</th><td>12 to 23</td></tr>
+          <tr data-day="6" data-open="12:00" data-close="23:00"><th scope="row">Sat</th><td>12 to 23</td></tr>
+          <tr data-day="0" data-open="12:00" data-close="21:00"><th scope="row">Sun</th><td>12 to 21</td></tr>
+        </tbody>
+      </table>
+      <p class="small">The kitchen takes its last order fifteen minutes before closing.</p>
     </div>
-    <figure class="map">
-      <svg viewBox="0 0 600 380" role="img" aria-label="Street map: Tacos Mañana on the corner of Market Row and Bell Street, across from the covered market">
-        <rect class="m-bg" width="600" height="380"/>
-        <rect class="m-block" x="30" y="30" width="250" height="140" rx="10"/>
-        <rect class="m-market" x="330" y="30" width="240" height="140" rx="10"/>
-        <rect class="m-block" x="30" y="220" width="250" height="130" rx="10"/>
-        <rect class="m-block" x="330" y="220" width="240" height="130" rx="10"/>
-        <path class="m-street" d="M0 195H600M305 0V380"/>
-        <text class="m-label" x="40" y="202">MARKET ROW</text>
-        <text class="m-label" x="314" y="365" transform="rotate(-90 314 365)">BELL STREET</text>
-        <text class="m-small" x="450" y="106" text-anchor="middle">Covered market</text>
-        <g class="m-pin" transform="translate(250 222)">
-          <path d="M0 0c-14-18-22-28-22-40a22 22 0 0 1 44 0c0 12-8 22-22 40z"/>
-          <circle cy="-40" r="8" class="m-pin-dot"/>
-        </g>
-        <text class="m-name" x="160" y="290" text-anchor="middle">Tacos Mañana</text>
-      </svg>
-    </figure>
+    <div id="find" class="find">
+      <h2>Find the yellow awning</h2>
+      <p>88 Market Row, on the corner with Bell Street, across from the covered market. Buses 4 and 12 stop right outside.</p>
+      <figure class="map">
+        <svg viewBox="0 0 600 380" role="img" aria-labelledby="map-title">
+          <title id="map-title">Map: Tacos Mañana at 88 Market Row, on the corner with Bell Street, across from the covered market</title>
+          <rect class="map-bg" x="0" y="0" width="600" height="380" rx="28"/>
+          <path class="map-road" d="M-10 214c120-8 260 6 380-2s170 4 240-4"/>
+          <path class="map-road" d="M372 -10c-6 90 8 170 0 250s6 110 2 150"/>
+          <path class="map-market" d="M60 44c70-6 150 4 230-2 6 40-2 80 4 120-78 8-160-2-236 4-6-40 4-80 2-122z"/>
+          <text class="map-text" x="175" y="112" text-anchor="middle">Covered market</text>
+          <text class="map-street" x="200" y="252" text-anchor="middle">Market Row</text>
+          <text class="map-street" x="404" y="330" transform="rotate(-88 404 330)">Bell Street</text>
+          <circle class="map-bus" cx="270" cy="198" r="12"/>
+          <text class="map-bus-text" x="270" y="203" text-anchor="middle">B</text>
+          <g transform="translate(448 128)">
+            <use href="#burst" class="map-burst" x="-46" y="-46" width="92" height="92"/>
+            <text class="map-name" x="0" y="-2" text-anchor="middle">Tacos</text>
+            <text class="map-name" x="0" y="20" text-anchor="middle">Mañana</text>
+          </g>
+        </svg>
+      </figure>
+      <div class="actions">
+        <button class="btn btn-line" type="button" data-maps>Get directions</button>
+      </div>
+      <p class="small" data-maps-note aria-live="polite"></p>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact" class="contact" aria-labelledby="contact-title">
   <div class="wrap">
-    <h2>Call the counter</h2>
+    <h2 id="contact-title">Call the counter</h2>
     <p class="phone">(503) 555-0163</p>
-    <p class="aside-note">On a real site this number starts a call with one tap. We also cater office lunches for 10 to 60 people: write to hola@tacosmanana.example.</p>
+    <p>Lunch for the office? We cater for 10 to 60 people with a day's notice. hola@tacosmanana.example</p>
+    <div class="actions">
+      <button class="btn btn-ink" type="button" data-call>Call the counter</button>
+      <a class="btn btn-line" href="#order">Order for pick-up</a>
+    </div>
   </div>
 </section>
 </main>
 
-<footer class="foot">
+<footer class="footer">
   <div class="wrap">
-    <p>Tacos Mañana is an invented business. This sample site shows the kind of page George Mikaelson builds for cafés, bars and restaurants.</p>
-    <p><a href="../../index.html#samples">See the other samples</a> <a href="../../index.html#prices">Prices</a></p>
-    <p class="credit">Photo from Unsplash.</p>
+    <p>Tacos Mañana is an invented business. This sample site shows the kind of page George Mikaelson builds for cafés, bars and restaurants. The address, phone number and email are made up.</p>
+    <p>Photos on Unsplash by Frankie Lopez, Mahdi Dastmard, Charles Shaffer, Alma Agencia D and Zoshua Colah.</p>
+    <p class="footer-links"><a href="../cafe-lumen/index.html">Café Lumen sample</a> <a href="../the-amber-room/index.html">The Amber Room sample</a> <a href="../../index.html#prices">Prices</a></p>
   </div>
 </footer>
+
+<nav class="dock" aria-label="Quick actions">
+  <a href="#order">Order</a>
+  <button type="button" data-call>Call</button>
+  <a href="#find">Map</a>
+</nav>
+
+<dialog class="call" data-call-dialog aria-labelledby="call-title">
+  <h2 id="call-title">Call Tacos Mañana</h2>
+  <p class="phone">(503) 555-0163</p>
+  <p>On the real site this button starts a phone call to the counter. This is a sample site, so nothing was dialled.</p>
+  <button class="btn btn-ink" type="button" data-close>Close</button>
+</dialog>
 
 </body>
 </html>

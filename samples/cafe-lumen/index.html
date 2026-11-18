@@ -3,98 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Café Lumen - Coffee and pastries (sample site)</title>
-<meta name="description" content="Sample website for Café Lumen, an invented neighbourhood café: menu, opening hours, map and contact details.">
+<title>Café Lumen, coffee and pastries on Alder Street (sample site)</title>
+<meta name="description" content="Sample website for Café Lumen, an invented neighbourhood café: today's bakes, menu, pastry boxes, opening hours, map and contact details.">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..500;1,6..96,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/main.js" defer></script>
 </head>
 <body id="top">
 
-<p class="sample-note">Sample site for an invented business. <a href="../../index.html#samples">Back to George Mikaelson</a></p>
+<a class="skip" href="#menu">Skip to the menu</a>
 
-<header class="bar">
-  <div class="wrap">
-    <a class="name" href="#top">Café Lumen</a>
-    <nav aria-label="Sections">
-      <a href="#menu">Menu</a>
-      <a href="#hours">Hours</a>
-      <a href="#find">Find us</a>
-    </nav>
-  </div>
+<header class="masthead">
+  <p class="sample-line">Sample site for an invented business. <a href="../../index.html#samples">Back to George Mikaelson</a></p>
+  <nav class="nav" aria-label="Sections">
+    <a href="#oven">Today's bakes</a>
+    <a href="#menu">Menu</a>
+    <a href="#hours">Hours</a>
+    <a href="#find">Find us</a>
+    <a class="nav-box" href="#box">Pastry boxes</a>
+  </nav>
 </header>
 
 <main>
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <h1>Coffee from one farm at a time, and pastries out of the oven by 7:30</h1>
-      <p class="lede">A small café on Alder Street with twelve seats, a long window bench and a dog bowl by the door.</p>
-      <p class="status" data-status aria-live="polite">Mon to Sat, 7:30 to 16:00</p>
-      <div class="actions">
-        <a class="btn" href="#contact">Call</a>
-        <a class="btn alt" href="#find">Directions</a>
-      </div>
+<section class="cover" aria-labelledby="title">
+  <h1 id="title" class="cover-title"><span class="cover-cafe">Café</span> <span class="cover-word">Lumen</span></h1>
+  <div class="cover-intro">
+    <p class="cover-lede">Coffee and pastries on Alder Street, from half past seven.</p>
+    <p class="cover-text">Twelve seats, a long bench in the east window and a dog bowl by the door. The first croissants come out of the oven at ten past seven.</p>
+    <p class="status" data-status aria-live="polite">Mon to Fri 7:30 to 16:00, Sat 8:00 to 16:00</p>
+    <div class="actions">
+      <button class="btn" type="button" data-call>Call the café</button>
+      <a class="text-link" href="#find">Directions</a>
     </div>
-    <figure class="arch">
-      <img src="../../img/cappuccino-900.webp" srcset="../../img/cappuccino-480.webp 480w, ../../img/cappuccino-900.webp 900w" sizes="(min-width: 900px) 420px, 90vw" alt="A cappuccino with a leaf drawn in the milk, on a dark wooden table" width="900" height="1125" fetchpriority="high">
-    </figure>
+  </div>
+  <figure class="cover-photo" data-enter>
+    <img src="../../img/lumen-hero-1120.webp" srcset="../../img/lumen-hero-640.webp 640w, ../../img/lumen-hero-1120.webp 1120w" sizes="(min-width: 768px) 52vw, 100vw" alt="Three croissants on a white plate next to a cup of milky coffee and a folded newspaper" width="1120" height="1400" fetchpriority="high">
+  </figure>
+  <figure class="cover-small" data-enter>
+    <img src="../../img/lumen-cup-840.webp" srcset="../../img/lumen-cup-480.webp 480w, ../../img/lumen-cup-840.webp 840w" sizes="(min-width: 768px) 24vw, 60vw" alt="An espresso cup on a saucer beside two sugared croissants on a linen cloth" width="840" height="1050">
+    <figcaption>Cappuccino and the second batch, 8:30 on a Tuesday.</figcaption>
+  </figure>
+</section>
+
+<section id="oven" class="oven" aria-labelledby="oven-title">
+  <figure class="oven-photo">
+    <img src="../../img/lumen-tray-1080.webp" srcset="../../img/lumen-tray-640.webp 640w, ../../img/lumen-tray-1080.webp 1080w" sizes="(min-width: 768px) 50vw, 100vw" alt="Rows of pains au chocolat and small custard tarts on a baking tray" width="1080" height="810" loading="lazy">
+  </figure>
+  <div class="oven-copy">
+    <h2 id="oven-title">Out of the oven today</h2>
+    <p>Everything is baked in the back room, in small batches through the morning. When a tray is gone, it is gone until tomorrow.</p>
+    <ul class="oven-board" data-oven>
+      <li data-time="07:10"><span class="oven-name">Butter croissant</span><span class="oven-when">7:10</span></li>
+      <li data-time="07:10"><span class="oven-name">Pain au chocolat</span><span class="oven-when">7:10</span></li>
+      <li data-time="08:30"><span class="oven-name">Cardamom bun</span><span class="oven-when">8:30</span></li>
+      <li data-time="10:00"><span class="oven-name">Rye and sour cherry loaf</span><span class="oven-when">10:00</span></li>
+      <li data-time="11:30"><span class="oven-name">Leek and cheddar scone</span><span class="oven-when">11:30</span></li>
+    </ul>
+    <p class="oven-note" data-oven-note>Times are for a normal weekday. Saturday bakes start half an hour later.</p>
   </div>
 </section>
 
-<section id="menu" class="menu">
-  <div class="wrap">
-    <h2>Menu</h2>
-    <p class="intro">Oat and whole milk at no extra cost. Pastries sell out most days by early afternoon.</p>
-    <div class="menu-cols">
-      <div>
-        <h3>Coffee</h3>
-        <ul class="items">
-          <li><span>Espresso</span><span class="dots" aria-hidden="true"></span><span>2.80</span></li>
-          <li><span>Flat white</span><span class="dots" aria-hidden="true"></span><span>3.90</span></li>
-          <li><span>Cappuccino</span><span class="dots" aria-hidden="true"></span><span>3.80</span></li>
-          <li><span>Filter, by the cup</span><span class="dots" aria-hidden="true"></span><span>3.50</span></li>
-          <li><span>Cold brew with tonic</span><span class="dots" aria-hidden="true"></span><span>4.60</span></li>
-          <li><span>Chai, made with honey</span><span class="dots" aria-hidden="true"></span><span>4.20</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3>From the oven</h3>
-        <ul class="items">
-          <li><span>Butter croissant</span><span class="dots" aria-hidden="true"></span><span>3.20</span></li>
-          <li><span>Cardamom bun</span><span class="dots" aria-hidden="true"></span><span>3.60</span></li>
-          <li><span>Rye and sour cherry loaf, slice</span><span class="dots" aria-hidden="true"></span><span>2.90</span></li>
-          <li><span>Leek and cheddar scone</span><span class="dots" aria-hidden="true"></span><span>4.10</span></li>
-          <li><span>Toast with ricotta and pear</span><span class="dots" aria-hidden="true"></span><span>7.50</span></li>
-          <li><span>Seasonal salad bowl, from 11:30</span><span class="dots" aria-hidden="true"></span><span>10.50</span></li>
-        </ul>
-      </div>
+<section id="menu" class="menu" aria-labelledby="menu-title">
+  <div class="menu-head">
+    <h2 id="menu-title">Menu</h2>
+    <p>Oat and whole milk at no extra cost. Prices in dollars, tax included.</p>
+  </div>
+  <div class="menu-lists">
+    <div class="menu-group">
+      <h3>Coffee and tea</h3>
+      <ul class="items">
+        <li><span>Espresso</span><span class="price">2.80</span></li>
+        <li><span>Flat white</span><span class="price">3.90</span></li>
+        <li><span>Cappuccino</span><span class="price">3.80</span></li>
+        <li><span>Filter, by the cup<small>Washed coffee from Huila, Colombia this month</small></span><span class="price">3.50</span></li>
+        <li><span>Cold brew with tonic</span><span class="price">4.60</span></li>
+        <li><span>Chai, made with honey</span><span class="price">4.20</span></li>
+      </ul>
     </div>
-    <aside class="beans">
-      <h3>On the grinder this month</h3>
-      <p>A washed coffee from Huila, Colombia. It tastes of red apple and brown sugar, and works well with milk or on its own. Bags of 250 g are on the shelf by the till for 14.00.</p>
-    </aside>
+    <div class="menu-group">
+      <h3>From the oven</h3>
+      <ul class="items">
+        <li><span>Butter croissant</span><span class="price">3.20</span></li>
+        <li><span>Pain au chocolat</span><span class="price">3.60</span></li>
+        <li><span>Cardamom bun</span><span class="price">3.60</span></li>
+        <li><span>Leek and cheddar scone</span><span class="price">4.10</span></li>
+        <li><span>Rye and sour cherry toast<small>With salted butter</small></span><span class="price">4.50</span></li>
+      </ul>
+    </div>
+    <div class="menu-group">
+      <h3>From 11:30</h3>
+      <ul class="items">
+        <li><span>Ricotta and pear on toast</span><span class="price">7.50</span></li>
+        <li><span>Soup of the day with rye</span><span class="price">8.00</span></li>
+        <li><span>Market salad bowl<small>Changes every Tuesday</small></span><span class="price">10.50</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section class="room" aria-label="Photos">
-  <div class="wrap">
-    <figure class="wide">
-      <img src="../../img/espresso-bar-720.webp" srcset="../../img/espresso-bar-360.webp 360w, ../../img/espresso-bar-720.webp 720w" sizes="(min-width: 900px) 700px, 100vw" alt="The counter with the espresso machine and the chalkboard menu" width="720" height="540" loading="lazy">
-      <figcaption>The counter, before the morning rush.</figcaption>
-    </figure>
-    <figure class="small">
-      <img src="../../img/plate-640.webp" srcset="../../img/plate-640.webp 640w, ../../img/plate-1200.webp 1200w" sizes="(min-width: 900px) 420px, 100vw" alt="A salad bowl seen from above on a grey table" width="640" height="480" loading="lazy">
-      <figcaption>The salad bowl changes with the market every Tuesday.</figcaption>
-    </figure>
+<figure class="room">
+  <img src="../../img/lumen-room-1440.webp" srcset="../../img/lumen-room-800.webp 800w, ../../img/lumen-room-1440.webp 1440w" sizes="(min-width: 768px) 84vw, 100vw" alt="A bright café room with paper lanterns, a long white counter and tall windows" width="1440" height="900" loading="lazy">
+  <figcaption>The room fills with sun from the east windows until about eleven.</figcaption>
+</figure>
+
+<section id="box" class="box" aria-labelledby="box-title">
+  <div class="box-copy">
+    <h2 id="box-title">Reserve a pastry box</h2>
+    <p>For a meeting, a birthday breakfast or a slow Sunday at home. Tell us the day and time and the box is packed and waiting at the counter. You pay when you collect it.</p>
   </div>
+  <form class="box-form" data-box novalidate>
+    <fieldset class="box-sizes">
+      <legend>Box</legend>
+      <label class="choice"><input type="radio" name="size" value="Morning box" checked><span><b>Morning box</b> Six pieces, chosen by the baker <i>18.00</i></span></label>
+      <label class="choice"><input type="radio" name="size" value="Big box"><span><b>Big box</b> Twelve pieces and a loaf of rye <i>34.00</i></span></label>
+    </fieldset>
+    <div class="field-row">
+      <label class="field">Day
+        <select name="day" data-days></select>
+      </label>
+      <label class="field">Pick-up time
+        <select name="time">
+          <option>8:00</option><option>8:30</option><option selected>9:00</option><option>9:30</option><option>10:00</option><option>10:30</option><option>11:00</option>
+        </select>
+      </label>
+    </div>
+    <label class="field">Name for the box
+      <input name="name" autocomplete="name" required aria-describedby="box-error">
+    </label>
+    <p class="error" id="box-error" data-error hidden>Add a name so the box can be labelled.</p>
+    <button class="btn" type="submit">Reserve the box</button>
+    <p class="done" data-done aria-live="polite" hidden></p>
+  </form>
 </section>
 
-<section id="hours" class="hours">
-  <div class="wrap">
+<section class="visit" aria-label="Opening hours and location">
+  <div id="hours" class="hours">
     <h2>Opening hours</h2>
     <table class="week" data-hours>
       <caption class="visually-hidden">Opening hours by day</caption>
@@ -104,66 +151,71 @@
         <tr data-day="3" data-open="07:30" data-close="16:00"><th scope="row">Wednesday</th><td>7:30 to 16:00</td></tr>
         <tr data-day="4" data-open="07:30" data-close="16:00"><th scope="row">Thursday</th><td>7:30 to 16:00</td></tr>
         <tr data-day="5" data-open="07:30" data-close="16:00"><th scope="row">Friday</th><td>7:30 to 16:00</td></tr>
-        <tr data-day="6" data-open="08:30" data-close="16:00"><th scope="row">Saturday</th><td>8:30 to 16:00</td></tr>
+        <tr data-day="6" data-open="08:00" data-close="16:00"><th scope="row">Saturday</th><td>8:00 to 16:00</td></tr>
         <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
       </tbody>
     </table>
-    <p class="aside-note">Closed on public holidays. In August we close for the first two weeks.</p>
+    <p class="small">Closed on public holidays and for the first two weeks of August.</p>
   </div>
-</section>
-
-<section id="find" class="find">
-  <div class="wrap">
-    <div>
-      <h2>Find us</h2>
-      <address>14 Alder Street<br>Next to the bike shop, opposite the park</address>
-      <p>The Alder Street tram stop is two minutes away on foot. There are bike racks right outside and paid parking on Mill Road.</p>
-      <p class="aside-note">On a real site, the map opens directions in your phone's map app.</p>
-    </div>
+  <div id="find" class="find">
+    <h2>Find us</h2>
+    <p class="address">14 Alder Street<br>next to the bike shop, opposite Linden Park</p>
     <figure class="map">
-      <svg viewBox="0 0 600 380" role="img" aria-label="Street map: Café Lumen on Alder Street, opposite the park, with the tram stop two blocks west">
-        <rect class="m-bg" width="600" height="380"/>
-        <rect class="m-park" x="330" y="40" width="210" height="120" rx="10"/>
-        <rect class="m-block" x="40" y="40" width="240" height="120" rx="8"/>
-        <rect class="m-block" x="40" y="220" width="240" height="120" rx="8"/>
-        <rect class="m-block" x="330" y="220" width="210" height="120" rx="8"/>
-        <path class="m-street" d="M0 190H600M305 0V380"/>
-        <path class="m-tram" d="M0 190H600"/>
-        <text class="m-label" x="335" y="197">ALDER STREET</text>
-        <text class="m-label" x="312" y="365" transform="rotate(-90 312 365)">MILL ROAD</text>
-        <text class="m-label m-park-label" x="435" y="106" text-anchor="middle">Linden Park</text>
-        <circle class="m-stop" cx="70" cy="190" r="9"/>
-        <text class="m-small" x="80" y="240" text-anchor="middle">Tram stop</text>
-        <g class="m-pin" transform="translate(215 222)">
-          <path d="M0 0c-14-18-22-28-22-40a22 22 0 0 1 44 0c0 12-8 22-22 40z"/>
-          <circle cy="-40" r="8" class="m-pin-dot"/>
-        </g>
-        <text class="m-name" x="170" y="300" text-anchor="middle">Café Lumen</text>
+      <svg viewBox="0 0 640 400" role="img" aria-labelledby="map-title">
+        <title id="map-title">Map: Café Lumen at 14 Alder Street, opposite Linden Park, two minutes from the Alder Street tram stop</title>
+        <rect class="map-park" x="360" y="40" width="240" height="150"/>
+        <text class="map-label" x="480" y="122" text-anchor="middle">Linden Park</text>
+        <path class="map-street" d="M0 230 H640"/>
+        <path class="map-street" d="M300 0 V400"/>
+        <path class="map-lane" d="M0 330 H300"/>
+        <text class="map-street-name" x="560" y="220" text-anchor="end">Alder Street</text>
+        <text class="map-street-name" x="290" y="388" transform="rotate(-90 290 388)">Mill Road</text>
+        <rect class="map-block" x="40" y="250" width="230" height="60"/>
+        <rect class="map-block" x="340" y="250" width="260" height="110"/>
+        <rect class="map-block" x="40" y="40" width="230" height="160"/>
+        <circle class="map-tram" cx="140" cy="230" r="7"/>
+        <text class="map-label" x="140" y="214" text-anchor="middle">Tram stop</text>
+        <circle class="map-pin" cx="420" cy="250" r="12"/>
+        <text class="map-name" x="440" y="290">Café Lumen</text>
+        <text class="map-label" x="452" y="336">Bike shop</text>
       </svg>
     </figure>
+    <div class="actions">
+      <button class="btn btn-quiet" type="button" data-maps>Open in maps</button>
+    </div>
+    <p class="small" data-maps-note aria-live="polite"></p>
+    <p class="small">Tram 3 to Alder Street, then two minutes east. Bike racks outside, paid parking on Mill Road.</p>
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <h2>Call or write</h2>
-    <dl>
-      <dt>Phone</dt><dd>(503) 555-0142</dd>
-      <dt>Email</dt><dd>hello@cafelumen.example</dd>
-      <dt>Instagram</dt><dd>@cafe.lumen</dd>
-    </dl>
-    <p class="aside-note">We take orders for whole loaves and pastry boxes until 14:00 the day before. On a real site the phone number starts a call with one tap.</p>
+<section id="contact" class="contact" aria-labelledby="contact-title">
+  <div class="contact-copy">
+    <h2 id="contact-title">Call or write</h2>
+    <p class="phone">(503) 555-0142</p>
+    <p>hello@cafelumen.example<br>Instagram @cafe.lumen</p>
+    <p>Orders for whole loaves by 14:00 the day before, please.</p>
+    <div class="actions">
+      <button class="btn" type="button" data-call>Call the café</button>
+    </div>
   </div>
+  <figure class="contact-photo">
+    <img src="../../img/lumen-window-800.webp" srcset="../../img/lumen-window-480.webp 480w, ../../img/lumen-window-800.webp 800w" sizes="(min-width: 768px) 30vw, 80vw" alt="Wooden chairs and a small table beside a tall window in a white room" width="800" height="1200" loading="lazy">
+  </figure>
 </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap">
-    <p>Café Lumen is an invented business. This sample site shows the kind of page George Mikaelson builds for cafés, bars and restaurants.</p>
-    <p><a href="../../index.html#samples">See the other samples</a> <a href="../../index.html#prices">Prices</a></p>
-    <p class="credit">Photos from Unsplash.</p>
-  </div>
+<footer class="footer">
+  <p>Café Lumen is an invented business. This sample site shows the kind of page George Mikaelson builds for cafés, bars and restaurants. The address, phone number and email are made up.</p>
+  <p>Photos on Unsplash by Olga Petnyunene, Marialaura Gionfriddo, Mink Mingle, Minku Kang and Dyah Arum.</p>
+  <p class="footer-links"><a href="../the-amber-room/index.html">The Amber Room sample</a> <a href="../tacos-manana/index.html">Tacos Mañana sample</a> <a href="../../index.html#prices">Prices</a></p>
 </footer>
+
+<dialog class="call" data-call-dialog aria-labelledby="call-title">
+  <h2 id="call-title">Call Café Lumen</h2>
+  <p class="phone">(503) 555-0142</p>
+  <p>On the café's real site this button starts a phone call. This is a sample site, so nothing was dialled.</p>
+  <button class="btn" type="button" data-close>Close</button>
+</dialog>
 
 </body>
 </html>

@@ -1,23 +1,17 @@
 # Credits: Cafeteria Aroma de Montaña concept
 
-These photos are samples. The finished site will use the venue's own photos.
+Sample photos — we'll use yours. None of these photos shows this café, its coffee, farm or staff. The landscape is in Chalatenango (Los Zapotes); the drying bed is in Costa Rica.
 
-All photos come from Unsplash and are used under the Unsplash License (https://unsplash.com/license): free for commercial use, no permission needed. None of them shows this venue, its food or its staff. They were downloaded from the Unsplash image CDN as WebP, cropped and kept under 250 KB each.
+| Used for | Shows | Photo by | Licence | Source |
+|---|---|---|---|---|
+| Ridge band | Hills of Los Zapotes, Chalatenango | MARVIN SOLIS | CC BY 3.0 (cropped) | https://commons.wikimedia.org/wiki/File:Los_zapotes,_chalatenango_-_panoramio.jpg |
+| Counter | Coffee with latte art | nameless 3791 | Unsplash License | https://unsplash.com/photos/tWO51IleBfg |
+| Counter | Slice of cream cake with berries | Diliara Garifullina | Unsplash License | https://unsplash.com/photos/I48gnI1Qs5o |
+| Journey 1 | Ripe coffee cherries on a branch | lienyuan lee | CC BY 3.0 (cropped) | https://commons.wikimedia.org/wiki/File:Coffee_cherries_%E5%92%96%E5%95%A1%E6%9E%9C_-_panoramio.jpg |
+| Journey 2 | Coffee drying on a raised bed, Tarrazú | Tarrazu at en.wikipedia | Public domain | https://commons.wikimedia.org/wiki/File:Coffee-cherries-afternoon-in-san-marcos-tarrazu-costa-rica.jpg |
 
-| Used for | Shows | Photo by | Source |
-|---|---|---|---|
-| Hero | Barista pouring steamed milk into a cup of coffee | Nathan Dumlao | https://unsplash.com/photos/FHH0GARugiE |
-| Menu photo 1 | Coffee cherries ripening on the branch | Quang Nguyen Vinh | https://unsplash.com/photos/OE1zLjHsfm0 |
-| Menu photo 2 | Slice of cream cake with cherries | Diliara Garifullina | https://unsplash.com/photos/I48gnI1Qs5o |
+Licences: Unsplash License https://unsplash.com/license; CC BY 3.0 https://creativecommons.org/licenses/by/3.0/.
 
-## Map and venue details
+The contour lines and the cup illustration are drawn for this concept. Venue facts (street, phone, email, menu types, outdoor seating) come from OpenStreetMap https://www.openstreetmap.org/node/12813422139. No hours are published, so none are shown. See BRIEF.md.
 
-`img/map.webp` is made from OpenStreetMap tiles. Map data © OpenStreetMap contributors, ODbL (https://www.openstreetmap.org/copyright).
-
-Address, hours, phone, email and cuisine come from the public OpenStreetMap listing https://www.openstreetmap.org/node/12813422139, read on 2026-11-18. Nothing else about the venue is claimed: no prices, dishes, reviews or awards.
-
-The Facebook page linked in the footer is the one on the OpenStreetMap listing. OpenStreetMap has no opening hours for this café.
-
-## Fonts
-
-Google Fonts, SIL Open Font License.
+Fonts: Big Shoulders Stencil Display and Libre Franklin, Google Fonts, SIL Open Font License.

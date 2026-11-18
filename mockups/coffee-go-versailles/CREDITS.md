@@ -1,22 +1,16 @@
 # Credits: Coffee Go Versailles concept
 
-These photos are samples. The finished site will use the venue's own photos.
+Sample photos — we'll use yours. None of these photos shows this café, its drinks or its staff.
 
-All photos come from Unsplash and are used under the Unsplash License (https://unsplash.com/license): free for commercial use, no permission needed. None of them shows this venue, its food or its staff. They were downloaded from the Unsplash image CDN as WebP, cropped and kept under 250 KB each.
+| Used for | Shows | Photo by | Licence | Source |
+|---|---|---|---|---|
+| Hero window | Cappuccino and a croissant by a window | Alisa Anton | Unsplash License | https://unsplash.com/photos/FbRGK2rZs8g |
+| Menu | Glass of hot chocolate with shavings | Steve Buissinne | CC0 | https://commons.wikimedia.org/wiki/File:Hot-chocolate-1058197.jpg |
+| Menu | Glass of milky chai | Tirth Patel | Unsplash License | https://unsplash.com/photos/c9nTmIvehyM |
+| Host section | The Orangerie parterre, Versailles | Urban at French Wikipedia | CC BY-SA 3.0 (cropped) | https://commons.wikimedia.org/wiki/File:Orangerie.jpg |
 
-| Used for | Shows | Photo by | Source |
-|---|---|---|---|
-| Hero | Cappuccino and a croissant on a wooden table | David Dvořáček | https://unsplash.com/photos/12z0NP3X3LI |
-| Menu photo 1 | Cups of latte on a wooden table among plants | Nathan Dumlao | https://unsplash.com/photos/zUNs99PGDg0 |
-| Menu photo 2 | Slice of cream cake with cherries | Diliara Garifullina | https://unsplash.com/photos/I48gnI1Qs5o |
-| Menu photo 3 | Glass of orange juice with a straw | ABHISHEK HAJARE | https://unsplash.com/photos/kkrXVKK-jhg |
+Unsplash License: https://unsplash.com/license (commercial use allowed). CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/ (the cropped photo is shared under the same licence).
 
-## Map and venue details
+Venue facts (address, hours, terrace, about 20 seats) come from the public OpenStreetMap listing https://www.openstreetmap.org/node/13883673036. The "ask us about the Château" section follows a theme in public reviews; see BRIEF.md.
 
-`img/map.webp` is made from OpenStreetMap tiles. Map data © OpenStreetMap contributors, ODbL (https://www.openstreetmap.org/copyright).
-
-Address, hours, phone, email and cuisine come from the public OpenStreetMap listing https://www.openstreetmap.org/node/13883673036, read on 2026-11-18. Nothing else about the venue is claimed: no prices, dishes, reviews or awards.
-
-## Fonts
-
-Google Fonts, SIL Open Font License.
+Fonts: IM Fell French Canon and EB Garamond, Google Fonts, SIL Open Font License.

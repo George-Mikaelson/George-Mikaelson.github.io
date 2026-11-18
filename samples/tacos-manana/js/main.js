@@ -1,94 +1,113 @@
-// Tacos Mañana sample site. 1: marks today's row in the hours table and says whether the counter is open now.
+// Tacos Mañana sample site: open-now status, today's tile in the hours, the pick-up ticket with a
+// running total, and the call panel. The order is never sent anywhere.
 (function () {
-  var table = document.querySelector('[data-hours]');
-  var status = document.querySelector('[data-status]');
-  if (!table) return;
-
-  function minutes(t) { var p = t.split(':'); return Number(p[0]) * 60 + Number(p[1]); }
-  function show(t) { return t.replace(/^0/, ''); }
-
-  var rows = {};
-  table.querySelectorAll('tr[data-day]').forEach(function (tr) { rows[tr.getAttribute('data-day')] = tr; });
+  'use strict';
 
   var now = new Date();
   var day = now.getDay();
   var mins = now.getHours() * 60 + now.getMinutes();
-  if (rows[day]) rows[day].classList.add('is-today');
-  if (!status) return;
 
+  function toMinutes(t) { var p = t.split(':'); return Number(p[0]) * 60 + Number(p[1]); }
+  function hhmm(m) { return Math.floor(m / 60) + ':' + String(m % 60).padStart(2, '0'); }
+  function money(n) { return '$' + n.toFixed(2); }
+
+  var rows = {};
+  document.querySelectorAll('.week tr[data-day]').forEach(function (tr) { rows[tr.getAttribute('data-day')] = tr; });
+  if (rows[day]) rows[day].classList.add('is-today');
   function span(tr) {
-    if (!tr || !tr.hasAttribute('data-open')) return null;
-    var o = minutes(tr.getAttribute('data-open'));
-    var c = minutes(tr.getAttribute('data-close'));
-    if (c <= o) c += 1440; // closes after midnight
-    return { open: o, close: c, openText: show(tr.getAttribute('data-open')), closeText: show(tr.getAttribute('data-close')), name: tr.querySelector('th').textContent };
+    return tr && tr.hasAttribute('data-open') ? { open: toMinutes(tr.getAttribute('data-open')), close: toMinutes(tr.getAttribute('data-close')) } : null;
+  }
+  var today = span(rows[day]);
+  var isOpen = today && mins >= today.open && mins < today.close - 15;
+
+  var status = document.querySelector('[data-status]');
+  if (status && today) {
+    if (isOpen) status.textContent = 'Open now, last orders at ' + hhmm(today.close - 15);
+    else if (mins < today.open) status.textContent = 'Closed now. The press starts at ' + hhmm(today.open);
+    else status.textContent = 'Closed for tonight. Back tomorrow at ' + hhmm(span(rows[(day + 1) % 7]).open);
+    status.classList.toggle('is-open', !!isOpen);
   }
 
-  var today = span(rows[day]);
-  var yesterday = span(rows[(day + 6) % 7]);
-  var text;
-  if (yesterday && mins < yesterday.close - 1440) {
-    text = 'Open now, until ' + yesterday.closeText;
-  } else if (today && mins >= today.open && mins < today.close) {
-    text = 'Open now, until ' + today.closeText;
-  } else if (today && mins < today.open) {
-    text = 'Closed now. Opens today at ' + today.openText;
-  } else {
-    for (var i = 1; i <= 7; i++) {
-      var next = span(rows[(day + i) % 7]);
-      if (next) { text = 'Closed now. Opens ' + (i === 1 ? 'tomorrow' : next.name) + ' at ' + next.openText; break; }
+  // pick-up times: every 15 minutes from 15 minutes from now (or from opening) to last orders
+  var when = document.querySelector('[data-when]');
+  if (when && today) {
+    var start = isOpen ? Math.ceil((mins + 15) / 15) * 15 : null;
+    if (!isOpen) {
+      when.options[0].textContent = mins < today.open ? 'When we open at ' + hhmm(today.open) : 'Tomorrow when we open';
+    }
+    for (var t = start; isOpen && t <= today.close - 15 && when.options.length < 13; t += 15) {
+      var opt = document.createElement('option');
+      opt.value = hhmm(t);
+      opt.textContent = 'At ' + hhmm(t);
+      when.appendChild(opt);
     }
   }
-  if (text) {
-    status.textContent = text;
-    status.classList.toggle('is-open', text.indexOf('Open now') === 0);
-  }
-})();
 
-// 2. Pick-up order builder. Hidden without JavaScript (the page still says to call).
-//    This is a sample site, so the order goes nowhere: the page says so and repeats it back.
-(function () {
-  var form = document.querySelector('[data-order]');
-  if (!form) return;
-  form.hidden = false;
-  var lines = [].slice.call(form.querySelectorAll('[data-item]'));
-  var total = form.querySelector('[data-total]');
-  var done = form.querySelector('.done');
-  var qty = lines.map(function () { return 0; });
+  // the ticket
+  var form = document.querySelector('[data-builder]');
+  if (form) {
+    var lines = Array.prototype.slice.call(form.querySelectorAll('.lines li'));
+    var totalOut = form.querySelector('[data-total]');
+    var error = form.querySelector('[data-error]');
+    var done = form.querySelector('.done');
+    var qty = lines.map(function () { return 0; });
 
-  function money(n) { return '$' + n.toFixed(2); }
-  function render() {
-    var sum = 0;
+    function bump(el) { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
+    function refresh() {
+      var total = 0;
+      lines.forEach(function (li, i) {
+        total += qty[i] * Number(li.getAttribute('data-price'));
+        li.querySelector('output').textContent = qty[i];
+        li.classList.toggle('has-qty', qty[i] > 0);
+      });
+      totalOut.textContent = money(total);
+      return total;
+    }
     lines.forEach(function (li, i) {
-      li.querySelector('output').textContent = qty[i];
-      li.querySelector('[data-step="-1"]').disabled = qty[i] === 0;
-      li.querySelector('[data-step="1"]').disabled = qty[i] === 20;
-      sum += qty[i] * Number(li.getAttribute('data-price'));
-    });
-    total.textContent = money(sum);
-    return sum;
-  }
-
-  lines.forEach(function (li, i) {
-    li.querySelectorAll('[data-step]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        qty[i] = Math.max(0, Math.min(20, qty[i] + Number(btn.getAttribute('data-step'))));
-        done.textContent = '';
-        render();
+      li.querySelectorAll('[data-step]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var next = Math.max(0, Math.min(20, qty[i] + Number(btn.getAttribute('data-step'))));
+          if (next === qty[i]) return;
+          qty[i] = next;
+          refresh();
+          bump(li.querySelector('output'));
+          bump(totalOut);
+          if (next > 0) error.hidden = true;
+          done.hidden = true;
+        });
       });
     });
-  });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var items = [];
+      lines.forEach(function (li, i) { if (qty[i]) items.push(qty[i] + ' ' + li.getAttribute('data-name').toLowerCase()); });
+      if (!items.length) { error.hidden = false; done.hidden = true; return; }
+      var name = form.elements.name.value.trim();
+      var pick = when ? when.options[when.selectedIndex].textContent.toLowerCase() : 'as soon as it is ready';
+      done.textContent = (name ? name + ', your' : 'Your') + ' order of ' + items.join(', ') + ' comes to ' + money(refresh()) +
+        ', for pick-up ' + pick + '. This is a sample site, so nothing was sent and nothing is cooking.';
+      done.hidden = false;
+    });
+    refresh();
+  }
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var sum = render();
-    var picked = lines.map(function (li, i) { return qty[i] ? qty[i] + ' ' + li.getAttribute('data-item').toLowerCase() : ''; }).filter(Boolean);
-    if (!picked.length) {
-      done.textContent = 'Add at least one item with the + buttons first.';
-      return;
-    }
-    done.textContent = 'Sample site, so nothing was sent. On a real site the kitchen now gets: ' + picked.join(', ') +
-      '. You pay ' + money(sum) + ' when you collect, in about 15 minutes.';
+  // call buttons open a panel with the number instead of dialling
+  var dialog = document.querySelector('[data-call-dialog]');
+  var opener = null;
+  document.querySelectorAll('[data-call]').forEach(function (btn) {
+    btn.addEventListener('click', function () { opener = btn; if (dialog && dialog.showModal) dialog.showModal(); });
   });
-  render();
+  if (dialog) {
+    dialog.querySelector('[data-close]').addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', function () { if (opener) opener.focus(); });
+  }
+
+  var maps = document.querySelector('[data-maps]');
+  var mapsNote = document.querySelector('[data-maps-note]');
+  if (maps && mapsNote) {
+    maps.addEventListener('click', function () {
+      mapsNote.textContent = 'On the real site this opens directions in your map app. This is a sample, and Market Row is made up.';
+    });
+  }
 })();

@@ -251,22 +251,37 @@ footer .fine a { color: var(--on-dark); }
 .mock-btns { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .4rem; }
 .mock-btns a { display: inline-flex; align-items: center; min-height: 44px; font-size: var(--text-secondary); font-weight: 600; padding: .5rem 1rem; border-radius: 999px; text-decoration: none; }
 .open-sample { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; margin-top: .2rem; font-weight: 600; color: inherit; text-decoration-thickness: 2px; }
-.s-cafe { background: #e3e9d8; color: #22301f; }
-.s-cafe .sample-name { font-family: "Young Serif", Georgia, serif; }
-.s-cafe .mock-btns a { background: #3f5a37; color: #f5f8ef; }
-.s-cafe .mock-btns a + a { background: transparent; color: #22301f; box-shadow: inset 0 0 0 2px #3f5a37; }
-.s-cafe .mock-btns a:hover { background: #2f4529; color: #f5f8ef; }
-.s-bar { background: #10292c; color: #f2e7cf; }
-.s-bar .sample-name { font-family: "Limelight", Georgia, serif; color: #f1c264; }
-.s-bar .mock-btns a { background: #e8b04a; color: #10292c; }
-.s-bar .mock-btns a + a { background: transparent; color: #f2e7cf; box-shadow: inset 0 0 0 2px #e8b04a; }
-.s-bar .mock-btns a:hover { background: #f1c264; color: #10292c; }
-.s-bar :focus-visible { outline-color: #f1c264; }
-.s-taco { background: #ffd23f; color: #2b0f17; }
-.s-taco .sample-name { font-family: "Bungee", Impact, sans-serif; font-size: 1.75rem; color: #ffd23f; }
-.s-taco .mock-btns a { background: #d7264f; color: #fff; }
-.s-taco .mock-btns a + a { background: transparent; color: #2b0f17; box-shadow: inset 0 0 0 2px #d7264f; }
-.s-taco .mock-btns a:hover { background: #b01c40; color: #fff; }
+/* each card borrows its sample's look: Café Lumen white and ink with square buttons, The Amber Room
+   walnut and brass with notched buttons, Tacos Mañana pink with fat bordered pills */
+.s-cafe { background: #fff; color: #1c2430; border-radius: 0; border-color: rgba(28, 36, 48, .18); }
+.s-cafe .sample-name { font-family: "Bodoni Moda", Didot, Georgia, serif; font-style: italic; font-size: 2.3rem; }
+.s-cafe .flag { border-radius: 0; color: #1c2430; }
+.s-cafe .mock-btns a { background: #1c2430; color: #fff; border-radius: 0; }
+.s-cafe .mock-btns a + a { background: transparent; color: #1c2430; padding-inline: .25rem; text-decoration: underline; text-underline-offset: .25em; }
+.s-cafe .mock-btns a:hover { background: #33405a; color: #fff; }
+.s-cafe .mock-btns a + a:hover { background: transparent; color: #1c2430; }
+.s-bar { background: #1b110c; color: #f4e7d0; border-radius: 0; border-color: #a77b3a; outline: 1px solid rgba(167, 123, 58, .55); outline-offset: -7px; }
+.s-bar .sample-name { font-family: "Poiret One", Futura, sans-serif; letter-spacing: .06em; color: #f4e7d0; }
+.s-bar .flag { border-radius: 0; background: #e3a857; color: #1b110c; }
+.s-bar .mock-btns a {
+  border-radius: 0; color: #1b110c;
+  background:
+    linear-gradient(135deg, transparent 8px, #e3a857 0) top left / 51% 51% no-repeat,
+    linear-gradient(-135deg, transparent 8px, #e3a857 0) top right / 51% 51% no-repeat,
+    linear-gradient(45deg, transparent 8px, #e3a857 0) bottom left / 51% 51% no-repeat,
+    linear-gradient(-45deg, transparent 8px, #e3a857 0) bottom right / 51% 51% no-repeat;
+}
+.s-bar .mock-btns a + a { background: none; color: #f4e7d0; border-block: 3px double #a77b3a; }
+.s-bar .mock-btns a:hover { color: #1b110c; filter: brightness(1.08); }
+.s-bar .mock-btns a + a:hover { color: #e3a857; filter: none; }
+.s-bar :focus-visible { outline-color: #f0bd70; }
+.s-taco { background: #e4007c; color: #fff; border-radius: 26px; border: 3px solid #2a0e4a; }
+.s-taco .sample-name { font-family: "Bagel Fat One", "Arial Black", sans-serif; font-size: 2.1rem; color: #ffc21a; }
+.s-taco .flag { color: #2a0e4a; border: 2px solid #2a0e4a; }
+.s-taco .mock-btns a { background: #ffc21a; color: #2a0e4a; border: 3px solid #2a0e4a; }
+.s-taco .mock-btns a + a { background: #fff; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .s-taco .mock-btns a:hover { transform: rotate(-2deg); } }
+.s-taco :focus-visible { outline-color: #ffc21a; }
 .samples-note { margin-top: 1.5rem; color: var(--muted); max-width: 46rem; }
 
 /* video */

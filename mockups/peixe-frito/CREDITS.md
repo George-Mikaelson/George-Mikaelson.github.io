@@ -1,23 +1,17 @@
 # Credits: Peixe Frito concept
 
-These photos are samples. The finished site will use the venue's own photos.
+Sample photos — we'll use yours. None of these photos shows Peixe Frito, its food or its staff.
 
-All photos come from Unsplash and are used under the Unsplash License (https://unsplash.com/license): free for commercial use, no permission needed. None of them shows this venue, its food or its staff. They were downloaded from the Unsplash image CDN as WebP, cropped and kept under 250 KB each.
+| Used for | Shows | Photo by | Licence | Source |
+|---|---|---|---|---|
+| Hero | Fried sole fillets on a checked cloth | E4024 | CC BY-SA 4.0 (cropped) | https://commons.wikimedia.org/wiki/File:Fried_sole.jpg |
+| Order slip | Plate of small fried fish | E4024 | CC BY-SA 4.0 (cropped) | https://commons.wikimedia.org/wiki/File:A_plate_of_fried_istavrit.jpg |
+| Order slip | Fried tilapia | HaJunkiyada | CC BY-SA 4.0 (cropped) | https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Fried_Tilapia_with_Roasted_Potatoes_and_Onions.jpg |
+| Order slip | Fried cassava | Horacio Cambeiro | CC BY-SA 3.0 (cropped) | https://commons.wikimedia.org/wiki/File:Mandioca_frita_en_restaurante_de_Argentina.jpg |
+| Order slip | Beer poured from the tap | Wenceslao Moya grondona de luca | Unsplash License | https://unsplash.com/photos/6qVXypBghyg |
 
-| Used for | Shows | Photo by | Source |
-|---|---|---|---|
-| Hero | Ceviche with sweet potato, corn and fried squid | Diego Arenas de Rodrigo | https://unsplash.com/photos/p934mAdcoog |
-| Menu photo 1 | Shrimp with lime slices and basil | Vino Li | https://unsplash.com/photos/TqOEGdRNowY |
-| Menu photo 2 | Two glasses of beer on a dark table | Teo Do Rio | https://unsplash.com/photos/EUO7L470LXk |
+Licences: Unsplash License https://unsplash.com/license; CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/; CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/.
 
-## Map and venue details
+Venue facts: OpenStreetMap https://www.openstreetmap.org/node/12594153714 (address, WhatsApp, socials, Tuesday to Sunday evenings) and the venue's own ordering site https://peixefrito.obafood.com.br/ (phone, delivery and takeaway). Generous portions, house sauce and cassava with bacon come from public reviews; see BRIEF.md. No prices or founding year are shown.
 
-`img/map.webp` is made from OpenStreetMap tiles. Map data © OpenStreetMap contributors, ODbL (https://www.openstreetmap.org/copyright).
-
-Address, hours, phone, email and cuisine come from the public OpenStreetMap listing https://www.openstreetmap.org/node/12594153714, read on 2026-11-18. Nothing else about the venue is claimed: no prices, dishes, reviews or awards.
-
-OpenStreetMap lists the phone as a mobile number. The online menu link in the footer comes from the same listing.
-
-## Fonts
-
-Google Fonts, SIL Open Font License.
+Fonts: Alfa Slab One and Barlow, Google Fonts, SIL Open Font License.

@@ -1,84 +1,38 @@
-/* Concept site script: one entrance sequence, today's hours, open/closed status.
-   Times are computed in the venue's own time zone (data-tz on <body>). */
+/* Matteo Ristorante: lunch builder sentence, today's row and service status (Brazil time), red rule entrance. */
 (function () {
   var root = document.documentElement;
   root.classList.add('js');
 
-  var DAY_INDEX = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
+  var form = document.getElementById('builder');
+  var out = document.getElementById('plate-text');
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function update() {
+    var pasta = form.querySelector('input[name="pasta"]:checked').value;
+    var sauce = form.querySelector('input[name="sauce"]:checked').value;
+    out.textContent = cap(pasta) + ' with ' + sauce + ', salad on the side.';
+  }
+  if (form && out) { form.addEventListener('change', update); form.addEventListener('submit', function (e) { e.preventDefault(); }); }
 
-  function venueNow(tz) {
-    var d = new Date();
-    try {
-      var parts = new Intl.DateTimeFormat('en-GB', {
-        timeZone: tz, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
-      }).formatToParts(d);
-      var o = {};
-      parts.forEach(function (p) { o[p.type] = p.value; });
-      return { day: DAY_INDEX[o.weekday], min: parseInt(o.hour, 10) * 60 + parseInt(o.minute, 10) };
-    } catch (err) {
-      return { day: (d.getDay() + 6) % 7, min: d.getHours() * 60 + d.getMinutes() };
+  var DAYS = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
+  var o = {};
+  new Intl.DateTimeFormat('en-GB', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+    .formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
+  var day = DAYS[o.weekday], min = +o.hour * 60 + +o.minute;
+  function m(t) { var p = t.split(':'); return +p[0] * 60 + +p[1]; }
+  var row = document.querySelector('.matrix tr[data-day="' + day + '"]');
+  var now = document.getElementById('now');
+  if (row && now) {
+    row.classList.add('is-today');
+    var slots = row.getAttribute('data-slots') ? row.getAttribute('data-slots').split(',') : [];
+    var msg = 'Closed today. Lunch again on Monday at 11.30.';
+    for (var i = 0; i < slots.length; i++) {
+      var ab = slots[i].split('-');
+      if (min >= m(ab[0]) && min < m(ab[1])) { msg = (i === 0 ? 'Lunch is on now' : 'Dinner is on now') + ', until ' + ab[1].replace(':', '.'); break; }
+      if (min < m(ab[0])) { msg = (i === 0 ? 'Lunch' : 'Dinner') + ' starts today at ' + ab[0].replace(':', '.'); break; }
+      msg = 'Done for today. See you tomorrow.';
     }
+    if (day === 5 && slots.length === 1 && min >= m('14:00')) msg = 'Done for today. Back on Monday.';
+    now.textContent = msg;
   }
-
-  function toMin(t) {
-    var p = t.split(':');
-    return parseInt(p[0], 10) * 60 + parseInt(p[1], 10);
-  }
-
-  function isOpenAt(slots, minute) {
-    if (!slots) return false;
-    return slots.split(',').some(function (s) {
-      var ab = s.split('-');
-      return minute >= toMin(ab[0]) && minute < toMin(ab[1]);
-    });
-  }
-
-  function markToday(rows, today, label) {
-    rows.forEach(function (row) {
-      if (row.day !== today) return;
-      row.el.classList.add('is-today');
-      var th = row.el.querySelector('th');
-      if (th && !th.querySelector('.today-tag')) {
-        var tag = document.createElement('span');
-        tag.className = 'today-tag';
-        tag.textContent = label;
-        th.appendChild(tag);
-      }
-    });
-  }
-
-  function collect(attr) {
-    return Array.prototype.map.call(document.querySelectorAll('[' + attr + ']'), function (el) {
-      return { el: el, day: parseInt(el.getAttribute(attr), 10), slots: el.getAttribute('data-slots') || '' };
-    });
-  }
-
-  function init() {
-    var body = document.body;
-    var now = venueNow(body.getAttribute('data-tz'));
-    var label = body.getAttribute('data-today') || 'Today';
-    var rows = collect('data-day');
-    markToday(rows, now.day, label);
-    markToday(collect('data-kday'), now.day, label);
-
-    var status = document.querySelector('.status');
-    if (status && rows.length) {
-      var open = rows.some(function (r) { return r.day === now.day && isOpenAt(r.slots, now.min); });
-      status.querySelector('.status__text').textContent = status.getAttribute(open ? 'data-open' : 'data-closed');
-      status.classList.add(open ? 'is-open' : 'is-closed');
-      status.hidden = false;
-    }
-
-    /* Entrance: CSS hides [data-enter] only when motion is allowed; two frames let the
-       browser paint the start state before the transition runs. */
-    window.requestAnimationFrame(function () {
-      window.requestAnimationFrame(function () { root.classList.add('is-in'); });
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('is-in'); }); });
 })();
