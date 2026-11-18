@@ -1,0 +1,100 @@
+/* Padaria e Confeitaria Moderna: a 1950s Brazilian bakery front. Script sign over a striped awning,
+   mint tiles, boomerang-age shapes, and a live timeline of the bakery's day. */
+:root {
+  --mint: #cfe7da;     /* canvas, tiled wall */
+  --white: #fffdf9;    /* raised */
+  --brown: #4a2a12;    /* ink and buttons */
+  --crust: #9b5a23;
+  --orange: #e0701b;   /* sign script, now marker */
+  --teal: #2f6f5e;
+  --rule: rgba(74, 42, 18, .16);
+  --script: "Yellowtail", "Brush Script MT", cursive;
+  --sans: "Josefin Sans", "Century Gothic", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--mint); color: var(--brown); font: 400 1.0625rem/1.6 var(--sans); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--brown); }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--brown); color: var(--white); padding: .6rem 1rem; z-index: 10; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--brown); color: var(--white); }
+
+/* Awning */
+.awning__sign { background: var(--white); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 1.5rem; padding: .5rem 1rem; }
+.logo { display: inline-flex; flex-direction: column; text-decoration: none; line-height: 1; padding: .25rem 0; }
+.logo__script { font: 400 2.75rem/1 var(--script); color: var(--orange); }
+.logo__sub { font: 600 .875rem/1.2 var(--sans); color: var(--brown); margin-top: -.1rem; padding-left: .2rem; }
+.nav { display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
+.nav a { text-decoration: none; font-weight: 600; padding: .7rem 0; }
+.nav a:hover { color: var(--crust); }
+.awning__stripes { position: relative; height: 26px; background: repeating-linear-gradient(90deg, var(--teal) 0 34px, var(--white) 34px 68px); }
+.awning__stripes::after { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 16px;
+  background: radial-gradient(circle at 17px 0, var(--teal) 16px, transparent 17px) 0 0 / 68px 16px repeat-x, radial-gradient(circle at 51px 0, var(--white) 16px, transparent 17px) 0 0 / 68px 16px repeat-x; }
+  mask: radial-gradient(17px at 17px 0, #000 98%, transparent) 0 0 / 34px 100% repeat-x, linear-gradient(#000, #000) 0 0 / 100% 17px no-repeat; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .7rem 1.4rem .55rem; border-radius: 999px; font: 600 1rem/1.2 var(--sans); text-decoration: none; border: 2px solid var(--brown); }
+.btn--brown { background: var(--brown); color: var(--white); }
+.btn--brown:hover { background: var(--crust); border-color: var(--crust); }
+.btn--line:hover { background: var(--white); }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+/* Hero: headline + a rounded 1950s "TV screen" photo */
+.hero { display: grid; gap: 2rem; max-width: 76rem; margin: 0 auto; padding: 3rem 1rem 3.5rem; align-items: center; }
+.hero h1 { margin: 0 0 1rem; font: 600 clamp(2.6rem, 8vw, 5rem)/1.05 var(--sans); letter-spacing: -.01em; }
+.hero__six { font: 400 1.25em/1 var(--script); color: var(--orange); }
+.hero__text p { max-width: 30rem; font-size: 1.15rem; margin: 0 0 1.5rem; }
+.hero__screen { background: var(--brown); padding: 14px; border-radius: 3rem / 2.4rem; }
+.hero__screen img { border-radius: 2.4rem / 1.9rem; aspect-ratio: 11 / 9; object-fit: cover; width: 100%; }
+@media (min-width: 900px) { .hero { grid-template-columns: 1fr 1.1fr; padding-top: 3.5rem; } }
+
+/* Day timeline */
+.day { background: var(--white); border-block: 2px solid var(--brown); padding: 3.5rem 1rem; }
+.day h2, .counter h2, .visit h2 { margin: 0 0 .5rem; font: 400 clamp(2.4rem, 7vw, 3.75rem)/1.05 var(--script); color: var(--crust); }
+.day h2, .day__now, .line { max-width: 76rem; margin-inline: auto; }
+.day__now { font-weight: 600; margin-top: 0; margin-bottom: 2rem; min-height: 1.6em; }
+.line { position: relative; }
+.line__stops { list-style: none; margin: 0; padding: 0 0 0 1.75rem; display: grid; gap: 1.5rem; border-left: 4px solid var(--teal); }
+.line__stops li { position: relative; }
+.line__stops li::before { content: ""; position: absolute; left: calc(-1.75rem - 12px); top: .25rem; width: 20px; height: 20px; border-radius: 50%; background: var(--white); border: 4px solid var(--teal); }
+.line__time { display: block; font: 600 1.6rem/1.1 var(--sans); }
+.line__what { display: block; max-width: 22rem; }
+.line__marker { position: absolute; left: -10px; width: 24px; height: 24px; border-radius: 50%; background: var(--orange); border: 4px solid var(--white); box-shadow: 0 0 0 2px var(--orange); z-index: 1; }
+@media (min-width: 900px) {
+  .line { padding-top: 2.5rem; }
+  .line__stops { grid-template-columns: repeat(4, 1fr); padding: 1.5rem 0 0; border-left: 0; border-top: 4px solid var(--teal); }
+  .line__stops li::before { left: 0; top: calc(-1.5rem - 12px); }
+  .line__marker { top: calc(2.5rem - 12px); }
+}
+
+/* Counter: four mid-century shapes */
+.counter { max-width: 76rem; margin: 0 auto; padding: 4rem 1rem; }
+.shapes { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 1.5rem 1rem; grid-template-columns: 1fr 1fr; }
+.shape img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 4px solid var(--white); }
+.shape--round img { border-radius: 50%; }
+.shape--arch img { border-radius: 50% 50% 1rem 1rem / 40% 40% 1rem 1rem; }
+.shape--pill img { border-radius: 999px; aspect-ratio: 3 / 4; }
+.shape--leaf img { border-radius: 60% 0 60% 0; }
+.shape h3 { margin: .75rem 0 .1rem; font: 600 1.4rem/1.2 var(--sans); }
+.shape p { margin: 0; }
+@media (min-width: 1000px) { .shapes { grid-template-columns: repeat(4, 1fr); align-items: end; } }
+
+.town { position: relative; }
+.town img { width: 100%; max-height: 34rem; object-fit: cover; }
+.town__card { background: var(--teal); color: var(--white); padding: 2rem 1.25rem; }
+.town__card h2 { margin: 0 0 .5rem; font: 400 clamp(2.2rem, 6vw, 3.25rem)/1.05 var(--script); }
+.town__card p { margin: 0; max-width: 34rem; }
+@media (min-width: 900px) { .town__card { position: absolute; right: 4vw; bottom: 3rem; max-width: 28rem; border-radius: 2rem; padding: 2rem; } }
+
+.visit { max-width: 76rem; margin: 0 auto; padding: 4rem 1rem; }
+.visit__grid { display: grid; gap: 2rem; }
+.visit address { font-style: normal; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+.hours { border-collapse: collapse; background: var(--white); border: 2px solid var(--brown); border-radius: 1rem; overflow: hidden; min-width: min(100%, 22rem); }
+.hours th, .hours td { text-align: left; padding: .75rem 1rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.hours th { font-weight: 600; }
+@media (min-width: 900px) { .visit__grid { grid-template-columns: 1fr 1fr; } .visit .actions { align-content: start; } }
+
+.foot { background: var(--brown); color: var(--white); text-align: center; padding: 1.75rem 1rem; font-size: .9rem; }
+.foot a { color: var(--mint); }
+.foot p { margin: .3rem 0; }

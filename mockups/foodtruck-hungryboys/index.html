@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HungryBoys | Smoked BBQ burgers from a Rennes food truck</title>
+<meta name="description" content="Smoked, shredded meats in house-made buns from the HungryBoys food truck around Rennes and Cesson-Sévigné. Hire the truck for weddings and events.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&amp;family=Caveat+Brush&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for FoodTruck HungryBoys — not affiliated</p>
+
+<header class="top">
+  <a class="top__logo" href="#main">Hungry<span>Boys</span></a>
+  <nav class="top__nav" aria-label="Main">
+    <a href="#box">The box</a>
+    <a href="#truck">Find the truck</a>
+    <a class="btn btn--ember btn--small" href="#hire">Hire us</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="smoke" aria-labelledby="smoke-h">
+    <div class="smoke__text">
+      <p class="marker">Rennes, since 2020</p>
+      <h1 id="smoke-h"><span class="wisps" aria-hidden="true"><i></i><i></i><i></i></span>Authentic meat perfumers</h1>
+      <figure class="smoke__photo">
+        <img src="img/pulled.webp" width="1200" height="1000" alt="A pulled pork burger in a sesame bun with pickles on the side" fetchpriority="high">
+        <figcaption class="marker">house bun, house sauce</figcaption>
+      </figure>
+      <p class="smoke__lead">Beef, pork and chicken, seasoned and marinated for over ten hours, smoked, shredded and piled into buns we bake ourselves. A family food truck around Rennes.</p>
+      <div class="actions">
+        <a class="btn btn--ember" href="#truck">Where’s the truck?</a>
+        <a class="btn btn--line" href="#hire">Hire it for an event</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="box" id="box" aria-labelledby="box-h">
+    <h2 id="box-h">What’s in the box</h2>
+    <p class="box__intro">The menu moves with the seasons. There’s always a “burger du moment”: watch Instagram for the next one.</p>
+    <div class="box__grid">
+      <ul class="paper">
+        <li><span class="paper__item">Smoked burgers</span><span class="marker">pulled pork, beef, chicken</span></li>
+        <li><span class="paper__item">Meat platters</span><span class="marker">for the really hungry</span></li>
+        <li><span class="paper__item">Fries</span><span class="marker">double-cooked, from a local farm</span></li>
+        <li><span class="paper__item">Deli corner</span><span class="marker">our own dried and smoked charcuterie</span></li>
+        <li><span class="paper__item">Desserts</span><span class="marker">made by us</span></li>
+        <li><span class="paper__item">Drinks</span><span class="marker">cold ones</span></li>
+      </ul>
+      <figure class="tape tape--a"><img src="img/brisket.webp" width="900" height="700" alt="Slices of smoked brisket with a dark bark and pink smoke ring" loading="lazy"></figure>
+      <figure class="tape tape--b"><img src="img/smoker.webp" width="900" height="700" alt="A cook lifting a pan of ribs off a barrel smoker" loading="lazy"></figure>
+    </div>
+    <p class="box__local">Meat from Cheville 35, fries from farmer Jean-Michel Piot. Buns, BBQ sauce and desserts are made in the truck’s kitchen.</p>
+  </section>
+
+  <section class="truck" id="truck" aria-labelledby="truck-h">
+    <img class="truck__photo" src="img/truck.webp" width="900" height="700" alt="A dark vintage Citroën H van converted into a food truck" loading="lazy">
+    <div class="truck__text">
+      <h2 id="truck-h">Find the truck</h2>
+      <p>Weekday lunches around east Rennes. Spots we park at:</p>
+      <ul class="stops">
+        <li>Viasilva, metro line B</li>
+        <li>Champs Blancs, Cesson-Sévigné</li>
+        <li>Pontchaillou hospital</li>
+      </ul>
+      <p class="marker marker--note">This season’s days are posted on our site and Instagram first.</p>
+      <div class="actions">
+        <a class="btn btn--ember" href="https://hungryboys.fr/" target="_blank" rel="noopener">See this week’s schedule</a>
+        <a class="btn btn--line" href="tel:+33626587096">Call 06 26 58 70 96</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hire" id="hire" aria-labelledby="hire-h">
+    <div class="hire__head">
+      <h2 id="hire-h">Hire the truck</h2>
+      <p>Weddings, company lunches, festivals, birthdays. We’ve fed parties from 60 to 400 people. Tell us about yours and we’ll write back with a quote.</p>
+    </div>
+    <form class="ticket" id="ticket" novalidate>
+      <div class="field">
+        <label for="kind">What’s the occasion?</label>
+        <select id="kind" name="kind">
+          <option>Wedding</option>
+          <option>Company event</option>
+          <option>Festival or market</option>
+          <option>Private party</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date">
+      </div>
+      <div class="field">
+        <label for="guests">Number of guests</label>
+        <input id="guests" name="guests" type="number" inputmode="numeric" min="20" max="1000" step="10" placeholder="e.g. 120" aria-describedby="guests-err">
+        <p class="field__err" id="guests-err" hidden>Enter a number of guests, at least 20.</p>
+      </div>
+      <div class="field">
+        <label for="place">Town</label>
+        <input id="place" name="place" type="text" autocomplete="address-level2" placeholder="e.g. Rennes">
+      </div>
+      <button class="btn btn--ember ticket__send" type="submit">Write the email</button>
+      <p class="ticket__hint">Opens your email app with the details filled in. Nothing is sent until you press send there.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__links">
+    <a href="mailto:hungryboysfr@gmail.com">hungryboysfr@gmail.com</a>
+    <a href="tel:+33626587096">06 26 58 70 96</a>
+    <a href="https://hungryboys.fr/" target="_blank" rel="noopener">hungryboys.fr</a>
+  </div>
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with FoodTruck HungryBoys.</p>
+</footer>
+</body>
+</html>

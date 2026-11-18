@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Estância | Gaúcho welcome at Praia de Belas Shopping</title>
+<meta name="description" content="La Estância, store 2080 at Praia de Belas Shopping, Porto Alegre. Open every day from 11am to 10pm.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500&amp;family=Alegreya+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for La Estância — not affiliated</p>
+
+<header class="gate">
+  <nav class="gate__nav" aria-label="Main">
+    <a href="#house">The house</a>
+    <a href="#hours">Hours</a>
+    <a class="gate__brand" href="#main" aria-label="La Estância, back to top">
+      <svg class="brand" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="3"/><path d="M24 22v36h14M44 22v36h14M44 22h14M44 40h10" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square"/></svg>
+    </a>
+    <a href="#find">Find us</a>
+    <a href="https://www.instagram.com/laestancia.poa/" target="_blank" rel="noopener">Instagram</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="poncho" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+    <p class="hero__where">Praia de Belas Shopping, store 2080</p>
+    <h1 id="hero-h">La Estância</h1>
+    <p class="hero__lead">A ranch-house welcome in the middle of Porto Alegre. Take a break from the shops and sit down to a proper meal, any day of the week.</p>
+    <div class="actions">
+      <a class="btn btn--red" href="https://www.instagram.com/laestancia.poa/" target="_blank" rel="noopener">Follow us on Instagram</a>
+      <a class="btn btn--line" href="#find">How to find us</a>
+    </div>
+    <picture class="hero__photo">
+      <source media="(min-width: 768px)" srcset="img/pampa.webp" width="1600" height="700">
+      <img src="img/pampa-m.webp" width="800" height="800" alt="A herd of cattle grazing on wide, flat grassland under a cloudy sky" fetchpriority="high">
+    </picture>
+  </section>
+
+  <section class="house" id="house" aria-labelledby="house-h">
+    <h2 id="house-h">What an estância means</h2>
+    <div class="house__grid">
+      <p class="house__lead">In Rio Grande do Sul an <i lang="pt">estância</i> is a ranch on the open pampa. It stands for the gaúcho way of receiving people: the door open, the table long, the kettle on for chimarrão. That’s the welcome we keep, a few steps from the Guaíba.</p>
+      <figure class="tile tile--cuia"><img src="img/cuia.webp" width="800" height="1000" alt="A gourd of chimarrão with a metal straw on a wooden table" loading="lazy"><figcaption>Chimarrão, the gaúcho welcome</figcaption></figure>
+      <figure class="tile tile--fire"><img src="img/stove.webp" width="800" height="1000" alt="A clay pot on a lit wood-burning stove" loading="lazy"><figcaption>A warm kitchen</figcaption></figure>
+      <div class="note">
+        <h3>The menu</h3>
+        <p>Our dishes and news are on Instagram. Want to know what’s on before you come? Send us a message and we’ll tell you.</p>
+        <a class="btn btn--line" href="https://www.instagram.com/laestancia.poa/" target="_blank" rel="noopener">Open Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="poncho poncho--band" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+
+  <section class="hours" id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Open every day</h2>
+    <p class="hours__big">11am – 10pm</p>
+    <p class="hours__now" id="now" aria-live="polite"></p>
+    <p>Lunch or dinner, Monday to Sunday. Holiday hours follow the mall.</p>
+  </section>
+
+  <section class="find" id="find" aria-labelledby="find-h">
+    <img class="find__photo" src="img/plain.webp" width="1400" height="700" alt="Golden grassland with a small ranch house under grey clouds" loading="lazy">
+    <div class="find__card">
+      <h2 id="find-h">Find us inside the mall</h2>
+      <address id="addr">Praia de Belas Shopping, store 2080<br>Av. Praia de Belas 1181<br>Praia de Belas, Porto Alegre – RS, 90110-000</address>
+      <div class="actions">
+        <a class="btn btn--red" href="https://www.google.com/maps/dir/?api=1&amp;destination=-30.0492603,-51.228935" target="_blank" rel="noopener">Get directions</a>
+        <button class="btn btn--line" type="button" id="copy">Copy address</button>
+        <a class="btn btn--line" href="tel:+555130268224">Call (51) 3026-8224</a>
+        <a class="btn btn--line" href="mailto:laestanciapraia@gmail.com">Email</a>
+        <a class="btn btn--line" href="https://www.facebook.com/laestanciapraia" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <p class="find__toast" id="toast" role="status"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with La Estância.</p>
+</footer>
+</body>
+</html>

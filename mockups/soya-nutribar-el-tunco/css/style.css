@@ -1,0 +1,106 @@
+/* Soya Nutribar El Tunco: 1970s surf poster. A striped setting sun, a fat retro script,
+   and menu cards cut like surfboards. Warm sand canvas, deep sea ink, sunset orange for actions. */
+:root {
+  --sand: #f7ead4;    /* canvas */
+  --foam: #fffaf2;
+  --sea: #0f4f55;     /* ink and structure */
+  --orange: #ee6a2c;  /* actions */
+  --pink: #f4a0a8;
+  --yellow: #f7c548;
+  --green: #9cc58a;
+  --ink: #1d2a2e;
+  --script: "Shrikhand", "Cooper Black", serif;
+  --sans: "Figtree", "Segoe UI", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--sand); color: var(--ink); font: 400 1.0625rem/1.6 var(--sans); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--sea); }
+:focus-visible { outline: 3px solid var(--sea); outline-offset: 3px; }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--sea); color: var(--foam); padding: .6rem 1rem; z-index: 10; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--sea); color: var(--foam); }
+
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .25rem 1rem; max-width: 76rem; margin: 0 auto; padding: .6rem 1rem; }
+.top__logo { font: 400 1.9rem/1 var(--script); color: var(--orange); text-decoration: none; padding: .3rem 0; }
+.top__logo span { font: 600 .95rem/1 var(--sans); color: var(--sea); margin-left: .35rem; }
+.top__nav { display: flex; gap: 0 1.25rem; }
+.top__nav a { color: var(--sea); font-weight: 600; text-decoration: none; padding: .7rem 0; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.5rem; border-radius: 999px; font: 600 1rem/1.2 var(--sans); text-decoration: none; border: 2px solid var(--sea); }
+.btn--orange { background: var(--orange); border-color: var(--orange); color: var(--ink); }
+.btn--orange:hover { background: var(--yellow); border-color: var(--yellow); }
+.btn--line { color: var(--sea); background: transparent; }
+.btn--line:hover { background: var(--sea); color: var(--foam); }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+/* Sun: five stripes in a half circle, the wordmark sitting on the horizon */
+.sun { max-width: 76rem; margin: 0 auto; padding: 2rem 1rem 0; display: grid; gap: 1.5rem; align-items: end; }
+.sun__art { position: relative; width: min(100%, 34rem); aspect-ratio: 2 / 1; margin: 0 auto; overflow: hidden; border-radius: 34rem 34rem 0 0; }
+.ray { position: absolute; left: 0; right: 0; height: 20%; }
+.ray--1 { top: 0; background: var(--yellow); height: 36%; }
+.ray--2 { top: 40%; background: var(--orange); height: 16%; }
+.ray--3 { top: 60%; background: var(--pink); height: 12%; }
+.ray--4 { top: 76%; background: var(--orange); height: 9%; }
+.ray--5 { top: 89%; background: var(--sea); height: 11%; }
+.sun__copy { text-align: center; }
+.sun h1 { margin: -1rem 0 .5rem; font: 400 clamp(4.5rem, 20vw, 10rem)/.9 var(--script); color: var(--sea); }
+.sun__lead { max-width: 32rem; margin: 0 auto 1.5rem; font-size: 1.2rem; }
+.sun .actions { justify-content: center; }
+@media (min-width: 900px) {
+  .sun { grid-template-columns: 1fr 1fr; padding-top: 3rem; }
+  .sun__copy { text-align: left; padding-bottom: 1rem; }
+  .sun h1 { margin-top: 0; }
+  .sun__lead { margin-left: 0; }
+  .sun .actions { justify-content: flex-start; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .ray { transform: translateY(110%); }
+  .js.is-in .ray { transform: none; transition: transform .7s cubic-bezier(.2, .8, .2, 1); }
+  .js.is-in .ray--4 { transition-delay: .08s; } .js.is-in .ray--3 { transition-delay: .16s; }
+  .js.is-in .ray--2 { transition-delay: .24s; } .js.is-in .ray--1 { transition-delay: .32s; }
+}
+
+.shore { width: 100%; max-height: 26rem; object-fit: cover; border-top: 10px solid var(--sea); }
+
+/* Surfboard menu cards */
+.boards { max-width: 76rem; margin: 0 auto; padding: 4.5rem 1rem; }
+.boards h2, .diet h2, .visit h2 { margin: 0 0 .5rem; font: 400 clamp(2.2rem, 6vw, 3.5rem)/1.05 var(--script); color: var(--sea); }
+.boards__intro { margin: 0 0 2.5rem; }
+.quiver { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; }
+.board { border-radius: 50% 50% 45% 45% / 22% 22% 14% 14%; padding: 2.25rem 1.1rem 2.5rem; text-align: center; border: 2px solid var(--sea); position: relative; }
+.board::after { content: ""; position: absolute; left: 50%; top: 8%; bottom: 8%; border-left: 2px solid rgba(15, 79, 85, .18); }
+.board > * { position: relative; z-index: 1; }
+.board img { width: 72%; margin: 0 auto 1rem; aspect-ratio: 8 / 11; object-fit: cover; border-radius: 999px; border: 3px solid var(--foam); }
+.board h3 { margin: 0 0 .35rem; font: 600 1.2rem/1.2 var(--sans); }
+.board p { margin: 0; font-size: 1rem; background: inherit; }
+.board--pink { background: var(--pink); }
+.board--yellow { background: var(--yellow); }
+.board--green { background: var(--green); }
+.board--sea { background: var(--sea); color: var(--foam); }
+.board--sea::after { border-color: rgba(255, 250, 242, .2); }
+.board--orange { background: var(--orange); }
+@media (min-width: 900px) {
+  .quiver { grid-template-columns: repeat(6, 1fr); align-items: end; }
+  .board:nth-child(odd) { transform: rotate(-3deg); }
+  .board:nth-child(even) { transform: rotate(3deg); margin-bottom: 2rem; }
+}
+
+.diet { max-width: 76rem; margin: 0 auto; padding: 0 1rem 4.5rem; display: grid; gap: 1rem; }
+.diet__card { background: var(--foam); border: 2px solid var(--sea); border-radius: 2rem; padding: 2rem 1.5rem; }
+.diet__card--alt { background: var(--sea); color: var(--foam); }
+.diet__card--alt h2 { color: var(--yellow); }
+.diet__card p { margin: 0; max-width: 38rem; font-size: 1.1rem; }
+@media (min-width: 900px) { .diet { grid-template-columns: 1.5fr 1fr; } }
+
+.visit { position: relative; }
+.visit__photo { width: 100%; max-height: 36rem; object-fit: cover; }
+.visit__panel { background: var(--foam); border-top: 10px solid var(--orange); padding: 2rem 1.25rem 2.5rem; }
+.visit__panel h2 { max-width: 40rem; }
+.visit__now { font-weight: 600; color: var(--sea); min-height: 1.6em; }
+.visit address { font-style: normal; font-size: 1.2rem; margin-bottom: 1.25rem; }
+@media (min-width: 900px) { .visit__panel { position: absolute; right: 4vw; bottom: 3rem; max-width: 30rem; border-radius: 2rem; border: 2px solid var(--sea); border-top: 10px solid var(--orange); } }
+
+.foot { background: var(--sea); color: var(--foam); text-align: center; padding: 1.75rem 1rem; font-size: .9rem; }
+.foot a { color: var(--yellow); }
+.foot p { margin: .3rem 0; }

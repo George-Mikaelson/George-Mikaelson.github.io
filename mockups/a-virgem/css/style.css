@@ -38,7 +38,8 @@ a { color: var(--gold); }
 .poster__title { margin: 0; font: 400 clamp(4.5rem, 20vw, 11rem)/.85 var(--black); color: var(--paper); }
 .poster__lead { max-width: 34rem; font-size: 1.15rem; margin: 1.25rem 0 1.5rem; }
 .poster__actions, .visit__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
-.poster__photo { margin: 0; border: 3px solid var(--paper); border-radius: 50% 50% 8px 8px / 30% 30% 8px 8px; overflow: hidden; outline: 3px solid var(--red); outline-offset: 8px; }
+.poster__photo { margin: 0; padding: 10px; background: var(--red); clip-path: polygon(8% 0, 92% 0, 100% 6%, 100% 94%, 92% 100%, 8% 100%, 0 94%, 0 6%); }
+.poster__photo img { clip-path: polygon(8% 0, 92% 0, 100% 6%, 100% 94%, 92% 100%, 8% 100%, 0 94%, 0 6%); }
 .poster__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 @media (min-width: 900px) {
   .poster { grid-template-columns: 1.2fr 1fr; align-items: center; padding-top: 3rem; }

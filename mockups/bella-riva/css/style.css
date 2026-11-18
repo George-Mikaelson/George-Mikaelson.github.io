@@ -1,0 +1,103 @@
+/* BellaRiva: a postcard from the Loire. The hero is the two sides of a postcard, with a perforated
+   pizza stamp, a postmark and ruled address lines. Below, three postcards laid out in a fan. */
+:root {
+  --mist: #e7edf0;    /* canvas, river mist */
+  --paper: #fdfdfb;   /* postcard */
+  --ink: #22313a;
+  --slate: #5d7a8a;   /* structure, the Loire */
+  --tomato: #b3402a;  /* actions */
+  --basil: #3e6b3a;   /* postmark */
+  --rule: rgba(34, 49, 58, .16);
+  --didone: "Italiana", "Didot", serif;
+  --sans: "Jost", "Futura", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--mist); color: var(--ink); font: 400 1.0625rem/1.6 var(--sans); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--tomato); }
+:focus-visible { outline: 2px solid var(--tomato); outline-offset: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--ink); color: var(--paper); padding: .6rem 1rem; z-index: 10; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--ink); color: var(--paper); }
+
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .25rem 1rem; max-width: 76rem; margin: 0 auto; padding: .75rem 1rem; }
+.top__mark { font: 400 2rem/1 var(--didone); color: var(--ink); text-decoration: none; padding: .4rem 0; letter-spacing: .02em; }
+.top__nav { display: flex; align-items: center; gap: .25rem 1.25rem; }
+.top__nav a { color: var(--ink); text-decoration: none; font-weight: 500; padding: .7rem 0; }
+.top__nav .top__call { color: var(--tomato); border-bottom: 2px solid var(--tomato); padding-bottom: .4rem; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.3rem; font: 500 1rem/1.2 var(--sans); text-decoration: none; border: 1.5px solid var(--ink); border-radius: 2px; }
+.btn--tomato { background: var(--tomato); color: #fff; border-color: var(--tomato); }
+.btn--tomato:hover { background: var(--ink); border-color: var(--ink); }
+.btn--line { color: var(--ink); background: var(--paper); }
+.btn--line:hover { background: var(--ink); color: var(--paper); }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+/* The postcard */
+.card { max-width: 76rem; margin: 1rem auto 0; padding: 0 1rem; display: grid; gap: 0; }
+.card__photo { border: 10px solid var(--paper); border-bottom-width: 0; }
+.card__photo img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+.card__back { background: var(--paper); padding: 1.75rem 1.25rem 2rem; display: grid; gap: 2rem; border-top: 1px dashed var(--rule); }
+.card__message h1 { margin: 0 0 1rem; font: 400 clamp(2.4rem, 6.5vw, 4.25rem)/1.05 var(--didone); }
+.card__message p { max-width: 30rem; }
+.card__sign { font: 400 1.6rem/1.2 var(--didone); color: var(--slate); }
+.card__side { position: relative; display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+.stamp { width: 110px; padding: 9px; background: radial-gradient(circle, var(--mist) 3.5px, var(--paper) 4px) -6px -6px / 12px 12px; filter: drop-shadow(0 1px 2px rgba(34, 49, 58, .07)); }
+.stamp img { border: 4px solid var(--paper); }
+.stamp img { aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
+.postmark { position: absolute; left: 70px; top: 50px; width: 120px; color: var(--basil); opacity: .8; font-family: var(--sans); }
+.lines { grid-column: 1 / -1; font-style: normal; font-size: 1.2rem; line-height: 2.4; background: repeating-linear-gradient(transparent 0 calc(2.4em - 1px), var(--rule) calc(2.4em - 1px) 2.4em); margin-top: 3.5rem; }
+@media (min-width: 900px) {
+  .card { grid-template-columns: 1.05fr 1fr; }
+  .card__photo { border-bottom-width: 10px; border-right-width: 0; }
+  .card__photo img { height: 100%; aspect-ratio: auto; min-height: 34rem; }
+  .card__back { border-top: 0; border-left: 1px dashed var(--rule); grid-template-columns: 1fr 11rem; padding: 2.5rem 2rem; }
+  .card__message h1 { font-size: clamp(2.2rem, 3.6vw, 3.25rem); }
+  .card__side { grid-template-columns: 1fr; justify-items: end; }
+  .postmark { left: auto; right: 70px; top: 70px; }
+  .lines { justify-self: stretch; margin-top: 4rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .postmark { transform: scale(1.5) rotate(-18deg); opacity: 0; }
+  .js.is-in .postmark { transform: rotate(-12deg); opacity: .8; transition: transform .35s cubic-bezier(.5, 0, .7, .4) .6s, opacity .2s .6s; }
+}
+
+/* Fan of postcards */
+.kitchen { max-width: 76rem; margin: 0 auto; padding: 5rem 1rem 4rem; text-align: center; }
+.kitchen h2, .terrace h2, .hours h2, .visit h2 { margin: 0 0 .5rem; font: 400 clamp(2.2rem, 5.5vw, 3.5rem)/1.05 var(--didone); }
+.kitchen__intro { margin: 0 0 3rem; font-size: 1.15rem; }
+.fan { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem; justify-items: center; }
+.post { background: var(--paper); padding: 12px 12px 1.25rem; border: 1px solid var(--rule); width: min(100%, 22rem); text-align: left; }
+.post img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.post h3 { margin: 1rem .25rem .2rem; font: 400 1.8rem/1.1 var(--didone); }
+.post p { margin: 0 .25rem; }
+@media (min-width: 900px) {
+  .fan { grid-template-columns: repeat(3, 1fr); gap: 0; align-items: start; }
+  .post--a { transform: rotate(-4deg) translateX(1.5rem); margin-top: 1.5rem; }
+  .post--b { position: relative; z-index: 1; }
+  .post--c { transform: rotate(4deg) translateX(-1.5rem); margin-top: 1.5rem; }
+}
+
+.terrace { display: grid; max-width: 76rem; margin: 0 auto; padding: 2rem 1rem 4rem; gap: 2rem; align-items: center; }
+.terrace img { width: 100%; aspect-ratio: 9 / 11; object-fit: cover; border: 10px solid var(--paper); }
+.terrace__text p { max-width: 30rem; font-size: 1.15rem; }
+@media (min-width: 900px) { .terrace { grid-template-columns: 1fr 1.2fr; padding-inline: 4rem; } .terrace img { max-width: 26rem; } }
+
+.hours { background: var(--slate); color: var(--paper); padding: 4rem 1rem; }
+.hours h2, .hours__now, .tbl { max-width: 44rem; margin-inline: auto; }
+.hours__now { font-weight: 600; min-height: 1.6em; }
+.tbl { width: 100%; border-collapse: collapse; background: var(--paper); color: var(--ink); display: table; }
+.tbl th, .tbl td { text-align: left; padding: .7rem .6rem; border-bottom: 1px solid var(--rule); }
+@media (min-width: 600px) { .tbl th, .tbl td { white-space: nowrap; padding-inline: .9rem; } }
+.tbl thead th { font-weight: 600; background: #eef2f4; }
+.tbl tbody th { font-weight: 500; }
+.tbl tr.is-today th, .tbl tr.is-today td { background: #f7e5df; font-weight: 600; }
+
+.visit { max-width: 76rem; margin: 0 auto; padding: 4rem 1rem; text-align: center; }
+.visit address { font-style: normal; font-size: 1.25rem; margin: .5rem 0 1.5rem; }
+.visit .actions { justify-content: center; }
+
+.foot { background: var(--ink); color: var(--paper); text-align: center; padding: 1.75rem 1rem; font-size: .9rem; }
+.foot a { color: #f0b9a9; }
+.foot p { margin: .3rem 0; }
