@@ -1,0 +1,155 @@
+/* Tacos Mañana sample site. Painted sign colours: sun yellow, chile red, masa cream, ink. */
+:root {
+  --sun: #ffd23f;
+  --chile: #d7264f;
+  --chile-dark: #b01c40;
+  --ink: #2b0f17;
+  --muted: #5c3a42;
+  --masa: #fff6db;
+  --lime: #2f7a35;
+  --rule: #ecd9a6;
+  --display: "Bungee", Impact, sans-serif;
+  --body: "Archivo", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--masa); color: var(--ink); font: 400 1rem/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: var(--chile-dark); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1.1; }
+h1 { font-size: clamp(2.1rem, 6vw, 4.2rem); text-wrap: balance; }
+h2 { font-size: clamp(1.9rem, 4.4vw, 2.8rem); color: var(--chile); }
+h3 { font-size: 1.2rem; }
+p, dl, dd, address, figure { margin: 0; }
+address { font-style: normal; }
+.wrap { width: min(1120px, 100% - 2rem); margin-inline: auto; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+section { padding: clamp(3.5rem, 8vw, 5.5rem) 0; scroll-margin-top: 64px; }
+.intro { color: var(--muted); margin-top: .8rem; max-width: 38rem; }
+.aside-note { color: var(--muted); font-size: .875rem; margin-top: 1rem; max-width: 38rem; }
+
+.sample-note { margin: 0; padding: .55rem 1rem; text-align: center; font-size: .875rem; background: var(--ink); color: var(--sun); }
+.sample-note a { color: #fff; display: inline-block; padding: .2rem 0; }
+
+/* header */
+.bar { position: sticky; top: 0; z-index: 5; background: var(--chile); color: #fff; }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; }
+.name { font: 400 1.25rem/1 var(--display); color: var(--sun); text-decoration: none; padding: .6rem 0; white-space: nowrap; }
+.bar nav { display: flex; }
+.bar nav a { color: #fff; text-decoration: none; font-weight: 600; padding: .7rem .6rem; min-height: 44px; display: inline-flex; align-items: center; border-radius: 8px; }
+.bar nav a:hover { background: var(--chile-dark); }
+
+/* buttons */
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; min-width: 8rem; padding: .7rem 1.5rem; border-radius: 12px; background: var(--chile); color: #fff; font: 600 1.05rem/1.2 var(--body); text-decoration: none; border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); cursor: pointer; transition: transform 150ms ease-out, box-shadow 150ms ease-out; }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+.btn.alt { background: #fff; color: var(--ink); }
+
+/* hero */
+.hero { background: var(--sun); padding-top: clamp(2.5rem, 6vw, 4.5rem); }
+.hero .wrap { display: grid; gap: 2.5rem; align-items: center; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 4rem; } }
+.lede { font-size: 1.15rem; color: var(--muted); margin-top: 1.2rem; max-width: 33rem; }
+.status { display: flex; align-items: center; gap: .55rem; margin-top: 1.4rem; font-weight: 600; }
+.status::before { content: ""; width: .75rem; height: .75rem; border-radius: 50%; background: var(--muted); flex: none; }
+.status.is-open::before { background: var(--lime); box-shadow: 0 0 0 4px rgba(47, 122, 53, .2); }
+.plate { justify-self: center; width: min(440px, 100%); }
+.plate img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 22px; border: 4px solid var(--ink); box-shadow: 10px 10px 0 var(--chile); transform: rotate(2deg); }
+.plate figcaption { margin-top: 1.2rem; font-size: .875rem; color: var(--muted); }
+
+/* menu */
+.tacos { list-style: none; margin: 2.2rem 0 0; padding: 0; display: grid; gap: 0 3rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 768px) { .tacos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tacos li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .2rem 1rem; padding: 1.1rem 0; border-bottom: 2px dashed var(--rule); }
+.tacos h3 { grid-column: 1; }
+.tacos p { grid-column: 1; color: var(--muted); }
+.tacos .price { grid-column: 2; grid-row: 1 / span 2; align-self: center; font: 400 1.15rem/1 var(--display); background: var(--sun); border: 2px solid var(--ink); border-radius: 10px; padding: .45rem .6rem; }
+.salsas { margin-top: 2.5rem; background: var(--ink); color: var(--masa); border-radius: 18px; padding: 1.5rem; max-width: 46rem; }
+.salsas h3 { color: var(--sun); }
+.salsas ul { list-style: none; margin: .8rem 0 0; padding: 0; display: grid; gap: .6rem; }
+.salsas li { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .6rem; }
+.salsas b { font-weight: 600; color: #fff; }
+.heat { font-size: .75rem; font-weight: 600; border-radius: 6px; padding: .15rem .45rem; color: var(--ink); }
+.heat-1 { background: #9fd38f; }
+.heat-2 { background: var(--sun); }
+.heat-3 { background: #ff8a8a; }
+
+/* order builder */
+.order { background: var(--chile); color: #fff; }
+.order h2 { color: var(--sun); }
+.order .intro { color: #ffe3ea; }
+.order .wrap { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .order .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 4rem; align-items: start; } }
+.builder { background: var(--masa); color: var(--ink); border: 3px solid var(--ink); border-radius: 18px; padding: clamp(1rem, 4vw, 1.75rem); box-shadow: 8px 8px 0 var(--ink); display: grid; gap: 1rem; justify-items: start; }
+.lines { list-style: none; margin: 0; padding: 0; width: 100%; }
+.lines li { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-bottom: 2px dashed var(--rule); }
+.what { font-weight: 600; min-width: 0; }
+.what small { display: block; font-weight: 400; color: var(--muted); font-size: .875rem; }
+.qty { display: inline-flex; align-items: center; gap: .3rem; flex: none; }
+.qty output { min-width: 2ch; text-align: center; font: 400 1.15rem/1 var(--display); }
+.step { width: 44px; height: 44px; border-radius: 10px; border: 2px solid var(--ink); background: #fff; color: var(--ink); font: 600 1.3rem/1 var(--body); cursor: pointer; }
+.step:hover { background: var(--sun); }
+.step:disabled { opacity: .4; cursor: default; background: #fff; }
+.total { font-weight: 600; font-size: 1.1rem; display: flex; gap: .6rem; align-items: baseline; }
+.total output { font: 400 1.4rem/1 var(--display); color: var(--chile-dark); }
+.done:not(:empty) { display: block; border-left: 4px solid var(--chile); padding: .3rem 0 .3rem .8rem; }
+
+/* hours */
+.hours { background: var(--masa); }
+.week { width: 100%; max-width: 34rem; margin-top: 1.8rem; border-collapse: collapse; }
+.week th, .week td { text-align: left; padding: .75rem .9rem; border-bottom: 2px dashed var(--rule); }
+.week th { font-weight: 500; }
+.week td { text-align: right; font-variant-numeric: tabular-nums; }
+.week tr.is-today { background: var(--sun); }
+.week tr.is-today th { font-weight: 600; }
+.week tr.is-today th::after { content: " (today)"; font-weight: 400; }
+
+/* find us */
+.find { background: #fff; }
+.find .wrap { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 900px) { .find .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 3.5rem; } }
+.find address { font: 400 1.25rem/1.4 var(--display); margin-top: 1.2rem; }
+.find p { color: var(--muted); margin-top: 1rem; }
+.map { border: 3px solid var(--ink); border-radius: 18px; overflow: hidden; }
+.map svg { width: 100%; height: auto; }
+.m-bg { fill: #fdf1c8; }
+.m-block { fill: #f6e2a0; }
+.m-market { fill: #f3c6cf; }
+.m-street { stroke: #ffffff; stroke-width: 28; fill: none; }
+.m-label { font: 600 13px var(--body); fill: #8a6b4a; letter-spacing: .1em; }
+.m-small { font: 600 14px var(--body); fill: #8a2a40; }
+.m-pin path { fill: var(--chile); stroke: var(--ink); stroke-width: 3; }
+.m-pin-dot { fill: var(--sun); }
+.m-name { font: 400 18px var(--display); fill: var(--ink); }
+
+/* the map is drawn at 600 units wide; on a phone that halves the text, so the labels grow */
+@media (max-width: 767.98px) {
+  .m-label { font-size: 22px; letter-spacing: .04em; }
+  .m-small { font-size: 23px; }
+  .m-name { font-size: 26px; }
+}
+
+/* contact */
+.contact { background: var(--sun); }
+.contact h2 { color: var(--ink); }
+.phone { font: 400 clamp(1.8rem, 6vw, 3rem)/1.1 var(--display); color: var(--chile-dark); margin-top: 1rem; overflow-wrap: anywhere; }
+
+/* footer */
+.foot { padding: 2.5rem 0 3rem; font-size: .875rem; color: var(--muted); }
+.foot .wrap { display: grid; gap: .6rem; }
+.foot a { display: inline-block; padding: .5rem .2rem; margin-right: 1rem; }
+.credit { font-size: .75rem; }
+
+@media (max-width: 479.98px) {
+  .bar nav a { padding-inline: .4rem; }
+  .name { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .btn:hover, .btn:active { transition: none; transform: none; }
+}

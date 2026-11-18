@@ -18,7 +18,7 @@ h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
 @media (min-width: 860px) { .wallet.has-qr { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 3rem; } }
 .wallet h3 { font-size: 1.5rem; }
 .wallet .what { color: var(--muted); margin-top: .3rem; }
-.addr { display: block; margin-top: 1.1rem; background: var(--tint); border: 2px solid var(--btc); border-radius: 8px; padding: .9rem 1rem; font: 500 clamp(.95rem, 2.4vw, 1.15rem)/1.5 var(--mono); overflow-wrap: anywhere; color: var(--ink); }
+.addr { display: block; margin-top: 1.1rem; background: var(--tint); border: 2px solid var(--accent); border-radius: 8px; padding: .9rem 1rem; font: 500 clamp(.95rem, 2.4vw, 1.15rem)/1.5 var(--mono); overflow-wrap: anywhere; color: var(--ink); }
 .addr b { font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .copyrow { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-top: .9rem; }
 .copyrow output { font-size: var(--text-secondary); color: var(--muted); }
@@ -31,7 +31,7 @@ h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
 .qr svg { display: block; width: 100%; height: auto; }
 .qr .open { display: inline-flex; align-items: center; min-height: 44px; margin-top: .5rem; font-weight: 600; }
 .qr figcaption { font-size: var(--text-secondary); color: var(--muted); margin-top: .4rem; max-width: 300px; }
-.warn { border-left: 4px solid var(--btc); background: var(--surface); padding: 1.1rem 1.25rem; border-radius: 0 12px 12px 0; margin-top: 1.5rem; max-width: 52rem; }
+.warn { border-left: 4px solid var(--accent); background: var(--surface); padding: 1.1rem 1.25rem; border-radius: 0 12px 12px 0; margin-top: 1.5rem; max-width: 52rem; }
 .warn h3 { font-size: 1.2rem; margin-bottom: .4rem; }
 .warn p { color: var(--muted); }
 .warn p + p { margin-top: .5rem; }
@@ -43,7 +43,7 @@ h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
 .route > p { margin: .4rem 0 1.25rem; color: var(--muted); font-size: var(--text-secondary); }
 .flow { list-style: none; counter-reset: f; margin: 0; padding: 0; display: grid; gap: 1rem; }
 .flow li { counter-increment: f; display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: .2rem .7rem; }
-.flow li::before { content: counter(f); grid-row: span 2; width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid var(--ink); display: grid; place-items: center; font: 400 1rem/1 var(--display); background: var(--btc); color: var(--btc-ink); border: 0; }
+.flow li::before { content: counter(f); grid-row: span 2; width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid var(--ink); display: grid; place-items: center; font: 400 1rem/1 var(--display); background: var(--accent); color: var(--accent-ink); border: 0; }
 .flow h4 { align-self: center; }
 .flow p { color: var(--muted); font-size: var(--text-secondary); grid-column: 2; }
 .flow strong { color: var(--ink); font-weight: 600; }
@@ -69,3 +69,17 @@ h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
   .table td:first-child { width: auto; margin-bottom: .25rem; }
 }
 .table-cap { font-size: var(--text-secondary); color: var(--muted); margin-top: .8rem; max-width: 46rem; }
+
+/* currency logos (official marks, see CREDITS.md) */
+.coin-row { list-style: none; margin: 1.75rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; }
+.coin-row li { display: inline-flex; align-items: center; gap: .5rem; font-weight: 500; }
+.coin-row img { width: 32px; height: 32px; flex: none; }
+.coin-head { display: flex; align-items: center; gap: .7rem; }
+.coin-head .logos { display: inline-flex; flex: none; }
+.coin-head .logos img { width: 32px; height: 32px; }
+.coin-head .logos img + img { margin-left: -8px; box-shadow: 0 0 0 2px var(--surface); border-radius: 50%; }
+
+/* prices table: the price column stays readable */
+.table.prices td:nth-child(2) { font-weight: 500; color: var(--ink); }
+@media (min-width: 720px) { .table.prices td:first-child { width: 28%; } .table.prices td:nth-child(2) { width: 24%; } }
+@media (max-width: 719.98px) { .table.prices td:nth-child(2) { margin-bottom: .25rem; } }

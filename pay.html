@@ -15,22 +15,19 @@
 <body id="top">
 
 <svg class="visually-hidden" aria-hidden="true" focusable="false">
-  <symbol id="btc-mark" viewBox="0 0 64 64">
+  <symbol id="gm-mark" viewBox="0 0 64 64">
     <circle cx="32" cy="32" r="32" fill="#f7931a"/>
-    <g transform="rotate(14 32 32)" fill="#ffffff">
-      <rect x="25" y="11" width="3.6" height="8" rx="1"/><rect x="31.5" y="11" width="3.6" height="8" rx="1"/>
-      <rect x="25" y="45" width="3.6" height="8" rx="1"/><rect x="31.5" y="45" width="3.6" height="8" rx="1"/>
-      <text x="32" y="46" text-anchor="middle" font-family="Schibsted Grotesk, Segoe UI, Arial, sans-serif" font-weight="600" font-size="38">B</text>
-    </g>
+    <text x="32" y="44" text-anchor="middle" font-family="Shrikhand, Georgia, serif" font-size="34" fill="#2a1a12">G</text>
   </symbol>
 </svg>
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html"><svg aria-hidden="true"><use href="#btc-mark"/></svg>George Mikaelson</a>
+    <a class="brand" href="index.html"><svg aria-hidden="true"><use href="#gm-mark"/></svg>George Mikaelson</a>
     <nav aria-label="Sections">
       <a href="#address">Addresses</a>
       <a href="#steps">Steps</a>
+      <a href="#prices">Prices</a>
       <a href="#after">After paying</a>
       <a href="#refunds">Refunds</a>
     </nav>
@@ -48,12 +45,19 @@
         <a class="btn" href="#address">Show me the addresses</a>
         <a class="btn line" href="#steps">Walk me through it</a>
       </div>
+      <ul class="coin-row" aria-label="Accepted currencies">
+        <li><img src="img/crypto/btc.svg" alt="" width="32" height="32">Bitcoin</li>
+        <li><img src="img/crypto/usdc.svg" alt="" width="32" height="32">USDC</li>
+        <li><img src="img/crypto/sol.svg" alt="" width="32" height="32">SOL</li>
+        <li><img src="img/crypto/eth.svg" alt="" width="32" height="32">Ether</li>
+      </ul>
     </div>
     <dl class="facts" aria-label="Payment facts">
       <dt>Accepted</dt><dd>BTC on Bitcoin, USDC or SOL on Solana, ETH on Ethereum</dd>
       <dt>Network fee</dt><dd>Paid by the sender. Fractions of a cent on Solana; on Bitcoin and Ethereum it changes with traffic.</dd>
       <dt>Arrives in</dt><dd>Seconds on Solana, a minute or two on Ethereum, about 10 minutes or more on Bitcoin</dd>
       <dt>Schedule</dt><dd>50% to start, 50% on delivery</dd>
+      <dt>Extras</dt><dd>Own domain $50 once, care plan $20 a month (<a href="#prices">details</a>)</dd>
       <dt>Reversible</dt><dd>No, so check before you send</dd>
     </dl>
   </div>
@@ -67,7 +71,7 @@
     <div class="wallets">
       <article class="wallet has-qr">
         <div>
-          <h3>USDC or SOL on Solana</h3>
+          <h3 class="coin-head"><span class="logos"><img src="img/crypto/usdc.svg" alt="" width="32" height="32"><img src="img/crypto/sol.svg" alt="" width="32" height="32"></span>USDC or SOL on Solana</h3>
           <p class="what">One Solana address for both. Exchanges may call the network SOL or SPL.</p>
           <code class="addr" id="addr-sol"><b>7SJQ</b>yVwzmxLgM8SD9XAbMHwFgdPjphHapBZNnBXp<b>7H46</b></code>
           <div class="copyrow">
@@ -93,7 +97,7 @@
 
       <article class="wallet">
         <div>
-          <h3>Bitcoin (BTC)</h3>
+          <h3 class="coin-head"><span class="logos"><img src="img/crypto/btc.svg" alt="" width="32" height="32"></span>Bitcoin (BTC)</h3>
           <p class="what">On-chain Bitcoin only. It is a Taproot address (it starts with bc1p); most current wallets and exchanges can send to it. If yours refuses it, email me before paying.</p>
           <code class="addr" id="addr-btc"><b>bc1pym</b>4s0h6xx5z9md5qux28yfuny2mtqc06c4getxrxnwlj2ak52szsg<b>f4dsy</b></code>
           <div class="copyrow">
@@ -108,7 +112,7 @@
 
       <article class="wallet">
         <div>
-          <h3>Ether (ETH) on Ethereum</h3>
+          <h3 class="coin-head"><span class="logos"><img src="img/crypto/eth.svg" alt="" width="32" height="32"></span>Ether (ETH) on Ethereum</h3>
           <p class="what">ETH on the Ethereum main network only. For USDC, use the Solana address above.</p>
           <code class="addr" id="addr-eth"><b>0x3e91</b>949867ede89de07eb48d747a599e7a4a<b>7dd0</b></code>
           <div class="copyrow">
@@ -189,6 +193,24 @@
       </tbody>
     </table>
     <p class="table-cap">Exchanges do not read Solana Pay links. If you pay from an exchange, use the plain address and email me the transaction ID.</p>
+  </div>
+</section>
+
+<section id="prices">
+  <div class="wrap">
+    <h2>What you pay, and when</h2>
+    <p class="intro">The same prices as on the <a href="index.html#prices">services page</a>. Your quote gives the exact figure before any work starts.</p>
+    <table class="table prices">
+      <thead><tr><th>What</th><th>Price</th><th>When you pay</th></tr></thead>
+      <tbody>
+        <tr><td>Website for a restaurant, bar or café</td><td>$150 to $300</td><td>Half to start, half when the site is live</td></tr>
+        <tr><td>Vertical promo video</td><td>$90 to $150</td><td>Half to start, half when the video is ready</td></tr>
+        <tr><td>Your own domain</td><td>$50 once</td><td>With the deposit, so I can register the domain in your name before the site goes live</td></tr>
+        <tr><td>Domain renewal</td><td>The registrar's yearly price, usually $10 to $20 for a .com</td><td>Once a year, to the registrar, or at cost through the care plan</td></tr>
+        <tr><td>Monthly care plan</td><td>$20 a month</td><td>At the start of each month. Up to 2 changes to menu, hours, prices or photos, a weekly check that the site is online, and domain renewal handled. Stop any month.</td></tr>
+      </tbody>
+    </table>
+    <p class="table-cap">The care plan is paid like everything else here, in any of the currencies above. If you stop it, the site stays online on free hosting.</p>
   </div>
 </section>
 

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Amber Room - Cocktail bar (sample site)</title>
+<meta name="description" content="Sample website for The Amber Room, an invented cocktail bar: drinks menu, late kitchen, opening hours, table booking and map.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Limelight&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body id="top">
+
+<p class="sample-note">Sample site for an invented business. <a href="../../index.html#samples">Back to George Mikaelson</a></p>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="name" href="#top">The Amber Room</a>
+    <nav aria-label="Sections">
+      <a href="#menu">Menu</a>
+      <a href="#hours">Hours</a>
+      <a href="#book">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <picture class="hero-photo">
+    <img src="../../img/cocktail-900.webp" srcset="../../img/cocktail-480.webp 480w, ../../img/cocktail-900.webp 900w" sizes="(min-width: 900px) 50vw, 100vw" alt="A bartender strains an amber drink over one large ice cube" width="900" height="1125" fetchpriority="high">
+  </picture>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="since">Cooper Lane, since 2019</p>
+      <h1>Stirred drinks, low light and a kitchen open until one</h1>
+      <p class="lede">Forty seats and a long brass bar. Walk-ins sit at the bar, and booths can be booked for two to eight people.</p>
+      <p class="status" data-status aria-live="polite">Wed to Sun, 18:00 to 02:00</p>
+      <div class="actions">
+        <a class="btn" href="#book">Book a table</a>
+        <a class="btn alt" href="#menu">Menu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <div class="wrap">
+    <h2>The menu</h2>
+    <div class="menu-grid">
+      <div>
+        <h3>House cocktails</h3>
+        <ul class="drinks">
+          <li><div class="row"><span class="dish">Amber Old Fashioned</span><span class="price">13</span></div><p>Rye, demerara, orange and walnut bitters, over one clear cube.</p></li>
+          <li><div class="row"><span class="dish">Cooper Lane Sour</span><span class="price">12</span></div><p>Bourbon, lemon, honey and a red wine float.</p></li>
+          <li><div class="row"><span class="dish">Night Garden</span><span class="price">12</span></div><p>Gin, elderflower, cucumber and soda. Long and dry.</p></li>
+          <li><div class="row"><span class="dish">Smoke Signal</span><span class="price">14</span></div><p>Mezcal, sweet vermouth and Campari, stirred.</p></li>
+          <li><div class="row"><span class="dish">The Quiet One</span><span class="price">8</span></div><p>Alcohol-free: verjus, rosemary, tonic and grapefruit.</p></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Late kitchen</h3>
+        <p class="kitchen-note">Served until 01:00.</p>
+        <ul class="drinks">
+          <li><div class="row"><span class="dish">Marinated olives and almonds</span><span class="price">6</span></div></li>
+          <li><div class="row"><span class="dish">Fried chickpeas, smoked paprika</span><span class="price">6</span></div></li>
+          <li><div class="row"><span class="dish">Ham and gruyère toastie</span><span class="price">11</span></div></li>
+          <li><div class="row"><span class="dish">Beef tartare, crisp potatoes</span><span class="price">16</span></div></li>
+          <li><div class="row"><span class="dish">Dark chocolate pot, sea salt</span><span class="price">8</span></div></li>
+        </ul>
+        <p class="kitchen-note">Wine by the glass from 9, beer from 6. Ask for the full list at the bar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="photos" aria-label="Photos">
+  <div class="wrap">
+    <figure>
+      <img src="../../img/pour-1200.webp" srcset="../../img/pour-640.webp 640w, ../../img/pour-1200.webp 1200w" sizes="(min-width: 900px) 640px, 100vw" alt="A drink being poured at the bar under purple light" width="640" height="480" loading="lazy">
+      <figcaption>Thursday nights the bar team pours a guest menu.</figcaption>
+    </figure>
+    <figure>
+      <img src="../../img/dining-room-800.webp" srcset="../../img/dining-room-800.webp 800w, ../../img/dining-room-1600.webp 1600w" sizes="(min-width: 900px) 480px, 100vw" alt="A long, dimly lit room with booths along the wall" width="800" height="450" loading="lazy">
+      <figcaption>The booths along the back wall.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="hours" class="hours">
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <table class="week" data-hours>
+      <caption class="visually-hidden">Opening hours by day</caption>
+      <tbody>
+        <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+        <tr data-day="2"><th scope="row">Tuesday</th><td>Closed</td></tr>
+        <tr data-day="3" data-open="18:00" data-close="02:00"><th scope="row">Wednesday</th><td>18:00 to 02:00</td></tr>
+        <tr data-day="4" data-open="18:00" data-close="02:00"><th scope="row">Thursday</th><td>18:00 to 02:00</td></tr>
+        <tr data-day="5" data-open="18:00" data-close="02:00"><th scope="row">Friday</th><td>18:00 to 02:00</td></tr>
+        <tr data-day="6" data-open="18:00" data-close="02:00"><th scope="row">Saturday</th><td>18:00 to 02:00</td></tr>
+        <tr data-day="0" data-open="18:00" data-close="02:00"><th scope="row">Sunday</th><td>18:00 to 02:00</td></tr>
+      </tbody>
+    </table>
+    <p class="aside-note">Last orders at the bar 30 minutes before closing. Over 18s only.</p>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <div>
+      <h2>Book a booth</h2>
+      <p class="intro">Booths seat two to eight. We hold a booking for 15 minutes. For groups larger than eight, call the bar.</p>
+    </div>
+    <form class="booking" data-booking novalidate>
+      <div class="field">
+        <label for="b-date">Date</label>
+        <input id="b-date" name="date" type="date" required>
+        <p class="err" id="b-date-err" hidden>Pick a date.</p>
+      </div>
+      <div class="field">
+        <label for="b-time">Time</label>
+        <select id="b-time" name="time" required>
+          <option>18:00</option><option>18:30</option><option>19:00</option><option selected>19:30</option>
+          <option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
+          <option>22:00</option><option>22:30</option><option>23:00</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="b-guests">Guests</label>
+        <select id="b-guests" name="guests" required>
+          <option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option>
+        </select>
+      </div>
+      <div class="field wide">
+        <label for="b-name">Name for the booking</label>
+        <input id="b-name" name="name" type="text" autocomplete="name" required>
+        <p class="err" id="b-name-err" hidden>Enter a name so we know who to look for.</p>
+      </div>
+      <div class="submit wide">
+        <button class="btn" type="submit">Request a booth</button>
+        <output class="done" aria-live="polite"></output>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="find" class="find">
+  <div class="wrap">
+    <div>
+      <h2>Find us</h2>
+      <address>3 Cooper Lane<br>Down the steps under the green lamp</address>
+      <p>Five minutes on foot from Central station. The door is at the bottom of the steps, next to the record shop.</p>
+      <p class="aside-note">On a real site, the map opens directions in your phone's map app.</p>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 600 380" role="img" aria-label="Street map: The Amber Room on Cooper Lane, a short walk east of Central station">
+        <rect class="m-bg" width="600" height="380"/>
+        <rect class="m-block" x="30" y="30" width="250" height="140" rx="6"/>
+        <rect class="m-block" x="330" y="30" width="240" height="140" rx="6"/>
+        <rect class="m-block" x="30" y="220" width="250" height="130" rx="6"/>
+        <rect class="m-block" x="330" y="220" width="240" height="130" rx="6"/>
+        <path class="m-street" d="M0 195H600M305 0V380"/>
+        <rect class="m-station" x="45" y="55" width="215" height="64" rx="6"/>
+        <text class="m-small m-on-station" x="152" y="95" text-anchor="middle">Central station</text>
+        <text class="m-label" x="40" y="202">COOPER LANE</text>
+        <text class="m-label" x="312" y="365" transform="rotate(-90 312 365)">KING STREET</text>
+        <g class="m-pin" transform="translate(450 222)">
+          <path d="M0 0c-14-18-22-28-22-40a22 22 0 0 1 44 0c0 12-8 22-22 40z"/>
+          <circle cy="-40" r="8" class="m-pin-dot"/>
+        </g>
+        <text class="m-name" x="450" y="300" text-anchor="middle">The Amber Room</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Call the bar</h2>
+    <dl>
+      <dt>Phone</dt><dd>(503) 555-0187, from 16:00</dd>
+      <dt>Email</dt><dd>bar@theamberroom.example</dd>
+      <dt>Private hire</dt><dd>The whole room for up to 40, Mondays and Tuesdays</dd>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>The Amber Room is an invented business. This sample site shows the kind of page George Mikaelson builds for cafés, bars and restaurants.</p>
+    <p><a href="../../index.html#samples">See the other samples</a> <a href="../../index.html#prices">Prices</a></p>
+    <p class="credit">Photos from Unsplash.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Lumen - Coffee and pastries (sample site)</title>
+<meta name="description" content="Sample website for Café Lumen, an invented neighbourhood café: menu, opening hours, map and contact details.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body id="top">
+
+<p class="sample-note">Sample site for an invented business. <a href="../../index.html#samples">Back to George Mikaelson</a></p>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="name" href="#top">Café Lumen</a>
+    <nav aria-label="Sections">
+      <a href="#menu">Menu</a>
+      <a href="#hours">Hours</a>
+      <a href="#find">Find us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>Coffee from one farm at a time, and pastries out of the oven by 7:30</h1>
+      <p class="lede">A small café on Alder Street with twelve seats, a long window bench and a dog bowl by the door.</p>
+      <p class="status" data-status aria-live="polite">Mon to Sat, 7:30 to 16:00</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Call</a>
+        <a class="btn alt" href="#find">Directions</a>
+      </div>
+    </div>
+    <figure class="arch">
+      <img src="../../img/cappuccino-900.webp" srcset="../../img/cappuccino-480.webp 480w, ../../img/cappuccino-900.webp 900w" sizes="(min-width: 900px) 420px, 90vw" alt="A cappuccino with a leaf drawn in the milk, on a dark wooden table" width="900" height="1125" fetchpriority="high">
+    </figure>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <div class="wrap">
+    <h2>Menu</h2>
+    <p class="intro">Oat and whole milk at no extra cost. Pastries sell out most days by early afternoon.</p>
+    <div class="menu-cols">
+      <div>
+        <h3>Coffee</h3>
+        <ul class="items">
+          <li><span>Espresso</span><span class="dots" aria-hidden="true"></span><span>2.80</span></li>
+          <li><span>Flat white</span><span class="dots" aria-hidden="true"></span><span>3.90</span></li>
+          <li><span>Cappuccino</span><span class="dots" aria-hidden="true"></span><span>3.80</span></li>
+          <li><span>Filter, by the cup</span><span class="dots" aria-hidden="true"></span><span>3.50</span></li>
+          <li><span>Cold brew with tonic</span><span class="dots" aria-hidden="true"></span><span>4.60</span></li>
+          <li><span>Chai, made with honey</span><span class="dots" aria-hidden="true"></span><span>4.20</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>From the oven</h3>
+        <ul class="items">
+          <li><span>Butter croissant</span><span class="dots" aria-hidden="true"></span><span>3.20</span></li>
+          <li><span>Cardamom bun</span><span class="dots" aria-hidden="true"></span><span>3.60</span></li>
+          <li><span>Rye and sour cherry loaf, slice</span><span class="dots" aria-hidden="true"></span><span>2.90</span></li>
+          <li><span>Leek and cheddar scone</span><span class="dots" aria-hidden="true"></span><span>4.10</span></li>
+          <li><span>Toast with ricotta and pear</span><span class="dots" aria-hidden="true"></span><span>7.50</span></li>
+          <li><span>Seasonal salad bowl, from 11:30</span><span class="dots" aria-hidden="true"></span><span>10.50</span></li>
+        </ul>
+      </div>
+    </div>
+    <aside class="beans">
+      <h3>On the grinder this month</h3>
+      <p>A washed coffee from Huila, Colombia. It tastes of red apple and brown sugar, and works well with milk or on its own. Bags of 250 g are on the shelf by the till for 14.00.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="room" aria-label="Photos">
+  <div class="wrap">
+    <figure class="wide">
+      <img src="../../img/espresso-bar-720.webp" srcset="../../img/espresso-bar-360.webp 360w, ../../img/espresso-bar-720.webp 720w" sizes="(min-width: 900px) 700px, 100vw" alt="The counter with the espresso machine and the chalkboard menu" width="720" height="540" loading="lazy">
+      <figcaption>The counter, before the morning rush.</figcaption>
+    </figure>
+    <figure class="small">
+      <img src="../../img/plate-640.webp" srcset="../../img/plate-640.webp 640w, ../../img/plate-1200.webp 1200w" sizes="(min-width: 900px) 420px, 100vw" alt="A salad bowl seen from above on a grey table" width="640" height="480" loading="lazy">
+      <figcaption>The salad bowl changes with the market every Tuesday.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="hours" class="hours">
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <table class="week" data-hours>
+      <caption class="visually-hidden">Opening hours by day</caption>
+      <tbody>
+        <tr data-day="1" data-open="07:30" data-close="16:00"><th scope="row">Monday</th><td>7:30 to 16:00</td></tr>
+        <tr data-day="2" data-open="07:30" data-close="16:00"><th scope="row">Tuesday</th><td>7:30 to 16:00</td></tr>
+        <tr data-day="3" data-open="07:30" data-close="16:00"><th scope="row">Wednesday</th><td>7:30 to 16:00</td></tr>
+        <tr data-day="4" data-open="07:30" data-close="16:00"><th scope="row">Thursday</th><td>7:30 to 16:00</td></tr>
+        <tr data-day="5" data-open="07:30" data-close="16:00"><th scope="row">Friday</th><td>7:30 to 16:00</td></tr>
+        <tr data-day="6" data-open="08:30" data-close="16:00"><th scope="row">Saturday</th><td>8:30 to 16:00</td></tr>
+        <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+      </tbody>
+    </table>
+    <p class="aside-note">Closed on public holidays. In August we close for the first two weeks.</p>
+  </div>
+</section>
+
+<section id="find" class="find">
+  <div class="wrap">
+    <div>
+      <h2>Find us</h2>
+      <address>14 Alder Street<br>Next to the bike shop, opposite the park</address>
+      <p>The Alder Street tram stop is two minutes away on foot. There are bike racks right outside and paid parking on Mill Road.</p>
+      <p class="aside-note">On a real site, the map opens directions in your phone's map app.</p>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 600 380" role="img" aria-label="Street map: Café Lumen on Alder Street, opposite the park, with the tram stop two blocks west">
+        <rect class="m-bg" width="600" height="380"/>
+        <rect class="m-park" x="330" y="40" width="210" height="120" rx="10"/>
+        <rect class="m-block" x="40" y="40" width="240" height="120" rx="8"/>
+        <rect class="m-block" x="40" y="220" width="240" height="120" rx="8"/>
+        <rect class="m-block" x="330" y="220" width="210" height="120" rx="8"/>
+        <path class="m-street" d="M0 190H600M305 0V380"/>
+        <path class="m-tram" d="M0 190H600"/>
+        <text class="m-label" x="335" y="197">ALDER STREET</text>
+        <text class="m-label" x="312" y="365" transform="rotate(-90 312 365)">MILL ROAD</text>
+        <text class="m-label m-park-label" x="435" y="106" text-anchor="middle">Linden Park</text>
+        <circle class="m-stop" cx="70" cy="190" r="9"/>
+        <text class="m-small" x="80" y="240" text-anchor="middle">Tram stop</text>
+        <g class="m-pin" transform="translate(215 222)">
+          <path d="M0 0c-14-18-22-28-22-40a22 22 0 0 1 44 0c0 12-8 22-22 40z"/>
+          <circle cy="-40" r="8" class="m-pin-dot"/>
+        </g>
+        <text class="m-name" x="170" y="300" text-anchor="middle">Café Lumen</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Call or write</h2>
+    <dl>
+      <dt>Phone</dt><dd>(503) 555-0142</dd>
+      <dt>Email</dt><dd>hello@cafelumen.example</dd>
+      <dt>Instagram</dt><dd>@cafe.lumen</dd>
+    </dl>
+    <p class="aside-note">We take orders for whole loaves and pastry boxes until 14:00 the day before. On a real site the phone number starts a call with one tap.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Café Lumen is an invented business. This sample site shows the kind of page George Mikaelson builds for cafés, bars and restaurants.</p>
+    <p><a href="../../index.html#samples">See the other samples</a> <a href="../../index.html#prices">Prices</a></p>
+    <p class="credit">Photos from Unsplash.</p>
+  </div>
+</footer>
+
+</body>
+</html>

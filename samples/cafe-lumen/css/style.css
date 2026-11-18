@@ -1,0 +1,141 @@
+/* Café Lumen sample site. Morning light: sage, leaf green and a crust brown for the pastries. */
+:root {
+  --paper: #f6f7f0;
+  --sage: #e3e9d8;
+  --sage-deep: #cdd8bf;
+  --leaf: #3f5a37;
+  --leaf-dark: #2f4529;
+  --ink: #22301f;
+  --muted: #4e5c49;
+  --crust: #9a5a26;
+  --rule: #c9d3bc;
+  --display: "Young Serif", Georgia, serif;
+  --body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1rem/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: var(--leaf); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--crust); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; line-height: 1.15; }
+h1 { font-size: clamp(2.1rem, 5.4vw, 3.6rem); text-wrap: balance; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+h3 { font-size: 1.35rem; }
+p, dl, dd, address, figure { margin: 0; }
+address { font-style: normal; }
+.wrap { width: min(1120px, 100% - 2rem); margin-inline: auto; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+section { padding: clamp(3.5rem, 8vw, 5.5rem) 0; scroll-margin-top: 64px; }
+.intro { color: var(--muted); margin-top: .7rem; max-width: 38rem; }
+.aside-note { color: var(--muted); font-size: .875rem; margin-top: 1rem; max-width: 38rem; }
+
+/* marker that this is a sample, kept small */
+.sample-note { margin: 0; padding: .55rem 1rem; text-align: center; font-size: .875rem; background: var(--ink); color: var(--sage); }
+.sample-note a { color: #fff; display: inline-block; padding: .2rem 0; }
+
+/* header */
+.bar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; }
+.name { font: 400 1.4rem/1 var(--display); color: var(--leaf); text-decoration: none; padding: .6rem 0; white-space: nowrap; }
+.bar nav { display: flex; }
+.bar nav a { color: var(--ink); text-decoration: none; font-weight: 500; padding: .7rem .6rem; min-height: 44px; display: inline-flex; align-items: center; border-radius: 8px; }
+.bar nav a:hover { background: var(--sage); }
+
+/* buttons */
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; min-width: 8rem; padding: .7rem 1.4rem; border-radius: 999px; background: var(--leaf); color: #f5f8ef; font-weight: 600; text-decoration: none; border: 2px solid var(--leaf); transition: background-color 150ms ease-out; }
+.btn:hover { background: var(--leaf-dark); border-color: var(--leaf-dark); }
+.btn.alt { background: transparent; color: var(--ink); }
+.btn.alt:hover { background: var(--sage); }
+
+/* hero: copy beside a photo cut like the arched café window */
+.hero { padding-top: clamp(2.5rem, 6vw, 4.5rem); background: var(--sage); }
+.hero .wrap { display: grid; gap: 2.5rem; align-items: center; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 4rem; } }
+.lede { font-size: 1.15rem; color: var(--muted); margin-top: 1.2rem; max-width: 34rem; }
+.status { display: flex; align-items: center; gap: .55rem; margin-top: 1.4rem; font-weight: 500; }
+.status::before { content: ""; width: .7rem; height: .7rem; border-radius: 50%; background: var(--muted); flex: none; }
+.status.is-open::before { background: #2f8a3c; box-shadow: 0 0 0 4px rgba(47, 138, 60, .18); }
+.arch { justify-self: center; width: min(420px, 100%); }
+.arch img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 999px 999px 18px 18px; border: 10px solid var(--paper); }
+
+/* menu */
+.menu-cols { display: grid; gap: 2.5rem; margin-top: 2.5rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 768px) { .menu-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4rem; } }
+.items { list-style: none; margin: 1rem 0 0; padding: 0; }
+.items li { display: flex; align-items: baseline; gap: .5rem; padding: .55rem 0; }
+.items li span:first-child { min-width: 0; }
+.items .dots { flex: 1 1 1rem; min-width: 1rem; border-bottom: 2px dotted var(--sage-deep); transform: translateY(-.25em); }
+.items li span:last-child { font-variant-numeric: tabular-nums; font-weight: 500; }
+.beans { margin-top: 2.5rem; padding: 1.4rem 1.5rem; border-left: 4px solid var(--crust); background: #fff; border-radius: 0 14px 14px 0; max-width: 46rem; }
+.beans p { color: var(--muted); margin-top: .4rem; }
+
+/* photos */
+.room { padding-top: 0; }
+.room .wrap { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 1fr); align-items: end; }
+@media (min-width: 900px) { .room .wrap { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); } }
+.room img { width: 100%; border-radius: 18px; object-fit: cover; }
+.room .wide img { aspect-ratio: 4 / 3; }
+.room .small img { aspect-ratio: 4 / 3; }
+.room figcaption { font-size: .875rem; color: var(--muted); margin-top: .5rem; }
+
+/* hours */
+.hours { background: var(--sage); }
+.week { width: 100%; max-width: 34rem; margin-top: 1.8rem; border-collapse: collapse; }
+.week th, .week td { text-align: left; padding: .75rem .9rem; border-bottom: 1px solid var(--sage-deep); }
+.week th { font-weight: 500; }
+.week td { text-align: right; font-variant-numeric: tabular-nums; }
+.week tr.is-today { background: var(--paper); }
+.week tr.is-today th { font-weight: 600; }
+.week tr.is-today th::after { content: " (today)"; font-weight: 400; color: var(--muted); }
+
+/* find us */
+.find .wrap { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 900px) { .find .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 3.5rem; } }
+.find address { font: 400 1.3rem/1.4 var(--display); margin-top: 1rem; }
+.find p { color: var(--muted); margin-top: 1rem; }
+.map { border-radius: 18px; overflow: hidden; border: 1px solid var(--rule); }
+.map svg { width: 100%; height: auto; }
+.m-bg { fill: #eef0e6; }
+.m-block { fill: #dfe3d4; }
+.m-park { fill: #bcd0a8; }
+.m-street { stroke: #ffffff; stroke-width: 26; fill: none; }
+.m-tram { stroke: #b9c2ad; stroke-width: 2; stroke-dasharray: 8 6; fill: none; }
+.m-label { font: 600 13px var(--body); fill: #6c7766; letter-spacing: .08em; }
+.m-park-label { letter-spacing: 0; font-weight: 500; fill: #3f5a37; }
+.m-small { font: 500 13px var(--body); fill: #4e5c49; }
+.m-stop { fill: #ffffff; stroke: #3f5a37; stroke-width: 4; }
+.m-pin path { fill: var(--crust); }
+.m-pin-dot { fill: #ffffff; }
+.m-name { font: 400 18px var(--display); fill: var(--ink); }
+
+/* the map is drawn at 600 units wide; on a phone that halves the text, so the labels grow */
+@media (max-width: 767.98px) {
+  .m-label { font-size: 22px; letter-spacing: .04em; }
+  .m-small { font-size: 23px; }
+  .m-name { font-size: 26px; }
+}
+
+/* contact */
+.contact { background: var(--leaf); color: #f5f8ef; }
+.contact h2 { color: #fff; }
+.contact dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6rem 1.5rem; margin-top: 1.8rem; font-size: 1.15rem; }
+.contact dt { color: #cfdcc5; }
+.contact dd { overflow-wrap: anywhere; font-weight: 500; }
+.contact .aside-note { color: #cfdcc5; }
+
+/* footer */
+.foot { padding: 2.5rem 0 3rem; font-size: .875rem; color: var(--muted); }
+.foot .wrap { display: grid; gap: .6rem; }
+.foot a { display: inline-block; padding: .5rem .2rem; margin-right: 1rem; }
+.credit { font-size: .75rem; }
+
+@media (max-width: 479.98px) {
+  .bar nav a { padding-inline: .45rem; }
+  .name { font-size: 1.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
