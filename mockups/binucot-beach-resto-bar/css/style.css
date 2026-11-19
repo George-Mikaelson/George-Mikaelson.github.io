@@ -1,0 +1,110 @@
+/* Binucot Beach Resto Bar: the page is built around tonight's sunset.
+   Lagoon blue and sand, a sun disc that shows the real sunset time, sunset orange for actions. */
+:root {
+  --sand: #f3e6cf;
+  --shell: #fffaf1;
+  --lagoon: #0e3b53;
+  --deep: #0a2a3b;
+  --sun: #f08a3c;
+  --palm: #2e6b4a;
+  --ink: #1b1a17;
+  --muted: #5b5547;
+  --display: "Grandstander", "Trebuchet MS", sans-serif;
+  --text: "Nunito Sans", "Segoe UI", sans-serif;
+  --wide: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--sand); color: var(--ink); font: 400 1rem/1.55 var(--text); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; box-shadow: 0 0 0 6px var(--sun); }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; margin: 0; }
+h2 { font-size: clamp(2rem, 5vw, 3rem); }
+h3 { font-size: 1.25rem; font-weight: 500; }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--sun); color: var(--ink); padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--deep); color: var(--sand); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.3rem; border-radius: 14px; font: 600 1rem/1.2 var(--text); text-decoration: none; border: 2px solid var(--ink); }
+.btn--sun { background: var(--sun); color: var(--ink); }
+.btn--sun:hover { background: #f6a061; }
+.btn--line { background: transparent; }
+.btn--line:hover { background: var(--ink); color: var(--shell); }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .6rem 1rem; background: var(--lagoon); color: var(--shell); }
+.top__name { font: 600 1.5rem/1.1 var(--display); text-decoration: none; }
+.top__nav { display: flex; align-items: center; gap: .25rem; }
+.top__nav > a:not(.btn) { display: inline-flex; align-items: center; min-height: 44px; padding: 0 .6rem; text-decoration: none; font-weight: 600; }
+@media (max-width: 719.98px) { .top__nav > a:not(.btn) { display: none; } }
+
+main { max-width: var(--wide); margin: 0 auto; }
+
+/* Hero with the sun disc */
+.hero { position: relative; min-height: 36rem; overflow: hidden; display: flex; align-items: flex-end; background: var(--deep); }
+.hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,42,59,.35), rgba(10,42,59,.15) 40%, rgba(10,42,59,.85)); }
+.hero__inner { position: relative; z-index: 1; width: 100%; padding: 2rem 1rem; color: var(--shell); display: grid; gap: 1.5rem; align-items: end; }
+.hero h1 { font-size: clamp(2.6rem, 10vw, 5.5rem); max-width: 11ch; }
+.hero__lead { margin: .75rem 0 0; font-size: 1.125rem; max-width: 28rem; }
+.sun { margin: 0 0 0 26px; width: 15rem; height: 15rem; border-radius: 50%; background: var(--sun); color: var(--ink); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1.5rem; box-shadow: 0 0 0 12px rgba(240,138,60,.35), 0 0 0 26px rgba(240,138,60,.15); }
+.sun p { margin: 0; }
+.sun__label { font-size: .875rem; font-weight: 600; }
+.sun__time { font: 600 2.25rem/1.15 var(--display); margin: .25rem 0; }
+.sun__note { font-size: .875rem; max-width: 10rem; }
+
+/* Kitchen */
+.kitchen { padding: 3.5rem 1rem; }
+.kitchen__grid { display: grid; gap: 1.5rem; margin-top: 1.75rem; }
+.kitchen__photo { margin: 0; }
+.kitchen__photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 20px 20px 20px 4px; }
+.plates { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.plates li { padding: 1rem 0; border-bottom: 2px dotted #c9b48e; }
+.plates li:first-child { padding-top: 0; }
+.plates p { margin: .25rem 0 0; color: var(--muted); }
+.note { margin: 1.25rem 0 0; font-size: .875rem; color: var(--muted); }
+
+/* Stay */
+.stay { display: grid; background: var(--lagoon); color: var(--shell); }
+.stay img { width: 100%; height: 100%; min-height: 16rem; object-fit: cover; }
+.stay__text { padding: 2.5rem 1rem 3rem; }
+.stay__text p { max-width: 30rem; margin: .75rem 0 1.25rem; }
+.facts { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-weight: 600; }
+.facts li { position: relative; padding-left: 1rem; }
+.facts li::before { content: ""; position: absolute; left: 0; top: .55em; width: 7px; height: 7px; border-radius: 50%; background: var(--sun); }
+
+/* Getting here */
+.here { padding: 3.5rem 1rem; }
+.here__cols { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+.here__cols > div { background: var(--shell); padding: 1.25rem; border-radius: 16px; }
+.here__cols p { margin: .5rem 0 1rem; }
+
+/* Booking */
+.book { padding: 3.5rem 1rem; background: var(--shell); }
+.book__lead { max-width: 32rem; color: var(--muted); margin: .6rem 0 1.5rem; }
+.book__form { max-width: 40rem; }
+.seg { display: inline-flex; border: 2px solid var(--ink); border-radius: 14px; overflow: hidden; margin-bottom: 1.25rem; }
+.seg label { position: relative; }
+.seg input { position: absolute; opacity: 0; inset: 0; margin: 0; width: 100%; height: 100%; cursor: pointer; }
+.seg span { display: flex; align-items: center; min-height: 48px; padding: .5rem 1.25rem; font-weight: 600; }
+.seg input:checked + span { background: var(--lagoon); color: var(--shell); }
+.seg input:focus-visible + span { outline: 3px solid var(--sun); outline-offset: -3px; }
+.book__row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; }
+.field { display: grid; gap: .35rem; margin-bottom: 1.25rem; font-weight: 600; }
+.field input { font: 400 1rem/1.4 var(--text); padding: .7rem .8rem; min-height: 48px; border: 2px solid #c9b48e; border-radius: 12px; background: #fff; color: var(--ink); width: 100%; }
+.book__send { display: flex; flex-wrap: wrap; gap: .75rem; }
+.hours { margin: 1.5rem 0 0; font-weight: 600; }
+
+.foot { padding: 1.5rem 1rem 2rem; font-size: .875rem; color: var(--muted); }
+.foot p { margin: .25rem 0; }
+
+@media (min-width: 768px) {
+  .hero { min-height: 40rem; }
+  .hero__inner { grid-template-columns: 1fr auto; padding: 3rem 2rem; }
+  .sun { width: 17rem; height: 17rem; }
+  .kitchen, .here, .book { padding-left: 2rem; padding-right: 2rem; }
+  .kitchen__grid { grid-template-columns: 1fr 1fr; align-items: start; }
+  .stay { grid-template-columns: 1.2fr 1fr; }
+  .stay__text { padding: 3rem 2rem; align-self: center; }
+  .here__cols { grid-template-columns: repeat(3, 1fr); }
+  .foot { padding-left: 2rem; padding-right: 2rem; }
+}

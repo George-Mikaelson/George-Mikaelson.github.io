@@ -1,0 +1,97 @@
+/* Acácio Tattoo: a working archive, 1999 to today. Bone paper and black ink,
+   oxblood for dates and actions, catalogue cards with tabs. No neon. */
+:root {
+  --bone: #ede6da;
+  --card: #f7f2e8;
+  --ink: #141210;
+  --blood: #7a1f1f;
+  --blood-hi: #932828;
+  --grey: #5f584e;
+  --rule: #cfc4b2;
+  --display: "Antonio", "Arial Narrow", sans-serif;
+  --text: "Hanken Grotesk", "Segoe UI", sans-serif;
+  --wide: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bone); color: var(--ink); font: 400 1rem/1.55 var(--text); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--blood); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.1; margin: 0; }
+h2 { font-size: clamp(2.25rem, 6vw, 3.5rem); }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--blood); color: #fff; padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--blood); color: var(--bone); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.3rem; border-radius: 0; font: 600 1rem/1.2 var(--text); text-decoration: none; border: 2px solid var(--ink); }
+.btn--blood { background: var(--blood); border-color: var(--blood); color: #fff; }
+.btn--blood:hover { background: var(--blood-hi); border-color: var(--blood-hi); }
+.btn--bone { background: var(--bone); }
+.btn--bone:hover { background: var(--ink); color: var(--bone); }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .6rem 1rem; background: var(--ink); color: var(--bone); }
+.top__name { font: 600 1.6rem/1.1 var(--display); text-decoration: none; }
+
+main { max-width: var(--wide); margin: 0 auto; }
+
+/* Hero: the year, a line to today, the hands */
+.hero { display: grid; background: var(--ink); color: var(--bone); }
+.hero__text { padding: 2.5rem 1rem 2rem; }
+.hero__year { margin: 0; font: 600 clamp(6rem, 30vw, 14rem)/1 var(--display); color: var(--blood-hi); letter-spacing: -.01em; }
+.hero h1 { font-size: clamp(1.75rem, 5vw, 2.75rem); font-weight: 500; max-width: 18ch; margin-top: .25rem; }
+.line { display: flex; align-items: center; gap: .6rem; margin: 1.5rem 0 1rem; font: 500 1rem/1.2 var(--display); }
+.line__bar { flex: 1; height: 2px; background: var(--bone); position: relative; }
+.line__bar::before, .line__bar::after { content: ""; position: absolute; top: -5px; width: 2px; height: 12px; background: var(--bone); }
+.line__bar::before { left: 0; }
+.line__bar::after { right: 0; }
+.hero__lead { margin: 0; max-width: 28rem; font-size: 1.125rem; }
+.hero__photo { margin: 0; }
+.hero__photo img { width: 100%; height: 100%; min-height: 18rem; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+
+/* Catalogue cards */
+.cards { padding: 3.5rem 1rem; }
+.file { list-style: none; margin: 3.25rem 0 0; padding: 0; display: grid; gap: 2rem 1rem; }
+.card { position: relative; background: var(--card); padding: 1.5rem 1.25rem 1.25rem; border: 1px solid var(--rule); border-top: 3px solid var(--blood); }
+.card__tab { position: absolute; top: -2.15rem; left: -1px; margin: 0; padding: .35rem .8rem; background: var(--card); border: 1px solid var(--rule); border-bottom: 0; font-size: .875rem; font-weight: 600; color: var(--blood); }
+.card h3 { font-size: 1.875rem; }
+.card p { margin: .5rem 0 0; }
+
+/* Work */
+.work { padding: 3.5rem 1rem; border-top: 2px solid var(--ink); }
+.work__lead { max-width: 36rem; color: var(--grey); margin: .75rem 0 1.5rem; }
+.work__grid { display: grid; gap: 1rem; }
+.work__grid img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; filter: grayscale(.2); }
+.work__links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
+
+/* Quote */
+.quote { display: grid; gap: 1.5rem; padding: 3.5rem 1rem; background: var(--ink); color: var(--bone); }
+.quote__intro p { max-width: 28rem; }
+.quote__form { background: var(--card); color: var(--ink); padding: 1.5rem; }
+fieldset { border: 0; padding: 0; margin: 0 0 1.25rem; }
+legend { font-weight: 600; margin-bottom: .6rem; }
+.opts { display: flex; flex-wrap: wrap; gap: .5rem; }
+.opt { position: relative; }
+.opt input { position: absolute; opacity: 0; inset: 0; margin: 0; width: 100%; height: 100%; cursor: pointer; }
+.opt span { display: inline-flex; align-items: center; min-height: 48px; padding: .5rem 1rem; border: 2px solid var(--rule); background: var(--bone); font-weight: 500; }
+.opt input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--bone); }
+.opt input:focus-visible + span { outline: 3px solid var(--blood); outline-offset: 2px; }
+.field { display: grid; gap: .35rem; margin-bottom: 1.25rem; font-weight: 600; }
+.field input { font: 400 1rem/1.4 var(--text); padding: .7rem .8rem; min-height: 48px; border: 2px solid var(--rule); background: #fff; color: var(--ink); width: 100%; }
+
+.where { padding: 3.5rem 1rem; }
+.where address { font: 500 1.5rem/1.35 var(--display); font-style: normal; margin: 1rem 0 1.5rem; }
+.where__links { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.foot { padding: 1.5rem 1rem 2rem; font-size: .875rem; color: var(--grey); border-top: 1px solid var(--rule); }
+.foot p { margin: .25rem 0; }
+
+@media (min-width: 768px) {
+  .hero { grid-template-columns: 1.1fr 1fr; }
+  .hero__text { padding: 3.5rem 2rem; }
+  .cards, .work, .quote, .where { padding-left: 2rem; padding-right: 2rem; }
+  .file { grid-template-columns: repeat(2, 1fr); gap: 2.75rem 1.5rem; }
+  .work__grid { grid-template-columns: 1fr 1fr; }
+  .quote { grid-template-columns: 1fr 1.5fr; align-items: start; }
+  .foot { padding-left: 2rem; padding-right: 2rem; }
+}
+@media (min-width: 1100px) { .file { grid-template-columns: repeat(4, 1fr); } }

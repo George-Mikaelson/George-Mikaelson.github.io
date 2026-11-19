@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agile Tecnologia | Laptop, MacBook, iPhone and printer repair in Catolé, Campina Grande</title>
+<meta name="description" content="Repairs for laptops, MacBooks, iPhones and printers, and computers for sale. Rua João Quirino 602, room 108, Catolé, Campina Grande. Start a repair ticket on WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600&amp;family=Red+Hat+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for Agile Tecnologia — not affiliated</p>
+
+<header class="top">
+  <a class="top__name" href="#main"><span class="led" aria-hidden="true"></span>Agile Tecnologia</a>
+  <nav class="top__nav" aria-label="Main">
+    <a href="#steps">How it works</a>
+    <a href="#visit">Visit</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="bench" aria-labelledby="bench-h">
+    <div class="bench__intro">
+      <h1 id="bench-h">Repairs for laptops, MacBooks, iPhones and printers</h1>
+      <p>In Catolé, Campina Grande. Tell us what’s wrong and we’ll open a repair ticket on WhatsApp.</p>
+      <p class="status"><span class="led" aria-hidden="true"></span><span id="open-now">Monday to Friday, 8:30am to 5pm.</span></p>
+    </div>
+
+    <form class="ticket-form" id="ticket-form" novalidate aria-labelledby="form-h">
+      <h2 id="form-h">Start a repair ticket</h2>
+      <fieldset>
+        <legend>Device</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="device" value="Laptop" checked><span>Laptop</span></label>
+          <label class="chip"><input type="radio" name="device" value="MacBook"><span>MacBook</span></label>
+          <label class="chip"><input type="radio" name="device" value="iPhone"><span>iPhone</span></label>
+          <label class="chip"><input type="radio" name="device" value="Printer"><span>Printer</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>What’s wrong?</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="fault" value="Won't turn on" checked><span>Won’t turn on</span></label>
+          <label class="chip"><input type="radio" name="fault" value="Broken screen"><span>Broken screen</span></label>
+          <label class="chip"><input type="radio" name="fault" value="Battery or charging"><span>Battery or charging</span></label>
+          <label class="chip"><input type="radio" name="fault" value="Slow or freezing"><span>Slow or freezing</span></label>
+          <label class="chip"><input type="radio" name="fault" value="Something else"><span>Something else</span></label>
+        </div>
+      </fieldset>
+      <label class="field"><span>Model, if you know it</span><input type="text" name="model" placeholder="e.g. MacBook Air A2337" autocomplete="off"></label>
+    </form>
+
+    <div class="ticket" aria-live="polite">
+      <p class="ticket__head">Agile Tecnologia<br>Repair ticket</p>
+      <dl>
+        <div><dt>Device</dt><dd id="t-device">Laptop</dd></div>
+        <div><dt>Problem</dt><dd id="t-fault">Won’t turn on</dd></div>
+        <div><dt>Model</dt><dd id="t-model">not given</dd></div>
+        <div><dt>Status</dt><dd>Waiting for diagnosis</dd></div>
+      </dl>
+      <a class="btn btn--led" id="ticket-send" href="https://wa.me/5583991592048" target="_blank" rel="noopener">Send ticket on WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="steps" id="steps" aria-labelledby="steps-h">
+    <h2 id="steps-h">How a repair goes</h2>
+    <ol class="flow">
+      <li><h3>Diagnosis</h3><p>We open it up and find the fault.</p></li>
+      <li><h3>Quote</h3><p>You get the price before any work starts.</p></li>
+      <li><h3>Repair</h3><p>We fix it on the bench in room 108.</p></li>
+      <li><h3>Pick-up</h3><p>We message you when it’s ready.</p></li>
+    </ol>
+    <div class="photos">
+      <img src="img/laptop.webp" width="1024" height="765" alt="An opened laptop on a workbench with its screen hinge taken apart" loading="lazy">
+      <img src="img/board.webp" width="1024" height="683" alt="Close-up of a green circuit board with fresh solder joints" loading="lazy">
+      <img src="img/phone-kit.webp" width="1024" height="681" alt="A phone with its screen removed next to a small repair tool kit" loading="lazy">
+    </div>
+  </section>
+
+  <section class="sale" aria-labelledby="sale-h">
+    <h2 id="sale-h">Computers for sale</h2>
+    <p>Need a machine instead of a repair? Ask what’s in the shop this week.</p>
+    <a class="btn btn--line" href="https://wa.me/5583991592048?text=Hi%20Agile%2C%20which%20computers%20do%20you%20have%20for%20sale%20this%20week%3F" target="_blank" rel="noopener">Ask what’s for sale</a>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <div class="visit__grid">
+      <address>Rua João Quirino, 602, room 108<br>Catolé, Campina Grande – PB<br>58410-370</address>
+      <div>
+        <p>Monday to Friday, 8:30am to 5pm.</p>
+        <div class="visit__actions">
+          <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=-7.2350939,-35.8815166" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn--line" href="tel:+558333227181">Call (83) 3322-7181</a>
+          <a class="btn btn--line" href="https://www.instagram.com/agiletecnologiacg/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with Agile Tecnologia.</p>
+</footer>
+</body>
+</html>

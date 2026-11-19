@@ -1,0 +1,89 @@
+/* Dr Komal Verma: a quiet morning clinic. Paper ivory and neem green, a day dial
+   with the 10-to-2 window lit in turmeric and the sun at the real Pune time. */
+:root {
+  --ivory: #f6f1e7;
+  --white: #fffcf6;
+  --neem: #2f5d50;
+  --neem-soft: #dfe7e1;
+  --turmeric: #d9a21b;
+  --ink: #22302b;
+  --sand: #e2d6bf;
+  --muted: #5a625d;
+  --serif: "Literata", Georgia, serif;
+  --sans: "Hind", "Segoe UI", sans-serif;
+  --wide: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--ivory); color: var(--ink); font: 400 1.0625rem/1.6 var(--sans); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--neem); outline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; line-height: 1.15; margin: 0; }
+h2 { font-size: clamp(1.9rem, 4.5vw, 2.6rem); }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--neem); color: #fff; padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--neem); color: var(--ivory); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.4rem; border-radius: 24px; font: 500 1rem/1.2 var(--sans); text-decoration: none; border: 1.5px solid var(--ink); }
+.btn--turmeric { background: var(--turmeric); border-color: var(--turmeric); color: var(--ink); }
+.btn--turmeric:hover { background: #e6b234; }
+.btn--line { background: transparent; }
+.btn--line:hover { background: var(--white); }
+
+main { max-width: var(--wide); margin: 0 auto; }
+
+/* Hero with the day dial */
+.hero { display: grid; gap: 2rem; padding: 3rem 1rem; align-items: center; }
+.hero h1 { font-size: clamp(2.75rem, 9vw, 5rem); color: var(--neem); }
+.hero__role { font: 400 1.375rem/1.35 var(--serif); margin: .5rem 0 0; }
+.hero__lead { color: var(--muted); max-width: 28rem; margin: 1rem 0 1.75rem; }
+.dial { margin: 0; max-width: 26rem; width: 100%; justify-self: center; }
+.dial svg { width: 100%; height: auto; overflow: visible; }
+.dial__day { fill: none; stroke: var(--sand); stroke-width: 14; stroke-linecap: round; }
+.dial__open { fill: none; stroke: var(--turmeric); stroke-width: 14; stroke-linecap: round; }
+.dial__sun { fill: var(--white); stroke: var(--neem); stroke-width: 4; }
+.dial__sun.is-in { fill: var(--neem); }
+.dial__t { font: 500 14px/1 var(--sans); fill: var(--muted); }
+.dial__big { font: 400 34px/1 var(--serif); fill: var(--neem); }
+.dial figcaption { text-align: center; margin-top: .75rem; font-weight: 500; }
+
+/* Booking */
+.book { padding: 3rem 1rem; background: var(--white); }
+.book__lead { color: var(--muted); max-width: 32rem; margin: .75rem 0 1.5rem; }
+.book__form { max-width: 44rem; }
+fieldset { border: 0; padding: 0; margin: 0 0 1.25rem; }
+legend { font-weight: 600; margin-bottom: .6rem; }
+.opts { display: flex; flex-wrap: wrap; gap: .5rem; }
+.opt { position: relative; }
+.opt input { position: absolute; opacity: 0; inset: 0; margin: 0; width: 100%; height: 100%; cursor: pointer; }
+.opt span { display: inline-flex; align-items: center; min-height: 48px; padding: .4rem 1rem; border: 1.5px solid var(--sand); border-radius: 24px; background: var(--ivory); font-weight: 500; }
+.opt input:checked + span { background: var(--neem); color: #fff; border-color: var(--neem); }
+.opt input:focus-visible + span { outline: 3px solid var(--turmeric); outline-offset: 2px; }
+.field { display: grid; gap: .35rem; margin-bottom: 1.25rem; font-weight: 600; }
+.field input, .field textarea { font: 400 1rem/1.45 var(--sans); padding: .7rem .9rem; min-height: 48px; border: 1.5px solid var(--sand); border-radius: 10px; background: #fff; color: var(--ink); width: 100%; }
+.care { margin: 1.75rem 0 0; padding: .9rem 1rem; background: var(--neem-soft); border-radius: 10px; max-width: 44rem; font-size: .9375rem; }
+
+/* About */
+.about { display: grid; gap: 1.5rem; padding: 3rem 1rem; align-items: center; }
+.about__photo { margin: 0; }
+.about__photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px 80px 4px 4px; }
+.about__text > p { color: var(--muted); max-width: 30rem; margin: .75rem 0 1rem; }
+.sheet { margin: 0 0 1.5rem; }
+.sheet div { display: flex; justify-content: space-between; gap: 1rem; padding: .7rem 0; border-bottom: 1px solid var(--sand); }
+.sheet dt { font-weight: 600; }
+.sheet dd { margin: 0; text-align: right; }
+.about__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.lake { margin: 0; }
+.lake img { width: 100%; aspect-ratio: 21 / 8; object-fit: cover; object-position: 50% 65%; }
+.lake figcaption { padding: .4rem 1rem 0; font-size: .875rem; color: var(--muted); }
+
+.foot { padding: 1.5rem 1rem 2rem; font-size: .875rem; color: var(--muted); }
+.foot p { margin: .25rem 0; }
+
+@media (min-width: 768px) {
+  .hero { grid-template-columns: 1.1fr 1fr; padding: 4.5rem 2rem; }
+  .book, .about { padding-left: 2rem; padding-right: 2rem; }
+  .about { grid-template-columns: 1fr 1fr; }
+  .lake figcaption, .foot { padding-left: 2rem; padding-right: 2rem; }
+}

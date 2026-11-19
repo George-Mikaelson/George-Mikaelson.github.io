@@ -1,0 +1,87 @@
+/* Dainty Doll Eyelashes: a porcelain appointment card. One narrow centred column,
+   powder pink and porcelain, a mauve ink, the eye held in an oval cameo. */
+:root {
+  --porcelain: #fff8f5;
+  --powder: #f4d6d2;
+  --blush: #fae9e6;
+  --mauve: #5e3f4e;
+  --plum: #6d4c5c;
+  --rose: #c99a86;
+  --soft: #7d6470;
+  --display: "Bellefair", "Didot", Georgia, serif;
+  --text: "Questrial", "Segoe UI", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--porcelain); color: var(--mauve); font: 400 1rem/1.6 var(--text); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--plum); outline-offset: 4px; }
+h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.15; margin: 0; }
+h2 { font-size: clamp(2rem, 5vw, 2.75rem); text-align: center; }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--plum); color: var(--porcelain); padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--mauve); color: var(--porcelain); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.6rem; border-radius: 0; font: 400 1rem/1.2 var(--text); letter-spacing: .04em; text-decoration: none; border: 1px solid var(--plum); }
+.btn--plum { background: var(--plum); color: var(--porcelain); }
+.btn--plum:hover { background: var(--mauve); }
+.btn--plum[aria-disabled="true"] { background: #b7a3ad; border-color: #b7a3ad; }
+.btn--line { background: transparent; color: var(--plum); }
+.btn--line:hover { background: var(--blush); }
+
+.top { display: flex; align-items: center; justify-content: space-between; padding: .75rem 1rem; border-bottom: 1px solid var(--powder); }
+.top__name { font: 400 1.75rem/1.1 var(--display); text-decoration: none; }
+
+main { max-width: 44rem; margin: 0 auto; padding: 0 1rem; }
+section { padding: 3.5rem 0; border-bottom: 1px solid var(--powder); }
+
+/* Hero: the cameo */
+.hero { text-align: center; padding-top: 2.5rem; }
+.cameo { width: min(100%, 22rem); aspect-ratio: 4 / 5; margin: 0 auto 2rem; border-radius: 50%; overflow: hidden; border: 10px solid var(--powder); outline: 1px solid var(--rose); outline-offset: 6px; }
+.cameo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+.hero h1 { font-size: clamp(2.6rem, 9vw, 4.25rem); }
+.hero__lead { max-width: 30rem; margin: 1rem auto 1.75rem; font-size: 1.125rem; color: var(--soft); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+
+/* The week ruler */
+.lasts__lead { text-align: center; max-width: 32rem; margin: 1rem auto 2.5rem; color: var(--soft); }
+.ruler { position: relative; padding: 2.25rem 0 2.5rem; }
+.ruler__curl { position: absolute; left: 0; width: 70%; top: 2.25rem; height: 14px; background: var(--powder); border-radius: 0 7px 7px 0; }
+.ruler__fade { position: absolute; left: 60%; width: 20%; top: 2.25rem; height: 14px; background: linear-gradient(90deg, var(--rose), rgba(201,154,134,0)); }
+.ruler__weeks { list-style: none; margin: 0; padding: 22px 0 0; display: flex; justify-content: space-between; border-top: 1px solid var(--plum); position: relative; top: 14px; }
+.ruler__weeks li { position: relative; font-size: .875rem; width: 1.5rem; margin: 0 -.75rem; text-align: center; }
+.ruler__weeks li::before { content: ""; position: absolute; left: 50%; top: -22px; height: 10px; border-left: 1px solid var(--plum); }
+.ruler__a, .ruler__b { position: absolute; top: 0; margin: 0; font-size: .875rem; }
+.ruler__a { left: 0; }
+.ruler__b { left: 60%; }
+
+/* Treatments */
+.menu__list { margin: 2rem 0; }
+.menu__item { padding: 1.25rem 0; border-top: 1px solid var(--powder); }
+.menu__item dt { font: 400 1.5rem/1.2 var(--display); }
+.menu__item dd { margin: .35rem 0 0; }
+.menu__price { color: var(--soft); font-size: .875rem; }
+.results { margin: 0; }
+.results img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.results figcaption { margin-top: .6rem; font-size: .875rem; color: var(--soft); text-align: center; }
+
+/* Booking */
+.book__lead { text-align: center; color: var(--soft); max-width: 32rem; margin: 1rem auto 2rem; }
+.book__form { background: var(--blush); padding: 1.5rem; }
+fieldset { border: 0; margin: 0 0 1.25rem; padding: 0; }
+legend { font: 400 1.25rem/1.2 var(--display); margin-bottom: .6rem; }
+.picks { display: flex; flex-wrap: wrap; gap: .5rem; }
+.pick { min-height: 48px; min-width: 64px; padding: .4rem .8rem; font: 400 .875rem/1.25 var(--text); color: var(--mauve); background: var(--porcelain); border: 1px solid var(--rose); border-radius: 0; cursor: pointer; text-align: center; }
+.pick[aria-pressed="true"] { background: var(--plum); color: var(--porcelain); border-color: var(--plum); }
+.pick:hover { border-color: var(--plum); }
+.field { display: grid; gap: .35rem; margin-bottom: 1rem; }
+.field input { font: 400 1rem/1.4 var(--text); color: var(--mauve); padding: .7rem .8rem; min-height: 48px; border: 1px solid var(--rose); border-radius: 0; background: var(--porcelain); }
+.book__summary { font-size: .875rem; margin: 0 0 1rem; }
+
+/* Visit */
+.visit { text-align: center; border-bottom: 0; }
+.visit address { font: 400 1.5rem/1.3 var(--display); font-style: normal; margin: 1rem 0; }
+.visit__actions { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; margin-top: 1.25rem; }
+
+.foot { padding: 1.5rem 1rem 2rem; text-align: center; font-size: .875rem; color: var(--soft); border-top: 1px solid var(--powder); }
+.foot p { margin: .25rem 0; }

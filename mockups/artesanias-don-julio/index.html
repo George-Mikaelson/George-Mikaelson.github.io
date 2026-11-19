@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artesanías Don Julio | Crafts and guided hikes in Berlín, Usulután</title>
+<meta name="description" content="Handmade crafts by the main square of Berlín, El Salvador, and guided hikes with Don Julio to the volcanoes and lagoons around town.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bevan&amp;family=Cabin:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for Artesanías Don Julio — not affiliated</p>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <h1 id="hero-h">Artesanías Don Julio</h1>
+    <p class="hero__lead">Two things, one man, in Berlín, Usulután.</p>
+    <div class="paths">
+      <a class="path path--shop" href="#shop">
+        <img src="img/berlin.webp" width="1400" height="786" alt="A yellow colonial building with arches in the historic centre of Berlín" fetchpriority="high">
+        <span class="path__text"><span class="path__title">The shop</span><span>Handmade crafts by the main square</span></span>
+      </a>
+      <a class="path path--trail" href="#trail">
+        <svg class="contours" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <path d="M-20 250 C80 200 120 230 200 180 S330 120 420 150"/>
+          <path d="M-20 215 C70 170 130 195 200 148 S320 92 420 118"/>
+          <path d="M-20 180 C60 140 140 160 205 115 S310 64 420 86"/>
+          <path d="M40 150 C100 110 160 125 210 85 S290 40 360 52"/>
+          <path d="M110 118 C150 92 190 98 220 66 S270 30 310 34"/>
+          <path d="M170 86 C200 70 215 70 232 50 S258 30 280 30"/>
+        </svg>
+        <span class="path__text"><span class="path__title">The trail</span><span>Guided hikes to the volcanoes and lagoons</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="shop" id="shop" aria-labelledby="shop-h">
+    <div class="shop__text">
+      <h2 id="shop-h">The shop on the square</h2>
+      <p>Don Julio sells colourful handmade pieces from his shop on Berlín’s main square. The town is known for crafts made from wood, seeds and natural fibres.</p>
+      <a class="btn btn--clay" id="ask-craft" href="https://wa.me/50375391876" target="_blank" rel="noopener">Ask about a piece</a>
+    </div>
+    <div class="shop__photos">
+      <img src="img/carving.webp" width="1024" height="683" alt="Carved wooden figures with a warm polished finish" loading="lazy">
+      <img src="img/tools.webp" width="1024" height="681" alt="A row of wood-carving chisels with worn handles" loading="lazy">
+    </div>
+  </section>
+
+  <section class="trail" id="trail" aria-labelledby="trail-h">
+    <div class="trail__photo">
+      <img src="img/laguna.webp" width="1400" height="1050" alt="Laguna de Alegría, a green crater lake surrounded by forested slopes" loading="lazy">
+      <p>Laguna de Alegría, a crater lake near Berlín.</p>
+    </div>
+    <div class="trail__plan">
+      <h2 id="trail-h">Hike with Don Julio</h2>
+      <p>He knows the paths up the volcanoes and down to the lagoons around Berlín. Tell him your day and your pace and he’ll suggest a route.</p>
+      <form class="plan" id="plan" novalidate>
+        <div class="plan__row">
+          <label class="field"><span>Day</span><input type="date" name="day" id="day"></label>
+          <label class="field"><span>People</span><input type="number" name="people" min="1" max="20" value="2" inputmode="numeric"></label>
+        </div>
+        <fieldset>
+          <legend>Your pace</legend>
+          <div class="pace">
+            <label><input type="radio" name="pace" value="an easy walk" checked><span>Easy walk</span></label>
+            <label><input type="radio" name="pace" value="a steady half day"><span>Steady half day</span></label>
+            <label><input type="radio" name="pace" value="a long, steep day"><span>Long and steep</span></label>
+          </div>
+        </fieldset>
+        <a class="btn btn--sun" id="plan-send" href="https://wa.me/50375391876" target="_blank" rel="noopener">Plan it on WhatsApp</a>
+      </form>
+    </div>
+  </section>
+
+  <section class="coffee" aria-labelledby="coffee-h">
+    <img src="img/coffee.webp" width="1040" height="580" alt="An old black and white photo of workers raking coffee to dry on a plantation patio in El Salvador" loading="lazy">
+    <div class="coffee__text">
+      <h2 id="coffee-h">Coffee country</h2>
+      <p>Berlín sits in the coffee highlands of Usulután, among farms, volcanoes and crater lakes.</p>
+    </div>
+  </section>
+
+  <section class="find" aria-labelledby="find-h">
+    <h2 id="find-h">Find the shop</h2>
+    <p>Calle Dr. Antonio Guandique Poniente, by the central square of Berlín, Usulután. Message Don Julio for today’s opening times.</p>
+    <div class="find__actions">
+      <a class="btn btn--clay" href="https://www.google.com/maps/dir/?api=1&amp;destination=13.4983779,-88.5307147" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn btn--line" href="tel:+50375391876">Call 7539 1876</a>
+      <a class="btn btn--line" href="https://www.facebook.com/people/Artesan%C3%ADas-Don-Julio/100064831053125/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with Artesanías Don Julio.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Airborn Paddling | Stand-up paddle on the Ōtākaro Avon, Christchurch</title>
+<meta name="description" content="Stand-up paddleboarding in central Christchurch: lessons, city crossings, calm morning paddles and evening sessions on the Ōtākaro Avon River.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&amp;family=Saira+Extra+Condensed:wght@500;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for Airborn Paddling — not affiliated</p>
+
+<header class="top">
+  <a class="top__name" href="#main">Airborn Paddling</a>
+  <nav class="top__nav" aria-label="Main">
+    <a href="#route">The river</a>
+    <a href="#sessions">Sessions</a>
+    <a class="btn btn--jacket" href="#book">Book a paddle</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <img class="hero__img" src="img/avon.webp" width="1024" height="768" alt="Willows hanging over the Avon River as it winds through central Christchurch" fetchpriority="high">
+    <div class="hero__text">
+      <h1 id="hero-h">See Christchurch from the water</h1>
+      <p>Stand-up paddleboarding on the Ōtākaro Avon, right through the middle of the city.</p>
+      <a class="btn btn--jacket" href="#book">Book a paddle</a>
+    </div>
+    <svg class="hero__water" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30 C150 5 300 55 450 30 S750 5 900 30 S1100 50 1200 25 V60 H0 Z"/></svg>
+  </section>
+
+  <section class="route" id="route" aria-labelledby="route-h">
+    <h2 id="route-h">Where you get on the water</h2>
+    <p class="route__lead">Two launch points on the river. Tell us which one suits you when you book.</p>
+    <div class="route__map">
+      <svg class="route__river" viewBox="0 0 120 600" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M60 0 C10 90 110 160 60 250 S10 420 70 480 S50 560 60 600"/></svg>
+      <ol class="stops">
+        <li class="stop">
+          <h3>Botanic Gardens</h3>
+          <p>Launch beside the gardens, among the willows and the ducks.</p>
+          <a class="link" href="https://www.openstreetmap.org/search?query=Christchurch%20Botanic%20Gardens" target="_blank" rel="noopener">Find it on the map</a>
+        </li>
+        <li class="stop">
+          <h3>Through the central city</h3>
+          <p>Under the bridges and past the city on a crossing from one end to the other.</p>
+        </li>
+        <li class="stop">
+          <h3>Avon Loop ramp, Kilmore Street</h3>
+          <p>The ramp on the Avon Loop, a short walk from the centre.</p>
+          <a class="link" href="https://www.openstreetmap.org/search?query=Kilmore%20Street%20Christchurch" target="_blank" rel="noopener">Find it on the map</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sessions" id="sessions" aria-labelledby="sessions-h">
+    <h2 id="sessions-h">Four ways onto the river</h2>
+    <ul class="boards">
+      <li class="board"><h3>Learn the basics</h3><p>A first lesson: standing up, paddling straight, turning, and getting back on.</p></li>
+      <li class="board"><h3>Cross the city</h3><p>The long one. Paddle across Christchurch on the river.</p></li>
+      <li class="board"><h3>Morning mission</h3><p>Out early, while the water is at its calmest.</p></li>
+      <li class="board"><h3>Evening paddle</h3><p>End the day on the river as the city lights come on.</p></li>
+    </ul>
+    <figure class="sessions__photos">
+      <img src="img/paddler.webp" width="1023" height="682" alt="A paddler in a life jacket standing on a board on flat water" loading="lazy">
+      <img src="img/pair.webp" width="1024" height="683" alt="Two paddleboarders crossing clear green water" loading="lazy">
+    </figure>
+    <p class="note">Prices and session times change with the season. Ask for this week’s when you book.</p>
+  </section>
+
+  <section class="book" id="book" aria-labelledby="book-h">
+    <div class="book__intro">
+      <h2 id="book-h">Book a paddle</h2>
+      <p>Fill this in and your email app opens with the booking request ready to send. We reply to confirm the time and launch point.</p>
+    </div>
+    <form class="book__form" id="book-form" novalidate>
+      <label class="field"><span>Session</span>
+        <select name="session">
+          <option>Learn the basics</option>
+          <option>Cross the city</option>
+          <option>Morning mission</option>
+          <option>Evening paddle</option>
+        </select>
+      </label>
+      <label class="field"><span>Day</span><input type="date" name="day" id="day" required></label>
+      <div class="pair">
+        <label class="field"><span>Adults</span><input type="number" name="adults" min="0" max="20" value="1" inputmode="numeric"></label>
+        <label class="field"><span>Kids</span><input type="number" name="kids" min="0" max="20" value="0" inputmode="numeric"></label>
+      </div>
+      <label class="field"><span>Launch point</span>
+        <select name="launch">
+          <option>Botanic Gardens</option>
+          <option>Avon Loop ramp, Kilmore Street</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+      <p class="error" id="day-error" role="alert" hidden>Pick a day for your paddle.</p>
+      <a class="btn btn--jacket" id="book-send" href="mailto:airbornpaddling@gmail.com">Send booking request</a>
+    </form>
+  </section>
+
+  <section class="then" aria-labelledby="then-h">
+    <img src="img/avon-1920s.webp" width="1024" height="658" alt="A black and white photo of the Avon River and its willows in the 1920s" loading="lazy">
+    <div class="then__text">
+      <h2 id="then-h">The same river, a hundred years ago</h2>
+      <p>People have boated on the Avon for well over a century. The willows are still there.</p>
+      <a class="btn btn--line" href="https://www.facebook.com/airbornpaddling/" target="_blank" rel="noopener">Follow on Facebook</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with Airborn Paddling.</p>
+</footer>
+</body>
+</html>

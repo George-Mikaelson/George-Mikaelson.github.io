@@ -1,0 +1,103 @@
+/* Artesanías Don Julio: two paths from one door. The shop (cream, clay) and the trail
+   (coffee-farm green with contour lines). Bevan like a hand-painted shop sign. */
+:root {
+  --cream: #f4ecdd;
+  --white: #fffaf2;
+  --farm: #2e4a2f;
+  --farm-2: #3b5c3b;
+  --clay: #c0622d;
+  --clay-dark: #9b4a1f;
+  --parrot: #8dc63f;
+  --sun: #f2c14e;
+  --ink: #20231c;
+  --muted: #5b5a4d;
+  --sign: "Bevan", Georgia, serif;
+  --text: "Cabin", "Segoe UI", sans-serif;
+  --wide: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--cream); color: var(--ink); font: 400 1rem/1.6 var(--text); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--clay); outline-offset: 3px; }
+h1, h2 { font-family: var(--sign); font-weight: 400; line-height: 1.15; margin: 0; }
+h2 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--clay); color: #fff; padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--farm); color: var(--cream); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.3rem; border-radius: 6px; font: 600 1rem/1.2 var(--text); text-decoration: none; border: 2px solid transparent; }
+.btn--clay { background: var(--clay); color: #fff; }
+.btn--clay:hover { background: var(--clay-dark); }
+.btn--sun { background: var(--sun); color: var(--ink); }
+.btn--sun:hover { background: #f7d16f; }
+.btn--line { border-color: var(--ink); }
+.btn--line:hover { background: var(--ink); color: var(--white); }
+
+main { max-width: var(--wide); margin: 0 auto; }
+
+/* Hero: sign name over two doors */
+.hero { padding: 2.5rem 1rem 3rem; text-align: center; }
+.hero h1 { font-size: clamp(2.4rem, 9vw, 5.5rem); color: var(--farm); }
+.hero__lead { margin: .75rem 0 2rem; font-size: 1.25rem; }
+.paths { display: grid; gap: 1rem; text-align: left; }
+.path { position: relative; display: block; min-height: 17rem; overflow: hidden; border-radius: 8px; text-decoration: none; }
+.path img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.path--shop::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(32,35,28,0) 40%, rgba(32,35,28,.75)); }
+.path--trail { background: var(--farm); }
+.contours { position: absolute; inset: 0; width: 100%; height: 100%; }
+.contours path { fill: none; stroke: var(--parrot); stroke-width: 1.6; opacity: .55; }
+.path__text { position: absolute; left: 1.25rem; right: 1.25rem; bottom: 1.25rem; z-index: 1; color: var(--white); display: grid; gap: .25rem; font-size: 1.125rem; }
+.path__title { font: 400 2.25rem/1.15 var(--sign); }
+.path:hover .path__title, .path:focus-visible .path__title { text-decoration: underline; text-underline-offset: 6px; }
+
+/* Shop */
+.shop { display: grid; gap: 1.5rem; padding: 3rem 1rem; background: var(--white); }
+.shop__text p { max-width: 32rem; margin: .75rem 0 1.5rem; }
+.shop__photos { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.shop__photos img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; }
+
+/* Trail */
+.trail { display: grid; background: var(--farm); color: var(--cream); }
+.trail__photo { position: relative; }
+.trail__photo img { width: 100%; height: 100%; min-height: 16rem; object-fit: cover; }
+.trail__photo p { position: absolute; left: .75rem; bottom: .75rem; margin: 0; padding: .3rem .6rem; background: rgba(32,35,28,.8); font-size: .875rem; border-radius: 4px; }
+.trail__plan { padding: 2.5rem 1rem 3rem; }
+.trail__plan > p { max-width: 30rem; margin: .75rem 0 1.5rem; }
+.plan__row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; }
+.field { display: grid; gap: .35rem; margin-bottom: 1.25rem; font-weight: 600; }
+.field input { font: 400 1rem/1.4 var(--text); padding: .7rem .8rem; min-height: 48px; border: 2px solid var(--farm-2); border-radius: 6px; background: var(--white); color: var(--ink); width: 100%; }
+fieldset { border: 0; padding: 0; margin: 0 0 1.5rem; }
+legend { font-weight: 600; margin-bottom: .6rem; }
+.pace { display: flex; flex-wrap: wrap; gap: .5rem; }
+.pace label { position: relative; }
+.pace input { position: absolute; opacity: 0; inset: 0; margin: 0; width: 100%; height: 100%; cursor: pointer; }
+.pace span { display: inline-flex; align-items: center; min-height: 48px; padding: .5rem 1rem; border: 2px solid var(--parrot); border-radius: 6px; font-weight: 500; }
+.pace input:checked + span { background: var(--parrot); color: var(--ink); }
+.pace input:focus-visible + span { outline: 3px solid var(--sun); outline-offset: 2px; }
+
+/* Coffee */
+.coffee { display: grid; }
+.coffee img { width: 100%; height: 100%; min-height: 14rem; object-fit: cover; }
+.coffee__text { padding: 2.5rem 1rem; background: var(--clay); color: var(--white); }
+.coffee__text p { max-width: 28rem; margin: .75rem 0 0; font-size: 1.125rem; }
+
+.find { padding: 3rem 1rem; }
+.find p { max-width: 34rem; margin: .75rem 0 1.25rem; }
+.find__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.foot { padding: 1.5rem 1rem 2rem; font-size: .875rem; color: var(--muted); border-top: 1px solid #ddd0b8; }
+.foot p { margin: .25rem 0; }
+
+@media (min-width: 768px) {
+  .hero { padding: 3.5rem 2rem 4rem; }
+  .paths { grid-template-columns: 1fr 1fr; }
+  .path { min-height: 24rem; }
+  .shop { grid-template-columns: 1fr 1.2fr; align-items: center; padding: 4rem 2rem; }
+  .trail { grid-template-columns: 1fr 1fr; }
+  .trail__plan { padding: 3.5rem 2rem; }
+  .coffee { grid-template-columns: 1.4fr 1fr; }
+  .coffee__text { padding: 3rem 2rem; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+  .find { padding-left: 2rem; padding-right: 2rem; }
+  .foot { padding-left: 2rem; padding-right: 2rem; }
+}
