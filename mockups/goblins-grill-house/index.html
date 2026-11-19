@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goblin’s Grill House | Grill restaurant in San Nicolas, Castillejos, Zambales</title>
+<meta name="description" content="Goblin’s Grill House, a grill restaurant in Purok 7, San Nicolas, Castillejos, Zambales. Book a table or ask about a group night by email.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600&amp;family=Work+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for Goblin’s Grill House — not affiliated</p>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <img class="hero__img" src="img/liempo.webp" width="1024" height="768" alt="Pieces of pork belly grilling over charcoal" fetchpriority="high">
+    <div class="hero__text">
+      <h1 id="hero-h"><span class="mark">Goblin’s</span> Grill House</h1>
+      <p>A grill restaurant in Purok 7, San Nicolas, Castillejos, Zambales.</p>
+      <div class="actions">
+        <a class="btn btn--ember" href="#table">Book a table</a>
+        <a class="btn btn--ghost" href="#find">Find us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="board" aria-labelledby="board-h">
+    <h2 id="board-h">From the grill</h2>
+    <p class="board__note">Your menu goes on this board, with prices in pesos.</p>
+    <ul class="slate" aria-label="Menu placeholder">
+      <li><span>Your grill dish</span><span class="dots" aria-hidden="true"></span><span>₱</span></li>
+      <li><span>Your grill dish</span><span class="dots" aria-hidden="true"></span><span>₱</span></li>
+      <li><span>Rice and sides</span><span class="dots" aria-hidden="true"></span><span>₱</span></li>
+      <li><span>Drinks</span><span class="dots" aria-hidden="true"></span><span>₱</span></li>
+    </ul>
+  </section>
+
+  <section class="groups" aria-labelledby="groups-h">
+    <div class="groups__text">
+      <h2 id="groups-h">Bring the barkada</h2>
+      <p>The grill house has hosted community gatherings. Planning a birthday, a team dinner or a class night? Tell us the date and how many are coming.</p>
+    </div>
+  </section>
+
+  <section class="table" id="table" aria-labelledby="table-h">
+    <div class="table__card">
+      <h2 id="table-h">Book a table</h2>
+      <p class="table__lead">Your email app opens with the booking written out.</p>
+      <form id="table-form" novalidate>
+        <div class="row">
+          <label class="field"><span>Date</span><input type="date" id="day"></label>
+          <label class="field"><span>People</span><input type="number" id="people" min="1" max="80" value="4" inputmode="numeric"></label>
+        </div>
+        <fieldset class="field">
+          <legend>When</legend>
+          <div class="when">
+            <label><input type="radio" name="when" value="lunch" checked><span>Lunch</span></label>
+            <label><input type="radio" name="when" value="dinner"><span>Dinner</span></label>
+          </div>
+        </fieldset>
+        <label class="check"><input type="checkbox" id="event"> <span>It’s a group event</span></label>
+        <p class="hint" id="hint" aria-live="polite">Pick a date to continue.</p>
+        <a class="btn btn--ember" id="send" href="mailto:cathybasa3@gmail.com" aria-disabled="true">Email the booking</a>
+      </form>
+    </div>
+    <figure class="table__photo" id="find">
+      <img src="img/zambales.webp" width="1024" height="678" alt="The Zambales mountains under low cloud" loading="lazy">
+      <figcaption>The Zambales mountains. Photos of the grill house go here.</figcaption>
+      <div class="find">
+        <h3>Find us</h3>
+        <p>Purok 7, San Nicolas, Castillejos, Zambales.</p>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=14.9287971,120.2051269" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </figure>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with Goblin’s Grill House.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Granel | Bulk healthy food by weight, San Martín 47, Bella Vista, Tucumán</title>
+<meta name="description" content="A Granel sells healthy food loose, by weight, at San Martín 47 in Bella Vista, Tucumán. Write your shopping list here and send it on WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for A Granel, Tienda de Alimentos Saludables — not affiliated</p>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero__text">
+      <p class="brand">A Granel</p>
+      <h1 id="hero-h">Healthy food, sold by weight</h1>
+      <p class="lead">A bulk food shop at San Martín 47, Bella Vista, Tucumán. Buy as much or as little as you need.</p>
+      <a class="btn btn--olive" href="#list">Write my list</a>
+    </div>
+    <figure class="hero__photo">
+      <img src="img/nuts.webp" width="1024" height="683" alt="Bowls of almonds, dried apricots and other dried fruit and nuts at a market stall" fetchpriority="high">
+      <figcaption>Sample photo. Your shelves go here.</figcaption>
+    </figure>
+  </section>
+
+  <section class="shelf" aria-labelledby="shelf-h">
+    <h2 id="shelf-h">On the shelves</h2>
+    <p class="shelf__note">The usual families of a bulk shop. Your real list, with prices per kilo, goes here.</p>
+    <ul class="jars">
+      <li><span class="jar__name">Nuts and dried fruit</span></li>
+      <li><span class="jar__name">Seeds</span></li>
+      <li><span class="jar__name">Pulses</span></li>
+      <li><span class="jar__name">Flours</span></li>
+      <li><span class="jar__name">Grains and cereals</span></li>
+      <li><span class="jar__name">Spices</span></li>
+    </ul>
+  </section>
+
+  <section class="list" id="list" aria-labelledby="list-h">
+    <div class="list__form">
+      <h2 id="list-h">Write your list</h2>
+      <p>Add what you want and how much. Send it on WhatsApp and pick it up at the shop.</p>
+      <form id="add-form" novalidate>
+        <label class="field"><span>Product</span><input type="text" id="item" placeholder="Almonds, oats, lentils…" autocomplete="off"></label>
+        <fieldset class="field">
+          <legend>Amount</legend>
+          <div class="weights">
+            <label><input type="radio" name="w" value="100 g"><span>100 g</span></label>
+            <label><input type="radio" name="w" value="250 g" checked><span>250 g</span></label>
+            <label><input type="radio" name="w" value="500 g"><span>500 g</span></label>
+            <label><input type="radio" name="w" value="1 kg"><span>1 kg</span></label>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn--line">Add to my list</button>
+        <p class="error" id="error" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="receipt" aria-labelledby="receipt-h">
+      <h3 id="receipt-h">My list</h3>
+      <ol id="lines" class="lines"></ol>
+      <p class="empty" id="empty">Nothing yet. Add your first product.</p>
+      <a class="btn btn--olive" id="send" href="https://wa.me/5493813365504" target="_blank" rel="noopener" aria-disabled="true">Send on WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit the shop</h2>
+    <p>San Martín 47, Bella Vista, Tucumán (CP 4168).</p>
+    <p>Opening hours: ask on WhatsApp, <a href="tel:+5493813365504">+54 9 381 336-5504</a>.</p>
+    <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=-27.0310297,-65.3051479" target="_blank" rel="noopener">Get directions</a>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with A Granel.</p>
+</footer>
+</body>
+</html>

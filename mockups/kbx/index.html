@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KBX | Ads, ideas, writing, design and video from Surat</title>
+<meta name="description" content="KBX is a creative studio in Surat for ads, ideas, writing, design and video. Pick what you need and send a brief.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for KBX Ads + Ideas + Writing + Design + Video — not affiliated</p>
+
+<header class="top">
+  <a class="top__name" href="#main">KBX</a>
+  <p class="top__clock" id="clock">Surat, India</p>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <h1 id="hero-h" class="sr">KBX: ads, ideas, writing, design and video</h1>
+    <p class="pick-lead">What do you need? Tap one or more.</p>
+    <div class="words" role="group" aria-label="Services">
+      <button type="button" class="word" aria-pressed="false" data-s="ads">Ads</button><span class="plus" aria-hidden="true">+</span>
+      <button type="button" class="word" aria-pressed="false" data-s="ideas">Ideas</button><span class="plus" aria-hidden="true">+</span>
+      <button type="button" class="word" aria-pressed="false" data-s="writing">Writing</button><span class="plus" aria-hidden="true">+</span>
+      <button type="button" class="word" aria-pressed="false" data-s="design">Design</button><span class="plus" aria-hidden="true">+</span>
+      <button type="button" class="word" aria-pressed="false" data-s="video">Video</button>
+    </div>
+    <p class="picked" id="picked" aria-live="polite">Nothing picked yet.</p>
+    <a class="btn btn--ink" href="#brief">Send a brief</a>
+  </section>
+
+  <section class="what" aria-labelledby="what-h">
+    <h2 id="what-h">Five things, one studio</h2>
+    <dl class="defs">
+      <div data-s="ads"><dt>Ads</dt><dd>Campaigns for print, outdoor and social.</dd></div>
+      <div data-s="ideas"><dt>Ideas</dt><dd>The thought a campaign hangs on, before anything is made.</dd></div>
+      <div data-s="writing"><dt>Writing</dt><dd>Headlines, scripts, websites and the words on packs.</dd></div>
+      <div data-s="design"><dt>Design</dt><dd>Layouts, identities and the look that carries the words.</dd></div>
+      <div data-s="video"><dt>Video</dt><dd>Short films and edits for screens of every size.</dd></div>
+    </dl>
+    <p class="work-note">Case studies go here: the problem, the idea, the result, one per screen.</p>
+  </section>
+
+  <section class="city" aria-labelledby="city-h">
+    <figure>
+      <img src="img/surat.webp" width="1000" height="1250" alt="Sunset over the rooftops and towers of Surat" loading="lazy">
+    </figure>
+    <div class="city__text">
+      <h2 id="city-h">From Surat, for anywhere</h2>
+      <p>The studio lists itself as open around the clock, so a brief can come in from any time zone.</p>
+    </div>
+  </section>
+
+  <section class="brief" id="brief" aria-labelledby="brief-h">
+    <h2 id="brief-h">Send a brief</h2>
+    <form id="brief-form" novalidate>
+      <p class="brief__picked" id="brief-picked">You need: pick at the top, or just describe it.</p>
+      <label class="field"><span>What is it for?</span><textarea id="about" rows="4" placeholder="A launch ad for a new sari collection, print and Instagram."></textarea></label>
+      <label class="field"><span>When do you need it?</span>
+        <select id="when"><option>No fixed date</option><option>This week</option><option>This month</option><option>Next month or later</option></select>
+      </label>
+      <p class="error" id="error" aria-live="polite"></p>
+      <button class="btn btn--ink" type="submit">Email the brief</button>
+      <p class="alt">Or call <a href="tel:+919408710492">+91 94087 10492</a>.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with KBX.</p>
+</footer>
+</body>
+</html>

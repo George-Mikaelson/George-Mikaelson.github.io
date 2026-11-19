@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maidment’s Meat Service | Family butcher, 15 Dawson Street, Strathalbyn</title>
+<meta name="description" content="Maidment’s Meat Service, the Maidment family’s butcher shop at 15 Dawson Street, Strathalbyn SA. Write your order and pick it up.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for Maidment’s Meat Service — not affiliated</p>
+
+<header class="top">
+  <a class="top__name" href="#main">Maidment’s</a>
+  <a class="btn btn--red" href="tel:+61885362618">Call (08) 8536 2618</a>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="tiles" aria-hidden="true"></div>
+    <div class="sign">
+      <p class="sign__small">The Maidment family</p>
+      <h1 id="hero-h">Maidment’s Meat Service</h1>
+      <p class="sign__addr">Butchers, 15 Dawson Street, Strathalbyn</p>
+    </div>
+    <div class="hero__cta">
+      <a class="btn btn--red" href="#order">Order ahead</a>
+      <a class="btn btn--line" href="#visit">Find the shop</a>
+    </div>
+  </section>
+
+  <section class="counter" aria-labelledby="counter-h">
+    <figure class="counter__photo">
+      <img src="img/chops.webp" width="1024" height="681" alt="Three thick raw pork chops on a wooden board" loading="lazy">
+      <figcaption>Sample photo. Your counter and cuts go here.</figcaption>
+    </figure>
+    <div class="counter__text">
+      <h2 id="counter-h">Across the counter</h2>
+      <p>A family butcher on Dawson Street, run by the Maidments. When you order, say what you’re cooking and how many you’re feeding.</p>
+      <p class="pay">Cash, credit and debit cards accepted.</p>
+    </div>
+  </section>
+
+  <section class="order" id="order" aria-labelledby="order-h">
+    <h2 id="order-h">Order ahead</h2>
+    <p class="order__lead">Tap what you need, add the amount, then send it by email or read it out over the phone.</p>
+    <form id="order-form" novalidate>
+      <div class="tickets" role="group" aria-label="What you need">
+        <button type="button" class="ticket" aria-pressed="false">Beef</button>
+        <button type="button" class="ticket" aria-pressed="false">Lamb</button>
+        <button type="button" class="ticket" aria-pressed="false">Pork</button>
+        <button type="button" class="ticket" aria-pressed="false">Chicken</button>
+        <button type="button" class="ticket" aria-pressed="false">Sausages</button>
+        <button type="button" class="ticket" aria-pressed="false">Mince</button>
+      </div>
+      <div id="amounts" class="amounts"></div>
+      <div class="row">
+        <label class="field"><span>Pickup day</span><input type="date" id="day"></label>
+        <label class="field"><span>Your name</span><input type="text" id="name" autocomplete="name"></label>
+      </div>
+      <p class="hint" id="hint" aria-live="polite">Tap at least one item.</p>
+      <div class="actions">
+        <a class="btn btn--red" id="send" href="mailto:maidmentsmeats@gmail.com" aria-disabled="true">Email my order</a>
+        <a class="btn btn--line" href="tel:+61885362618">Or call the shop</a>
+      </div>
+    </form>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="visit__text">
+      <h2 id="visit-h">Find the shop</h2>
+      <p>15 Dawson Street, Strathalbyn SA 5255.</p>
+      <p>Call for this week’s opening hours.</p>
+      <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=-35.2598563,138.8910581" target="_blank" rel="noopener">Get directions</a>
+    </div>
+    <figure class="visit__photo">
+      <img src="img/strathalbyn.webp" width="1400" height="1050" alt="The Angas River and its footbridge in Strathalbyn’s memorial gardens" loading="lazy">
+      <figcaption>The Angas River in Strathalbyn.</figcaption>
+    </figure>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with Maidment’s Meat Service.</p>
+</footer>
+</body>
+</html>

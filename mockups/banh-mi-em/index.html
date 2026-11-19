@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bánh Mì EM | Vietnamese sandwiches and iced coffee, 150 Lichfield Street, Christchurch</title>
+<meta name="description" content="Bánh mì and Vietnamese iced coffee on Lichfield Street, Christchurch Central. Order ahead by text and pick up on your lunch break.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for Bánh Mì EM — not affiliated</p>
+
+<header class="top">
+  <a class="top__name" href="#main">Bánh Mì EM</a>
+  <p class="top__status" id="status" aria-live="polite">Mon–Fri 10–5:30, Sat 10–3:30</p>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero__text">
+      <h1 id="hero-h">Bánh mì on Lichfield Street</h1>
+      <p>Vietnamese sandwiches and iced coffee at 150 Lichfield Street, Christchurch Central. Text your order, then walk in and pick it up.</p>
+      <a class="btn btn--carrot" href="#order">Order ahead</a>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <span class="layer layer--crust-top"></span>
+      <span class="layer layer--herb"></span>
+      <span class="layer layer--carrot"></span>
+      <span class="layer layer--cucumber"></span>
+      <span class="layer layer--filling"></span>
+      <span class="layer layer--crust-bottom"></span>
+    </div>
+  </section>
+
+  <section class="menu" aria-labelledby="menu-h">
+    <h2 id="menu-h">At the counter</h2>
+    <div class="menu__grid">
+      <figure class="item">
+        <img src="img/banh-mi.webp" width="1024" height="680" alt="A bánh mì cut open, with sliced meat, pickled vegetables and fresh herbs in a crusty roll" loading="lazy">
+        <figcaption><strong>Bánh mì</strong><span>Crusty roll, fillings, pickles and herbs. Your fillings and prices go here.</span></figcaption>
+      </figure>
+      <figure class="item">
+        <img src="img/ca-phe.webp" width="900" height="1125" alt="A glass of Vietnamese coffee with condensed milk over ice" loading="lazy">
+        <figcaption><strong>Cà phê sữa đá</strong><span>Vietnamese iced coffee with condensed milk.</span></figcaption>
+      </figure>
+    </div>
+    <blockquote class="said">
+      <p>“Great bread rolls and iced coffee!”</p>
+      <footer>A customer, November 2025</footer>
+    </blockquote>
+  </section>
+
+  <section class="order" id="order" aria-labelledby="order-h">
+    <div class="ticket">
+      <h2 id="order-h">Order ahead</h2>
+      <p class="ticket__lead">Choose what you want and when you’ll pick it up. Your text app opens with the order written out.</p>
+      <form id="order-form" novalidate>
+        <div class="qty">
+          <span class="qty__name">Bánh mì</span>
+          <button type="button" class="step" data-for="bm" data-d="-1" aria-label="One less bánh mì">−</button>
+          <output id="bm" aria-live="polite">1</output>
+          <button type="button" class="step" data-for="bm" data-d="1" aria-label="One more bánh mì">+</button>
+        </div>
+        <div class="qty">
+          <span class="qty__name">Iced coffee</span>
+          <button type="button" class="step" data-for="cf" data-d="-1" aria-label="One less iced coffee">−</button>
+          <output id="cf" aria-live="polite">0</output>
+          <button type="button" class="step" data-for="cf" data-d="1" aria-label="One more iced coffee">+</button>
+        </div>
+        <label class="field"><span>Pickup time</span><select id="time"></select></label>
+        <label class="field"><span>Your name</span><input type="text" id="name" autocomplete="given-name"></label>
+        <p class="preview" id="preview"></p>
+        <div class="actions">
+          <a class="btn btn--carrot" id="sms" href="sms:+64212294668">Text my order</a>
+          <a class="btn btn--line" href="tel:+64212294668">Call 021 229 4668</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="find" aria-labelledby="find-h">
+    <figure class="find__photo">
+      <img src="img/lichfield.webp" width="1400" height="852" alt="Lichfield Street in central Christchurch, with new buildings and a wide road" loading="lazy">
+    </figure>
+    <div class="find__text">
+      <h2 id="find-h">Find us</h2>
+      <p>150 Lichfield Street, Christchurch Central 8011.</p>
+      <dl class="hours">
+        <div><dt>Monday to Friday</dt><dd>10am – 5:30pm</dd></div>
+        <div><dt>Saturday</dt><dd>10am – 3:30pm</dd></div>
+        <div><dt>Sunday</dt><dd>Closed</dd></div>
+      </dl>
+      <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=-43.5343111,172.641802" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with Bánh Mì EM.</p>
+</footer>
+</body>
+</html>

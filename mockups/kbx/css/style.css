@@ -1,0 +1,77 @@
+/* KBX: the name is the menu. Five huge words joined by plus signs; tapping one
+   marks it with a saffron highlighter, like a copywriter circling a draft. */
+:root {
+  --paper: #fafaf7;
+  --ink: #1d1f3a;
+  --ink-hi: #2d3060;
+  --saffron: #f4a300;
+  --muted: #5d5f73;
+  --rule: #d9d9d2;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "Space Grotesk", "Segoe UI", sans-serif;
+  --wide: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1rem/1.6 var(--sans); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+h2 { font: 400 clamp(2.2rem, 6vw, 3.4rem)/1.08 var(--serif); margin: 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--ink); color: #fff; padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--ink); color: var(--paper); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.4rem; border-radius: 0; font: 500 1rem/1.2 var(--sans); text-decoration: none; border: 2px solid var(--ink); cursor: pointer; }
+.btn--ink { background: var(--ink); color: var(--paper); }
+.btn--ink:hover { background: var(--ink-hi); }
+
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1rem; border-bottom: 1px solid var(--rule); }
+.top__name { font: 600 1.375rem/1 var(--sans); text-decoration: none; letter-spacing: .02em; }
+.top__clock { margin: 0; font-size: .875rem; color: var(--muted); }
+main { max-width: var(--wide); margin: 0 auto; }
+
+/* Hero: the five words */
+.hero { padding: 2.5rem 1rem 3.5rem; }
+.pick-lead { margin: 0 0 1rem; color: var(--muted); }
+.words { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .35em; font: 400 clamp(3rem, 12vw, 8.5rem)/1.02 var(--serif); }
+.word { font: inherit; color: inherit; background: none; border: 0; padding: 0 .06em; cursor: pointer; min-height: 48px;
+  background-image: linear-gradient(transparent 58%, var(--saffron) 58%, var(--saffron) 90%, transparent 90%); background-size: 0 100%; background-repeat: no-repeat; transition: background-size .35s ease-out; }
+.word:hover { font-style: italic; }
+.word[aria-pressed="true"] { background-size: 100% 100%; }
+@media (prefers-reduced-motion: reduce) { .word { transition: none; } }
+.plus { color: var(--saffron); }
+.picked { font-size: 1.125rem; margin: 1.5rem 0; min-height: 1.6em; }
+
+/* What: definitions */
+.what { padding: 3rem 1rem; border-top: 1px solid var(--rule); }
+.defs { margin: 1.75rem 0 1.5rem; }
+.defs div { display: grid; gap: .2rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); transition: background-color .3s; }
+.defs div.is-on { background: #fff4dc; }
+.defs dt { font: 400 1.75rem/1.1 var(--serif); }
+.defs dd { margin: 0; color: var(--muted); }
+.work-note { font: 400 1.375rem/1.35 var(--serif); font-style: italic; max-width: 34rem; }
+
+/* City */
+.city { display: grid; gap: 2rem; padding: 3rem 1rem; background: var(--ink); color: var(--paper); }
+.city figure { margin: 0; }
+.city img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.city p { color: #c9cadb; font-size: 1.125rem; max-width: 28rem; margin: 1rem 0 0; }
+
+/* Brief */
+.brief { padding: 3.5rem 1rem 4.5rem; max-width: 46rem; }
+.brief__picked { font-size: 1.125rem; margin: 1.25rem 0; }
+.field { display: grid; gap: .35rem; font-weight: 500; margin: 0 0 1.1rem; }
+.field textarea, .field select { font: 400 1rem var(--sans); min-height: 48px; padding: .6rem .8rem; border: 2px solid var(--ink); border-radius: 0; background: #fff; color: var(--ink); width: 100%; resize: vertical; }
+.error { color: #9a2a12; font-weight: 500; min-height: 1.4em; margin: 0 0 .75rem; }
+.alt { color: var(--muted); margin-top: 1rem; }
+
+.foot { border-top: 1px solid var(--rule); padding: 1.5rem 1rem; text-align: center; font-size: .875rem; color: var(--muted); }
+.foot p { margin: .3rem 0; }
+
+@media (min-width: 768px) {
+  .top, .hero, .what, .brief { padding-left: 2rem; padding-right: 2rem; }
+  .hero { padding-top: 4rem; padding-bottom: 5rem; }
+  .defs { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3rem; }
+  .city { grid-template-columns: 1fr 1.2fr; align-items: end; padding: 4rem 2rem; }
+}

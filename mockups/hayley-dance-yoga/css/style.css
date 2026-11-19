@@ -1,0 +1,98 @@
+/* Hayley Dance-Yoga: the week is the hero. Seven days, two lit. Sea mist, ocean
+   blue for actions, tea-tree green, a warm sand for the class days. */
+:root {
+  --mist: #eef2ef;
+  --white: #ffffff;
+  --ocean: #2f6170;
+  --ocean-hi: #244c58;
+  --tea: #4e6b4c;
+  --sand: #e3cf9f;
+  --ink: #23302e;
+  --muted: #586560;
+  --display: "Marcellus", Georgia, serif;
+  --text: "Karla", "Segoe UI", sans-serif;
+  --wide: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--mist); color: var(--ink); font: 400 1.0625rem/1.6 var(--text); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--tea); outline-offset: 3px; }
+h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.12; margin: 0; }
+h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--ocean); color: #fff; padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--tea); color: #fff; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.3rem; border-radius: 6px; font: 600 1rem/1.2 var(--text); text-decoration: none; border: 2px solid var(--ocean); cursor: pointer; }
+.btn--ocean { background: var(--ocean); color: #fff; }
+.btn--ocean:hover { background: var(--ocean-hi); border-color: var(--ocean-hi); }
+.btn--line { background: var(--white); color: var(--ocean); }
+.btn--line:hover { background: #e3ecee; }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; }
+.top__name { font: 400 1.375rem/1.2 var(--display); text-decoration: none; }
+.top .btn { padding: .6rem 1rem; white-space: nowrap; }
+main { max-width: var(--wide); margin: 0 auto; }
+
+/* Hero: the week */
+.hero { padding: 2.5rem 1rem 3.5rem; }
+.hero h1 { font-size: clamp(2.4rem, 7.5vw, 4.6rem); max-width: 16ch; }
+.week { list-style: none; margin: 2rem 0 1rem; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.week li { min-height: 96px; background: var(--white); border-radius: 6px; padding: .5rem .25rem; display: flex; flex-direction: column; justify-content: space-between; align-items: center; color: #8a9692; font-weight: 500; }
+.week li.on { background: var(--sand); color: var(--ink); }
+.week strong { font: 400 1.125rem/1 var(--display); }
+.is-in .week li.on { animation: rise .8s ease-out both; }
+.is-in .week li.on:last-child { animation-delay: .25s; }
+@keyframes rise { from { background: var(--white); transform: translateY(8px); } to { background: var(--sand); transform: none; } }
+@media (prefers-reduced-motion: reduce) { .is-in .week li.on { animation: none; } }
+.next { font-size: 1.1875rem; font-weight: 500; margin: 1.25rem 0 0; color: var(--tea); }
+
+.classes { display: grid; gap: 2rem; padding: 3rem 1rem; background: var(--white); }
+.classes__photo { margin: 0; }
+.classes__photo img { border-radius: 6px; }
+.classes__photo figcaption { font-size: .875rem; color: var(--muted); margin-top: .5rem; }
+.slots { margin: 1.5rem 0; }
+.slots div { display: flex; justify-content: space-between; gap: 1rem; max-width: 22rem; padding: .6rem 0; border-bottom: 1px solid #dfe5e1; font-size: 1.125rem; }
+.slots dt { font-weight: 600; }
+.slots dd { margin: 0; }
+.classes__text p { color: var(--muted); max-width: 30rem; }
+
+.spot { padding: 3rem 1rem; }
+.spot__card { background: var(--white); border-radius: 12px; padding: 1.75rem 1.25rem; max-width: 40rem; margin: 0 auto; border-top: 6px solid var(--sand); }
+.spot__lead { color: var(--muted); margin: .5rem 0 1.25rem; }
+.field { display: grid; gap: .35rem; margin: 0 0 1.1rem; border: 0; padding: 0; font-weight: 600; }
+.field legend { padding: 0; margin-bottom: .4rem; }
+.pick { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.pick label { position: relative; }
+.pick input { position: absolute; opacity: 0; inset: 0; }
+.pick span { display: flex; align-items: center; justify-content: center; min-height: 52px; border: 2px solid #c9d3cf; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.pick input:checked + span { background: var(--sand); border-color: #c9ae6c; }
+.pick input:focus-visible + span { outline: 3px solid var(--tea); outline-offset: 2px; }
+.field select, .field input[type="text"] { font: 400 1rem var(--text); min-height: 48px; padding: .5rem .75rem; border: 2px solid #c9d3cf; border-radius: 8px; background: #fff; color: var(--ink); width: 100%; }
+.field select:focus, .field input:focus { border-color: var(--ocean); }
+.check { display: flex; align-items: center; gap: .6rem; min-height: 48px; }
+.check input { width: 22px; height: 22px; accent-color: var(--ocean); }
+.preview { background: var(--mist); border-left: 4px solid var(--tea); padding: .8rem 1rem; margin: 1rem 0; font-size: .9375rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.place { display: grid; background: var(--white); }
+.place img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+.place__text { padding: 2rem 1rem 3.5rem; }
+.place__text p { margin: .6rem 0 1rem; }
+.social a { color: var(--ocean); font-weight: 600; }
+
+.foot { background: var(--tea); color: #e7efe8; padding: 1.5rem 1rem; text-align: center; font-size: .875rem; }
+.foot p { margin: .3rem 0; }
+
+@media (min-width: 768px) {
+  .hero { padding: 4rem 2rem; }
+  .week li { min-height: 140px; padding: .9rem .5rem; font-size: 1.0625rem; }
+  .week strong { font-size: 1.5rem; }
+  .classes { grid-template-columns: 1.2fr 1fr; padding: 4rem 2rem; align-items: center; }
+  .spot { padding: 4rem 2rem; }
+  .spot__card { padding: 2.25rem; }
+  .place { grid-template-columns: 1.5fr 1fr; }
+  .place img { aspect-ratio: auto; height: 100%; }
+  .place__text { padding: 3rem 2rem; align-self: center; }
+}

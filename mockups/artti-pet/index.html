@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artti Pet | Pet shop, bath and grooming in Santo Antônio do Pinhal</title>
+<meta name="description" content="Artti Pet, a full pet shop in central Santo Antônio do Pinhal: pet food, accessories, bath and grooming. Open Monday to Saturday, 8:00 to 18:00. Book a bath by email.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for Artti Pet - Estética animal — not affiliated</p>
+
+<header class="top">
+  <a class="top__name" href="#main">Artti Pet</a>
+  <p class="top__open" id="open" aria-live="polite">Mon–Sat, 8:00–18:00</p>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero__text">
+      <h1 id="hero-h">Bath, grooming and everything for your pet</h1>
+      <p>A full pet shop on Avenida Ministro Nelson Hungria, in the centre of Santo Antônio do Pinhal. Food, accessories, bath and grooming.</p>
+      <a class="btn btn--teal" href="#book">Book a bath</a>
+    </div>
+    <figure class="hero__photo">
+      <img src="img/grooming.webp" width="720" height="960" alt="A small scruffy dog standing on a grooming table after a bath" fetchpriority="high">
+      <figcaption>Sample photo. Your happy customers go here.</figcaption>
+    </figure>
+  </section>
+
+  <section class="shop" aria-labelledby="shop-h">
+    <h2 id="shop-h">In the shop</h2>
+    <ul class="aisles">
+      <li><h3>Pet food</h3><p>Rações for your dog or cat.</p></li>
+      <li><h3>Accessories</h3><p>The things your pet needs at home and out.</p></li>
+      <li><h3>Bath and grooming</h3><p>Banho e tosa: a wash, or a wash and a trim.</p></li>
+    </ul>
+  </section>
+
+  <section class="book" id="book" aria-labelledby="book-h">
+    <div class="book__form">
+      <h2 id="book-h">Book a bath</h2>
+      <p class="lead">Fill in your pet’s card. The email to the shop is written from it.</p>
+      <form id="pet-form" novalidate>
+        <label class="field"><span>Pet’s name</span><input type="text" id="pname" placeholder="Bolinha"></label>
+        <fieldset class="field"><legend>Pet</legend>
+          <div class="chips">
+            <label><input type="radio" name="kind" value="Dog" checked><span>Dog</span></label>
+            <label><input type="radio" name="kind" value="Cat"><span>Cat</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="field"><legend>Size</legend>
+          <div class="chips">
+            <label><input type="radio" name="size" value="small"><span>Small</span></label>
+            <label><input type="radio" name="size" value="medium" checked><span>Medium</span></label>
+            <label><input type="radio" name="size" value="large"><span>Large</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="field"><legend>Service</legend>
+          <div class="chips">
+            <label><input type="radio" name="svc" value="Bath" checked><span>Bath</span></label>
+            <label><input type="radio" name="svc" value="Bath and trim"><span>Bath and trim</span></label>
+          </div>
+        </fieldset>
+        <div class="row">
+          <label class="field"><span>Day</span><input type="date" id="day"></label>
+          <label class="field"><span>Time</span><select id="time"></select></label>
+        </div>
+        <p class="hint" id="hint" aria-live="polite">Pick a day to continue.</p>
+      </form>
+    </div>
+    <aside class="card" aria-label="Your pet’s card">
+      <p class="card__tag" id="c-kind">Dog</p>
+      <p class="card__name" id="c-name">Your pet</p>
+      <dl>
+        <div><dt>Size</dt><dd id="c-size">Medium</dd></div>
+        <div><dt>Service</dt><dd id="c-svc">Bath</dd></div>
+        <div><dt>When</dt><dd id="c-when">Pick a day</dd></div>
+      </dl>
+      <a class="btn btn--sun" id="send" href="mailto:arttipet@gmail.com" aria-disabled="true">Email this booking</a>
+    </aside>
+  </section>
+
+  <section class="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <p>Av. Ministro Nelson Hungria 203, Centro, Santo Antônio do Pinhal (SP).</p>
+    <p>Monday to Saturday, 8:00 to 18:00. Cash and cards accepted.</p>
+    <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=-22.8254256,-45.6635355" target="_blank" rel="noopener">Get directions</a>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with Artti Pet.</p>
+</footer>
+</body>
+</html>

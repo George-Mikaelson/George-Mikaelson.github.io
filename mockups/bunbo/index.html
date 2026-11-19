@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Búnbò | Vietnamese lunch canteen, 124 Cours Lafayette, Lyon 3e</title>
+<meta name="description" content="Búnbò cooks Vietnamese lunches on weekdays from 11:30 to 14:30 at 124 Cours Lafayette, Lyon. Bò bún, homemade nems and a dish of the day. Pre-order for pickup.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&amp;family=Lora:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<p class="concept">Concept by George Mikaelson for Bunbo — not affiliated</p>
+
+<header class="top">
+  <a class="top__name" href="#main">Búnbò</a>
+  <a class="btn btn--chilli" href="#preorder">Pre-order</a>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <h1 id="hero-h">Vietnamese lunch, Monday to Friday</h1>
+    <p class="lead">A small canteen at 124 Cours Lafayette, Lyon 3e. Lunch only, 11:30 to 14:30.</p>
+    <div class="window" aria-describedby="window-status">
+      <div class="window__bar"><span class="window__now" id="now-mark" hidden></span></div>
+      <div class="window__ticks" aria-hidden="true"><span>11:30</span><span>12:30</span><span>13:30</span><span>14:30</span></div>
+      <p class="window__status" id="window-status" aria-live="polite">Open weekdays, 11:30 to 14:30.</p>
+    </div>
+  </section>
+
+  <section class="today" aria-labelledby="today-h">
+    <div class="board">
+      <h2 id="today-h">Today’s dish</h2>
+      <p class="board__date" id="board-date"></p>
+      <p class="board__dish">Written here every morning, so you know before you walk over.</p>
+    </div>
+    <figure class="today__photo">
+      <img src="img/bo-bun.webp" width="1400" height="1050" alt="A bowl of bò bún: rice noodles with beef, herbs, peanuts and a spring roll" loading="lazy">
+      <figcaption>Sample photo of a bò bún. Your bowls go here.</figcaption>
+    </figure>
+  </section>
+
+  <section class="menu" aria-labelledby="menu-h">
+    <h2 id="menu-h">Always on</h2>
+    <ul class="dishes">
+      <li><h3>Bò bún</h3><p>Rice noodles, beef, herbs and nems.</p></li>
+      <li><h3>Nems, homemade</h3><p>Chả giò, fried crisp.</p></li>
+      <li><h3>Bún with tofu</h3><p>The vegetarian bowl.</p></li>
+      <li><h3>Chè xoài</h3><p>Mango dessert.</p></li>
+    </ul>
+    <p class="formula">Lunch formula: starter, main and drink, €17.50. Prices to be confirmed by Búnbò.</p>
+    <blockquote class="said">
+      <p>“The dishes of the day surprise me every time.”</p>
+      <footer>A Google review, translated from French</footer>
+    </blockquote>
+  </section>
+
+  <section class="pre" id="preorder" aria-labelledby="pre-h">
+    <h2 id="pre-h">Pre-order for pickup</h2>
+    <p class="pre__lead">Skip the wait at 12:30. Pick your bowls and a time, then call or send the order by email.</p>
+    <form id="pre-form" novalidate>
+      <div class="picks">
+        <label class="pick"><span>Bò bún</span><input type="number" min="0" max="10" value="1" data-dish="Bò bún" inputmode="numeric"></label>
+        <label class="pick"><span>Nems</span><input type="number" min="0" max="10" value="0" data-dish="Nems" inputmode="numeric"></label>
+        <label class="pick"><span>Bún with tofu</span><input type="number" min="0" max="10" value="0" data-dish="Bún with tofu" inputmode="numeric"></label>
+        <label class="pick"><span>Dish of the day</span><input type="number" min="0" max="10" value="0" data-dish="Dish of the day" inputmode="numeric"></label>
+      </div>
+      <label class="field"><span>Pickup time</span><select id="slot"></select></label>
+      <p class="summary" id="summary" aria-live="polite"></p>
+      <div class="actions">
+        <a class="btn btn--chilli" id="mail" href="mailto:sarrazin.sebastien@gmail.com">Email my order</a>
+        <a class="btn btn--line" href="tel:+33961367587">Call 09 61 36 75 87</a>
+      </div>
+    </form>
+  </section>
+
+  <section class="where" aria-labelledby="where-h">
+    <h2 id="where-h">Find us</h2>
+    <p>124 Cours Lafayette, 69003 Lyon. Takeaway available.</p>
+    <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=45.7635482,4.8519096" target="_blank" rel="noopener">Get directions</a>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Sample photos — we’ll use yours. <a href="CREDITS.md">Photo credits</a></p>
+  <p>Concept site by George Mikaelson, not affiliated with Bunbo.</p>
+</footer>
+</body>
+</html>

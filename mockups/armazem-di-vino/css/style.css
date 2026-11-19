@@ -1,0 +1,87 @@
+/* Armazém Di Vino: the hero is a wine label with the Mantiqueira ridge drawn across it.
+   Deep wine, araucária green, label linen, a misty mountain blue. */
+:root {
+  --wine: #5a1e2b;
+  --wine-hi: #461621;
+  --pine: #2e4b3c;
+  --linen: #f2eee6;
+  --label: #fbf8f2;
+  --mist: #6f8796;
+  --ink: #2a2224;
+  --muted: #645a5c;
+  --display: "Gloock", Georgia, serif;
+  --text: "Manrope", "Segoe UI", sans-serif;
+  --wide: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--linen); color: var(--ink); font: 400 1rem/1.6 var(--text); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--mist); outline-offset: 3px; }
+h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.1; margin: 0; }
+h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--wine); color: #fff; padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--wine); color: var(--label); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.3rem; border-radius: 2px; font: 600 1rem/1.2 var(--text); text-decoration: none; border: 2px solid var(--wine); cursor: pointer; }
+.btn--wine { background: var(--wine); color: #fff; }
+.btn--wine:hover { background: var(--wine-hi); border-color: var(--wine-hi); }
+.btn--wine[aria-disabled="true"] { background: #b08d95; border-color: #b08d95; }
+.btn--line { background: transparent; color: var(--wine); }
+.btn--line:hover { background: #ebe3d8; }
+
+main { max-width: var(--wide); margin: 0 auto; }
+
+/* Hero: a bottle label on a pine-green "bottle" */
+.hero { background: var(--pine); padding: 3rem 1rem; }
+.label { background: var(--label); max-width: 40rem; margin: 0 auto; padding: 2rem 1.5rem 2.25rem; text-align: center; border: 1px solid #d8cdb9; outline: 6px solid var(--label); outline-offset: -14px; }
+.ridge { width: 100%; height: auto; display: block; margin-bottom: .5rem; }
+.ridge path { fill: none; stroke: var(--mist); stroke-width: 3; stroke-linejoin: round; stroke-dasharray: 800; stroke-dashoffset: 0; }
+.is-in .ridge path { animation: draw 2s ease-out both .2s; }
+@keyframes draw { from { stroke-dashoffset: 800; } to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .is-in .ridge path { animation: none; } }
+.label__place { margin: 0 0 .5rem; font-weight: 500; color: var(--muted); }
+.label h1 { font-size: clamp(2.6rem, 10vw, 4.8rem); color: var(--wine); }
+.label__line { margin: .75rem auto 1.5rem; max-width: 26rem; font-size: 1.0625rem; }
+.label__cta { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+
+.glass { display: grid; gap: 2rem; padding: 3.5rem 1rem; align-items: center; }
+.glass__photo { margin: 0; }
+.glass__text p { margin: 1rem 0 0; max-width: 32rem; font-size: 1.0625rem; }
+
+.view { position: relative; display: grid; }
+.view img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.view__text { background: var(--ink); color: var(--label); padding: 2rem 1rem; }
+.view__text p { color: #d7cfc9; margin: .75rem 0 0; max-width: 30rem; }
+
+.plan { display: grid; gap: 2.5rem; padding: 3.5rem 1rem 4.5rem; }
+.week { list-style: none; margin: 1.5rem 0 1rem; padding: 0; }
+.week li { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem .75rem; border-bottom: 1px solid #ddd3c4; }
+.week li.is-today { background: var(--label); border-left: 4px solid var(--wine); font-weight: 600; }
+.note { color: var(--muted); font-size: .9375rem; }
+.table { background: var(--label); padding: 1.75rem 1.25rem; border-top: 6px solid var(--wine); }
+.table__lead { color: var(--muted); margin: .5rem 0 1.25rem; }
+.row { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+.row .field:first-child { grid-column: 1 / -1; }
+.field { display: grid; gap: .3rem; font-weight: 500; }
+.field input { font: 400 1rem var(--text); min-height: 48px; padding: .5rem .7rem; border: 2px solid #cfc3b0; border-radius: 2px; background: #fff; color: var(--ink); width: 100%; }
+.field input:focus { border-color: var(--wine); }
+.hint { font-weight: 600; margin: 1rem 0; }
+.addr { margin: 1.75rem 0 .75rem; color: var(--muted); }
+
+.foot { background: var(--pine); color: #d9e2dc; padding: 1.5rem 1rem; text-align: center; font-size: .875rem; }
+.foot p { margin: .3rem 0; }
+
+@media (min-width: 768px) {
+  .hero { padding: 4.5rem 2rem; }
+  .label { padding: 2.75rem 3rem 3rem; }
+  .glass { grid-template-columns: 1fr 1fr; padding: 4.5rem 2rem; gap: 3rem; }
+  .view { grid-template-columns: 1.4fr 1fr; }
+  .view img { aspect-ratio: auto; height: 100%; }
+  .view__text { display: flex; flex-direction: column; justify-content: center; padding: 3rem; }
+  .plan { grid-template-columns: 1fr 1.3fr; padding: 4.5rem 2rem 5rem; gap: 3rem; align-items: start; }
+  .row { grid-template-columns: 1.4fr 1fr 6rem; }
+  .row .field:first-child { grid-column: auto; }
+  .table { padding: 2.25rem; }
+}

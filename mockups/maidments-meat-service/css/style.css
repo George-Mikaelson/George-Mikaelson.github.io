@@ -1,0 +1,94 @@
+/* Maidment's: a country butcher's shop. White wall tiles with a green band, a
+   painted slab-serif sign, price-ticket buttons with a cut corner, one butcher's red. */
+:root {
+  --tile: #fbfbf8;
+  --grout: #dcdcd4;
+  --green: #2e5e4e;
+  --green-2: #3d7462;
+  --red: #9e2a2b;
+  --red-hi: #842122;
+  --ink: #232421;
+  --muted: #5b5d57;
+  --slab: "Zilla Slab", Georgia, serif;
+  --text: "Source Sans 3", "Segoe UI", sans-serif;
+  --wide: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--tile); color: var(--ink); font: 400 1.0625rem/1.6 var(--text); }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+h1, h2 { font-family: var(--slab); font-weight: 600; line-height: 1.08; margin: 0; }
+h2 { font-size: clamp(2rem, 5vw, 2.75rem); }
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--green); color: #fff; padding: .6rem 1rem; z-index: 5; }
+.skip:focus { top: 1rem; }
+.concept { margin: 0; padding: .5rem 1rem; text-align: center; font-size: .875rem; background: var(--green); color: #fff; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .6rem 1.3rem; border-radius: 3px; font: 600 1rem/1.2 var(--text); text-decoration: none; border: 2px solid var(--red); cursor: pointer; }
+.btn--red { background: var(--red); color: #fff; }
+.btn--red:hover { background: var(--red-hi); border-color: var(--red-hi); }
+.btn--red[aria-disabled="true"] { background: #c99a9a; border-color: #c99a9a; }
+.btn--line { background: #fff; color: var(--red); }
+.btn--line:hover { background: #f6eded; }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 1rem; }
+.top__name { font: 600 1.5rem/1 var(--slab); text-decoration: none; color: var(--green); }
+.top .btn { padding: .6rem .9rem; white-space: nowrap; }
+main { max-width: var(--wide); margin: 0 auto; }
+
+/* Hero: tiled wall with a green band and a painted sign */
+.hero { position: relative; padding: 2.5rem 1rem 3rem; overflow: hidden; }
+.tiles { position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(var(--green) 0 0) 0 62% / 100% 28px no-repeat,
+    linear-gradient(var(--grout) 2px, transparent 2px) 0 0 / 48px 32px,
+    linear-gradient(90deg, var(--grout) 2px, transparent 2px) 0 0 / 48px 32px; }
+.sign { background: var(--green); color: #fff; padding: 1.75rem 1.25rem 2rem; border: 6px double #e9efe9; max-width: 44rem; }
+.sign__small { margin: 0 0 .5rem; font: 500 1.125rem/1.2 var(--slab); color: #cfe0d7; }
+.sign h1 { font-size: clamp(2.6rem, 9vw, 5rem); letter-spacing: -.01em; }
+.sign__addr { margin: .9rem 0 0; font-size: 1.125rem; }
+.is-in .sign { animation: hang .9s cubic-bezier(.2,.9,.3,1.2) both; transform-origin: top center; }
+@keyframes hang { from { transform: translateY(-30px) rotate(-2deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .is-in .sign { animation: none; } }
+.hero__cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+
+.counter { display: grid; gap: 2rem; padding: 3rem 1rem; background: #fff; border-top: 6px solid var(--green); }
+.counter__photo { margin: 0; }
+.counter__photo figcaption, .visit__photo figcaption { font-size: .875rem; color: var(--muted); margin-top: .5rem; }
+.counter__text p { margin: 1rem 0 0; max-width: 32rem; }
+.pay { font-weight: 600; color: var(--green); }
+
+/* Order: price tickets */
+.order { padding: 3rem 1rem; }
+.order__lead { color: var(--muted); margin: .6rem 0 1.5rem; max-width: 34rem; }
+.tickets { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+.ticket { --tk: #fff; --edge: var(--ink); min-height: 64px; font: 600 1.25rem/1 var(--slab); color: var(--ink); border: 2px solid var(--edge); cursor: pointer;
+  background: linear-gradient(225deg, transparent 0 12px, var(--edge) 12px 14px, var(--tk) 14px);
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%); }
+.ticket:hover { --tk: #f2f4ef; }
+.ticket[aria-pressed="true"] { --tk: var(--red); --edge: var(--red); color: #fff; }
+.amounts { display: grid; gap: .75rem; margin: 1.25rem 0; }
+.amount { display: grid; gap: .3rem; font-weight: 600; }
+.amount input, .field input { font: 400 1rem var(--text); min-height: 48px; padding: .5rem .75rem; border: 2px solid #b9bcb2; border-radius: 3px; background: #fff; color: var(--ink); width: 100%; }
+.amount input:focus, .field input:focus { border-color: var(--green); }
+.row { display: grid; gap: 1rem; }
+.field { display: grid; gap: .3rem; font-weight: 600; }
+.hint { font-weight: 600; margin: 1rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.visit { display: grid; gap: 2rem; padding: 3rem 1rem 4rem; background: #fff; }
+.visit__text p { margin: .6rem 0; }
+.visit__text .btn { margin-top: .75rem; }
+.visit__photo { margin: 0; }
+
+.foot { background: var(--green); color: #e5eee9; padding: 1.5rem 1rem; text-align: center; font-size: .875rem; }
+.foot p { margin: .3rem 0; }
+
+@media (min-width: 768px) {
+  .hero { padding: 4rem 2rem 4rem; }
+  .counter, .visit { grid-template-columns: 1fr 1fr; padding: 4rem 2rem; align-items: center; }
+  .order { padding: 4rem 2rem; }
+  .tickets { grid-template-columns: repeat(6, 1fr); }
+  .amounts { grid-template-columns: repeat(3, 1fr); }
+  .row { grid-template-columns: 14rem 1fr; max-width: 40rem; }
+}
