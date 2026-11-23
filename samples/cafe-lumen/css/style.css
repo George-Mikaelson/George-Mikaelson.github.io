@@ -262,3 +262,19 @@ figcaption { margin-top: .6rem; font-size: var(--text-secondary); color: var(--s
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Lenis smooth scroll (../../js/motion-core.js). Rules from lenis/dist/lenis.css 1.3.27 (MIT,
+   darkroom.engineering), plus scroll-behavior: auto so the browser does not smooth Lenis twice. */
+html.lenis, html.lenis body { height: auto; }
+html.lenis { scroll-behavior: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+/* words and letters split by ../../js/motion-core.js for staggered entrances (js/motion.js) */
+.split-w, .split-c { display: inline-block; }
+/* elements waiting to slide in from the side must not widen the page */
+main { overflow-x: clip; }
+/* while the masthead letters rise (js/motion.js) they are masked at the baseline */
+.cover-word.is-masked .split-w { clip-path: polygon(-10% -40%, 110% -40%, 110% 102%, -10% 102%); }
+/* with GSAP running, the CSS entrance must not hold its end state, or it would pin the
+   cover photos and block the scroll drift on .cover-small */
+.has-motion [data-enter] { animation-fill-mode: backwards; }

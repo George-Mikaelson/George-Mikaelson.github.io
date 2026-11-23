@@ -3,13 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to pay in Bitcoin, USDC, SOL or ETH - George Mikaelson</title>
-<meta name="description" content="Payment addresses and a step-by-step guide for paying a George Mikaelson invoice in Bitcoin, USDC or SOL on Solana, or ETH, written for people who have never used crypto.">
+<title>How to pay by bank transfer or in crypto - George Mikaelson</title>
+<meta name="description" content="How to pay a George Mikaelson invoice: instant bank transfer (SEPA Instant) first, or Bitcoin, USDC or SOL on Solana, or ETH, with a step-by-step guide for people who have never used crypto.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&family=Shrikhand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/pay.css">
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
+<script src="js/motion-core.js" defer></script>
+<script src="js/motion.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body id="top">
@@ -19,13 +24,17 @@
     <circle cx="32" cy="32" r="32" fill="#f7931a"/>
     <text x="32" y="44" text-anchor="middle" font-family="Shrikhand, Georgia, serif" font-size="34" fill="#2a1a12">G</text>
   </symbol>
+  <symbol id="bank-mark" viewBox="0 0 24 24">
+    <path d="M3 9.5 12 4l9 5.5M4.5 10v8M9.5 10v8M14.5 10v8M19.5 10v8M3 20h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
 </svg>
 
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html"><svg aria-hidden="true"><use href="#gm-mark"/></svg>George Mikaelson</a>
     <nav aria-label="Sections">
-      <a href="#address">Addresses</a>
+      <a href="#bank">Bank transfer</a>
+      <a href="#address">Crypto</a>
       <a href="#steps">Steps</a>
       <a href="#prices">Prices</a>
       <a href="#after">After paying</a>
@@ -39,13 +48,14 @@
 <div class="hero">
   <div class="wrap">
     <div>
-      <h1>How to pay in Bitcoin, USDC, SOL or ETH</h1>
-      <p class="lede">Never used crypto? This page takes you from nothing to a confirmed payment. The slowest part is usually the identity check when you open an exchange account, so start that a day before you need to pay.</p>
+      <h1>How to pay by bank transfer or in crypto</h1>
+      <p class="lede">An instant bank transfer is the quickest way: send it from your banking app and it arrives within seconds. You can also pay in Bitcoin, USDC, SOL or ETH. If you have never used crypto, this page takes you from nothing to a confirmed payment.</p>
       <div class="actions">
-        <a class="btn" href="#address">Show me the addresses</a>
-        <a class="btn line" href="#steps">Walk me through it</a>
+        <a class="btn" href="#bank">Pay by bank transfer</a>
+        <a class="btn line" href="#address">See the crypto addresses</a>
       </div>
-      <ul class="coin-row" aria-label="Accepted currencies">
+      <ul class="coin-row" aria-label="Ways to pay">
+        <li class="bank-chip"><svg aria-hidden="true"><use href="#bank-mark"/></svg>Bank transfer</li>
         <li><img src="img/crypto/btc.svg" alt="" width="32" height="32">Bitcoin</li>
         <li><img src="img/crypto/usdc.svg" alt="" width="32" height="32">USDC</li>
         <li><img src="img/crypto/sol.svg" alt="" width="32" height="32">SOL</li>
@@ -53,20 +63,44 @@
       </ul>
     </div>
     <dl class="facts" aria-label="Payment facts">
-      <dt>Accepted</dt><dd>BTC on Bitcoin, USDC or SOL on Solana, ETH on Ethereum</dd>
-      <dt>Network fee</dt><dd>Paid by the sender. Fractions of a cent on Solana; on Bitcoin and Ethereum it changes with traffic.</dd>
-      <dt>Arrives in</dt><dd>Seconds on Solana, a minute or two on Ethereum, about 10 minutes or more on Bitcoin</dd>
+      <dt>Accepted</dt><dd>Instant bank transfer (SEPA Instant, in euros) first. Also BTC on Bitcoin, USDC or SOL on Solana, ETH on Ethereum</dd>
+      <dt>Fees</dt><dd>Paid by the sender. A bank transfer costs what your bank charges for a normal transfer. Crypto network fees are fractions of a cent on Solana; on Bitcoin and Ethereum they change with traffic.</dd>
+      <dt>Arrives in</dt><dd>Seconds by SEPA Instant or on Solana, a minute or two on Ethereum, about 10 minutes or more on Bitcoin</dd>
       <dt>Schedule</dt><dd>50% to start, 50% on delivery</dd>
       <dt>Extras</dt><dd>Own domain $50 once, care plan $20 a month (<a href="#prices">details</a>)</dd>
-      <dt>Reversible</dt><dd>No, so check before you send</dd>
+      <dt>Reversible</dt><dd>No. Instant transfers and crypto payments cannot be called back, so check before you send</dd>
     </dl>
   </div>
 </div>
 
+<section id="bank">
+  <div class="wrap">
+    <h2>Instant bank transfer</h2>
+    <p class="intro">The simplest way to pay if your business banks in euros. You send it from your banking app or online banking, like any payment to a supplier.</p>
+    <article class="bank-card">
+      <svg class="bank-icon" aria-hidden="true"><use href="#bank-mark"/></svg>
+      <div>
+        <h3>SEPA Instant transfer, in euros</h3>
+        <p class="iban-note">IBAN is shared on your invoice once you accept the quote.</p>
+        <ul class="checks">
+          <li>The money arrives within ten seconds, on any day and at any hour.</li>
+          <li>Most banks in the EU offer instant transfers in their app. Under EU rules they cannot cost more than a normal transfer.</li>
+          <li>Put the invoice number in the payment reference, so I can match your transfer to the invoice.</li>
+          <li>If your bank cannot send an instant transfer, a regular SEPA transfer works too. It usually arrives the next working day.</li>
+        </ul>
+      </div>
+    </article>
+    <div class="warn" role="note">
+      <h3>Check the IBAN against your invoice</h3>
+      <p>Bank details only ever come on the invoice itself. If an email or message gives you a different IBAN, do not pay. Email me at the address below first.</p>
+    </div>
+  </div>
+</section>
+
 <section id="address">
   <div class="wrap">
-    <h2>The addresses</h2>
-    <p class="intro">These are the only addresses I use. Each one belongs to one network: send only what is listed on that network.</p>
+    <h2>Crypto addresses</h2>
+    <p class="intro">These are the only addresses I use. Each one belongs to one network: send only what is listed on that network. If you buy crypto for the first time, the slowest part is the identity check when you open an exchange account, so start that a day before you need to pay.</p>
 
     <div class="wallets">
       <article class="wallet has-qr">
@@ -137,7 +171,7 @@
 
 <section id="steps">
   <div class="wrap">
-    <h2>Step by step</h2>
+    <h2>Paying in crypto, step by step</h2>
     <p class="intro">Pick the route that matches what you have. If this is your first crypto payment, send a small test amount, wait for my confirmation, then send the rest.</p>
     <div class="routes">
       <article class="route">
@@ -210,16 +244,16 @@
         <tr><td>Monthly care plan</td><td>$20 a month</td><td>At the start of each month. Up to 2 changes to menu, hours, prices or photos, a weekly check that the site is online, and domain renewal handled. Stop any month.</td></tr>
       </tbody>
     </table>
-    <p class="table-cap">The care plan is paid like everything else here, in any of the currencies above. If you stop it, the site stays online on free hosting.</p>
+    <p class="table-cap">The care plan is paid like everything else here, by bank transfer or in any of the currencies above. If you stop it, the site stays online on free hosting.</p>
   </div>
 </section>
 
 <section id="after">
   <div class="wrap">
     <h2>What happens after you pay</h2>
-    <p class="intro">Every payment is public on its blockchain, so both of us can check it.</p>
+    <p class="intro">A bank transfer shows up in my account within seconds. A crypto payment is public on its blockchain, so both of us can check it.</p>
     <ol class="steps">
-      <li><h3>I confirm it</h3><p>I check it on a public block explorer and reply by email, usually the same day.</p></li>
+      <li><h3>I confirm it</h3><p>I check my bank account or a public block explorer and reply by email, usually the same day.</p></li>
       <li><h3>Work starts</h3><p>The delivery time in your quote counts from the confirmed deposit and the moment I have everything listed in the brief.</p></li>
       <li><h3>You review</h3><p>A preview link or a draft of the video. One revision round is included before you pay anything more.</p></li>
       <li><h3>Balance, then handover</h3><p>You pay the balance within 5 working days of approving the work. Then you get the files and the live site, plus a receipt by email.</p></li>
@@ -239,10 +273,11 @@
         <tr><td>The work does not match the quote</td><td>Tell me what is wrong; the revision round in your quote covers it. The balance is not due until it matches what we agreed.</td></tr>
         <tr><td>I cannot deliver what the quote describes</td><td>I refund everything you paid.</td></tr>
         <tr><td>You sent more than the invoice</td><td>I send the difference back.</td></tr>
+        <tr><td>You paid by bank transfer</td><td>Any refund goes back by bank transfer to the account the money came from.</td></tr>
         <tr><td>Coins went to a wrong address or network</td><td>Blockchain transfers cannot be reversed, and I cannot recover funds that never reached my address. This is why the test transfer and the address check matter.</td></tr>
       </tbody>
     </table>
-    <p class="note">Refunds go back in the currency and on the network you paid with, to the address you paid from. If you paid from an exchange, send me an address of your own instead, because exchanges often send from shared addresses. Jobs under $100 may be billed as one payment upfront; the cancellation and non-delivery rules above still apply.</p>
+    <p class="note">Crypto refunds go back in the currency and on the network you paid with, to the address you paid from. If you paid from an exchange, send me an address of your own instead, because exchanges often send from shared addresses. Jobs under $100 may be billed as one payment upfront; the cancellation and non-delivery rules above still apply.</p>
   </div>
 </section>
 </main>

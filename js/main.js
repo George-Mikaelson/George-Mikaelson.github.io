@@ -1,11 +1,12 @@
-// Site behaviour for index.html and pay.html. No dependencies.
+// Site behaviour for index.html and pay.html: hero fallback, showcase video, copy buttons. Motion lives in js/motion.js.
 (function () {
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // 1. Hero entrance (index.html): one orchestrated sequence. The CSS holds the hero items
   //    hidden while scripting is on; adding .is-in plays the staggered transitions.
+  //    When GSAP is running, js/motion.js has already played the full sequence instead.
   var stage = document.querySelector('.stage');
-  if (stage) {
+  if (stage && !stage.classList.contains('is-gsap')) {
     requestAnimationFrame(function () {
       requestAnimationFrame(function () { stage.classList.add('is-in'); });
     });

@@ -40,6 +40,17 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
+/* Lenis smooth scroll (js/motion-core.js). Rules from lenis/dist/lenis.css 1.3.27 (MIT,
+   darkroom.engineering), plus scroll-behavior: auto so the browser does not smooth Lenis twice. */
+html.lenis, html.lenis body { height: auto; }
+html.lenis { scroll-behavior: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+/* words and letters split by js/motion-core.js for staggered entrances */
+.split-w, .split-c { display: inline-block; }
+/* elements waiting to slide in from the side must not widen the page */
+main { overflow-x: clip; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--text-body)/1.55 var(--body); -webkit-font-smoothing: antialiased; }
 img, video, svg { display: block; max-width: 100%; }
 img { height: auto; }
@@ -185,6 +196,8 @@ footer .fine a { color: var(--on-dark); }
 .stage.is-in .d2 { transition-delay: 200ms; }
 .stage.is-in .d3 { transition-delay: 300ms; }
 .stage.is-in .d4 { transition-delay: 600ms; }
+/* js/motion.js plays the hero with GSAP instead: no CSS transitions to fight its tweens */
+.stage.is-gsap [data-enter] { transition: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .stage:not(.is-in) [data-enter] { transform: none; }
@@ -283,6 +296,17 @@ footer .fine a { color: var(--on-dark); }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) { .s-taco .mock-btns a:hover { transform: rotate(-2deg); } }
 .s-taco :focus-visible { outline-color: #ffc21a; }
 .samples-note { margin-top: 1.5rem; color: var(--muted); max-width: 46rem; }
+/* spotlight that follows the pointer over a card (js/motion.js, after React Bits SpotlightCard);
+   each card lights up in its own sample's colour */
+.s-cafe { --spot: rgba(255, 209, 92, .26); }
+.s-bar { --spot: rgba(240, 189, 112, .2); }
+.s-taco { --spot: rgba(255, 194, 26, .3); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .sample::before { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; opacity: 0;
+    background: radial-gradient(circle 240px at var(--mx, 50%) var(--my, 30%), var(--spot), transparent 70%);
+    transition: opacity var(--motion-300) var(--ease-out); }
+  .sample.is-lit::before { opacity: 1; }
+}
 
 /* video */
 .reel { display: grid; gap: 3rem; grid-template-columns: minmax(0, 1fr); align-items: center; }
@@ -300,6 +324,15 @@ footer .fine a { color: var(--on-dark); }
 /* payment summary */
 .pay { display: grid; gap: 2.5rem; margin-top: 2.75rem; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 900px) { .pay { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4rem; } }
+.methods { display: grid; gap: 1rem; align-content: start; }
+.method { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: clamp(1.1rem, 3.5vw, 1.5rem); display: grid; gap: .6rem; align-content: start; }
+.method h3 { font-size: 1.25rem; }
+.method p { color: var(--muted); }
+.method .fine-print { color: var(--ink); font-weight: 600; font-size: var(--text-secondary); background: var(--tint); border-radius: 8px; padding: .6rem .8rem; }
+.method-bank { border: 2px solid var(--accent); box-shadow: var(--shadow); }
+.method-icon { width: 32px; height: 32px; color: var(--link); }
+.method .coins { margin-top: .2rem; }
+.method .coins li { background: none; border: 0; border-radius: 0; padding: .35rem 0; }
 .coins { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .coins li { display: flex; align-items: center; gap: .8rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: .9rem 1rem; min-width: 0; }
 .coins img { flex: none; width: 40px; height: 40px; }

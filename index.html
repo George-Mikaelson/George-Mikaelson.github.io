@@ -11,6 +11,11 @@
 <link rel="preload" as="image" href="img/hero-table-800.webp" media="(max-width: 767.98px)">
 <link rel="preload" as="image" href="img/hero-table-1600.webp" media="(min-width: 768px)">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
+<script src="js/motion-core.js" defer></script>
+<script src="js/motion.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body id="top">
@@ -30,6 +35,9 @@
     <text font-family="Schibsted Grotesk, Segoe UI, Arial, sans-serif" font-weight="600" font-size="19" letter-spacing="3" fill="#2a1a12"><textPath href="#seal-bottom" startOffset="50%" text-anchor="middle">BEFORE YOU PAY</textPath></text>
     <circle cx="26" cy="100" r="3.5" fill="#2a1a12"/><circle cx="174" cy="100" r="3.5" fill="#2a1a12"/>
     <path d="M76 101l16 16 33-35" fill="none" stroke="#f7931a" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="bank-mark" viewBox="0 0 24 24">
+    <path d="M3 9.5 12 4l9 5.5M4.5 10v8M9.5 10v8M14.5 10v8M19.5 10v8M3 20h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
 </svg>
 
@@ -58,7 +66,7 @@
       <h1 data-enter>Websites and short videos for restaurants, bars and cafés</h1>
       <p class="lede d1" data-enter>One-page sites for restaurants, bars and cafés, with your menu, hours, map and a button to call or book. Vertical promo videos for TikTok and Reels. I build a free preview for your place first, so you see it before you pay.</p>
       <div class="actions d2" data-enter>
-        <a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">Ask for a free preview</a>
+        <a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request" data-magnet>Ask for a free preview</a>
         <a class="btn line" href="#samples">See sample sites</a>
       </div>
     </div>
@@ -172,7 +180,7 @@
         </article>
       </div>
     </div>
-    <p class="pay-note">Paid in crypto only: Bitcoin, USDC or SOL on Solana, or ETH. Prices are in US dollars; for BTC and ETH the invoice shows the amount at that day's rate.</p>
+    <p class="pay-note">Paid by instant bank transfer (SEPA Instant), or in crypto: Bitcoin, USDC or SOL on Solana, or ETH. Prices are in US dollars. For a bank transfer the invoice shows the amount in euros, and for BTC and ETH the amount at that day's rate.</p>
   </div>
 </section>
 
@@ -258,7 +266,7 @@
     <ol class="steps">
       <li><h3>I make a preview</h3><p>Free, built for your place from what is already public, like your map listing and menu. I send you the link.</p></li>
       <li><h3>You decide</h3><p>If you like it, tell me what to change. If you don't, you owe nothing.</p></li>
-      <li><h3>50% to start</h3><p>You pay half in crypto, and I make your changes and finish the work.</p></li>
+      <li><h3>50% to start</h3><p>You pay half by bank transfer or in crypto, and I make your changes and finish the work.</p></li>
       <li><h3>50% on delivery</h3><p>You pay the rest when the site is live or the video is ready, and the files are yours.</p></li>
     </ol>
   </div>
@@ -266,17 +274,28 @@
 
 <section id="payment" class="kraft">
   <div class="wrap">
-    <h2>Paid in crypto</h2>
+    <h2>Two ways to pay</h2>
     <div class="pay">
-      <ul class="coins" aria-label="Accepted currencies">
-        <li><img src="img/crypto/btc.svg" alt="" width="40" height="40"><span><b>Bitcoin</b><small>BTC on Bitcoin</small></span></li>
-        <li><img src="img/crypto/usdc.svg" alt="" width="40" height="40"><span><b>USDC</b><small>on Solana</small></span></li>
-        <li><img src="img/crypto/sol.svg" alt="" width="40" height="40"><span><b>SOL</b><small>on Solana</small></span></li>
-        <li><img src="img/crypto/eth.svg" alt="" width="40" height="40"><span><b>Ether</b><small>ETH on Ethereum</small></span></li>
-      </ul>
+      <div class="methods">
+        <article class="method method-bank">
+          <svg class="method-icon" aria-hidden="true"><use href="#bank-mark"/></svg>
+          <h3>Instant bank transfer</h3>
+          <p>SEPA Instant, in euros, sent from your banking app. It arrives within seconds.</p>
+          <p class="fine-print">IBAN is shared on your invoice once you accept the quote.</p>
+        </article>
+        <article class="method method-crypto">
+          <h3>Crypto</h3>
+          <ul class="coins" aria-label="Accepted currencies">
+            <li><img src="img/crypto/btc.svg" alt="" width="40" height="40"><span><b>Bitcoin</b><small>BTC on Bitcoin</small></span></li>
+            <li><img src="img/crypto/usdc.svg" alt="" width="40" height="40"><span><b>USDC</b><small>on Solana</small></span></li>
+            <li><img src="img/crypto/sol.svg" alt="" width="40" height="40"><span><b>SOL</b><small>on Solana</small></span></li>
+            <li><img src="img/crypto/eth.svg" alt="" width="40" height="40"><span><b>Ether</b><small>ETH on Ethereum</small></span></li>
+          </ul>
+        </article>
+      </div>
       <div class="pay-text">
-        <p>I only take crypto. If your place already accepts Bitcoin, you can pay from the wallet you use at the till.</p>
-        <p>The payment page has every address with a copy button, a QR code for Solana wallets, and a step-by-step guide for anyone paying in crypto for the first time.</p>
+        <p>A bank transfer is the easy route for most places. Most banks in the EU offer instant transfers in their app, and under EU rules they cost no more than a normal transfer.</p>
+        <p>If your place already accepts Bitcoin, you can pay from the wallet you use at the till. The payment page has every crypto address with a copy button, a QR code for Solana wallets, and a step-by-step guide for anyone paying in crypto for the first time.</p>
         <a class="btn line" href="pay.html">Open the payment page</a>
       </div>
     </div>
@@ -300,7 +319,7 @@
   <div class="wrap">
     <h2>Want to see your place first?</h2>
     <p>Send me the name of your place and the city. I reply with a link to your preview.</p>
-    <a class="mail" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">geroge.mikaelson1@gmail.com</a>
+    <a class="mail" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request" data-magnet>geroge.mikaelson1@gmail.com</a>
   </div>
 </section>
 </main>
