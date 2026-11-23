@@ -3,191 +3,93 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>George Mikaelson - Websites and promo videos for restaurants, bars and cafés</title>
-<meta name="description" content="One-page websites for restaurants, bars and cafés ($150 to $300), your own domain for $50 more, a $20 monthly care plan, and 20 to 30 second vertical promo videos ($90 to $150). Free preview first.">
+<title>George Mikaelson - Websites for restaurants, bars and cafés</title>
+<meta name="description" content="One-page websites for restaurants, bars and cafés for $190, your own domain for $50 more, a $20 monthly care plan, Google listing fixes and short promo videos. Free preview first.">
+<meta name="theme-color" content="#151c2e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&family=Poiret+One&family=Schibsted+Grotesk:wght@400;500;600&family=Shrikhand&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/hero-table-800.webp" media="(max-width: 767.98px)">
-<link rel="preload" as="image" href="img/hero-table-1600.webp" media="(min-width: 768px)">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Big+Shoulders+Display:wght@600&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&family=Poiret+One&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/home.css">
+<script src="js/gate.js"></script>
 <script src="js/vendor/gsap.min.js" defer></script>
 <script src="js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="js/vendor/lenis.min.js" defer></script>
 <script src="js/motion-core.js" defer></script>
-<script src="js/motion.js" defer></script>
-<script src="js/main.js" defer></script>
+<script src="js/home.js" defer></script>
 </head>
 <body id="top">
 
-<svg class="visually-hidden" aria-hidden="true" focusable="false">
-  <symbol id="gm-mark" viewBox="0 0 64 64">
-    <circle cx="32" cy="32" r="32" fill="#f7931a"/>
-    <text x="32" y="44" text-anchor="middle" font-family="Shrikhand, Georgia, serif" font-size="34" fill="#2a1a12">G</text>
-  </symbol>
-  <symbol id="seal" viewBox="0 0 200 200">
-    <circle cx="100" cy="100" r="99" fill="#f7931a"/>
-    <circle cx="100" cy="100" r="91" fill="none" stroke="#2a1a12" stroke-width="2"/>
-    <circle cx="100" cy="100" r="55" fill="#2a1a12"/>
-    <path id="seal-top" d="M 31 100 A 69 69 0 0 1 169 100" fill="none"/>
-    <path id="seal-bottom" d="M 22 100 A 78 78 0 0 0 178 100" fill="none"/>
-    <text font-family="Schibsted Grotesk, Segoe UI, Arial, sans-serif" font-weight="600" font-size="19" letter-spacing="3" fill="#2a1a12"><textPath href="#seal-top" startOffset="50%" text-anchor="middle">FREE PREVIEW</textPath></text>
-    <text font-family="Schibsted Grotesk, Segoe UI, Arial, sans-serif" font-weight="600" font-size="19" letter-spacing="3" fill="#2a1a12"><textPath href="#seal-bottom" startOffset="50%" text-anchor="middle">BEFORE YOU PAY</textPath></text>
-    <circle cx="26" cy="100" r="3.5" fill="#2a1a12"/><circle cx="174" cy="100" r="3.5" fill="#2a1a12"/>
-    <path d="M76 101l16 16 33-35" fill="none" stroke="#f7931a" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-  <symbol id="bank-mark" viewBox="0 0 24 24">
-    <path d="M3 9.5 12 4l9 5.5M4.5 10v8M9.5 10v8M14.5 10v8M19.5 10v8M3 20h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-</svg>
+<canvas class="scene" aria-hidden="true"></canvas>
 
 <header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top"><svg aria-hidden="true"><use href="#gm-mark"/></svg>George Mikaelson</a>
+  <a class="brand" href="#top">George Mikaelson</a>
+  <nav class="links" aria-label="Sections">
+    <a href="#prices">Prices</a>
+    <a href="#samples">Samples</a>
+    <a href="#video">Video</a>
+    <a href="#process">How it works</a>
+    <a href="pay.html">Pay</a>
+  </nav>
+  <details class="menu">
+    <summary>Menu</summary>
     <nav aria-label="Sections">
       <a href="#prices">Prices</a>
       <a href="#samples">Samples</a>
       <a href="#video">Video</a>
       <a href="#process">How it works</a>
-      <a href="pay.html">Payment</a>
+      <a href="pay.html">Pay</a>
     </nav>
-    <a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">Email me</a>
-  </div>
+  </details>
+  <a class="btn small" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">Email me</a>
 </header>
 
 <main>
-<div class="stage">
-  <picture class="stage-photo">
-    <source media="(min-width: 768px)" srcset="img/hero-table-1600.webp">
-    <img src="img/hero-table-800.webp" alt="" width="800" height="1000" fetchpriority="high">
-  </picture>
-  <div class="wrap">
-    <div>
-      <h1 data-enter>Websites and short videos for restaurants, bars and cafés</h1>
-      <p class="lede d1" data-enter>One-page sites for restaurants, bars and cafés, with your menu, hours, map and a button to call or book. Vertical promo videos for TikTok and Reels. I build a free preview for your place first, so you see it before you pay.</p>
-      <div class="actions d2" data-enter>
-        <a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request" data-magnet>Ask for a free preview</a>
-        <a class="btn line" href="#samples">See sample sites</a>
-      </div>
+<section class="hero" id="hero" data-scene="hero">
+  <div class="still" aria-hidden="true"></div>
+  <div class="copy">
+    <h1>Your restaurant, open on every phone</h1>
+    <p class="lede">I build one-page websites for restaurants, bars and cafés. Before you pay anything, I make a free preview of yours.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">Ask for a free preview</a>
+      <a class="btn line" href="#samples">See sample sites</a>
     </div>
-    <figure class="device d3" data-enter>
-      <div class="phone" role="img" aria-label="Phone showing a sample website for Casa Brasa, a made-up restaurant: photo, call and booking buttons, opening status, menu, hours and map.">
-        <div class="screen" aria-hidden="true">
-          <div class="scroller cb">
-            <div class="cb-bar"><span class="cb-name">Casa Brasa</span><span class="cb-tag">Sample</span></div>
-            <div class="cb-hero">
-              <img src="img/dish-spread-360.webp" srcset="img/dish-spread-360.webp 360w, img/dish-spread-720.webp 720w" sizes="280px" alt="" width="360" height="450">
-              <p>Cooked over wood, every night</p>
-            </div>
-            <div class="cb-actions"><span>Call</span><span>Book</span><span>Map</span></div>
-            <div class="cb-open"><span class="cb-dot"></span>Open tonight until 23:00</div>
-            <div class="cb-sec">
-              <h4>Tonight</h4>
-              <ul>
-                <li>Charred leeks, romesco <small>starter</small></li>
-                <li>Octopus from the grill <small>main</small></li>
-                <li>Half chicken, mojo verde <small>main</small></li>
-                <li>Burnt cheesecake <small>dessert</small></li>
-              </ul>
-            </div>
-            <img class="cb-photo" src="img/espresso-bar-360.webp" srcset="img/espresso-bar-360.webp 360w, img/espresso-bar-720.webp 720w" sizes="260px" alt="" width="360" height="270" loading="lazy">
-            <div class="cb-sec">
-              <h4>Hours</h4>
-              <ul>
-                <li>Tue to Thu <small>18:00 to 23:00</small></li>
-                <li>Fri and Sat <small>18:00 to 00:30</small></li>
-                <li>Sun and Mon <small>closed</small></li>
-              </ul>
-            </div>
-            <div class="cb-sec"><h4>Find us</h4></div>
-            <div class="cb-map"></div>
-            <p class="cb-foot">Sample site for a made-up restaurant.</p>
-          </div>
-        </div>
-      </div>
-      <svg class="seal d4" data-enter role="img" aria-label="Badge: free preview before you pay"><use href="#seal"/></svg>
-      <figcaption>A sample site for a made-up restaurant. Yours uses your own menu, hours and photos.</figcaption>
-    </figure>
-  </div>
-</div>
-
-<section id="includes">
-  <div class="wrap">
-    <h2>What every site includes</h2>
-    <p class="intro">The things people look for before they visit, on one page that loads fast on a phone.</p>
-    <ul class="includes">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M9 9h6M9 13h6"/></svg><b>Menu</b><span>Readable on a phone, no PDF to download</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Opening hours</b><span>Days, times and the holidays you tell me about</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Map</b><span>Directions open in the visitor's map app</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 12l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg><b>Call or book</b><span>One tap to call, or a link to your booking page</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><b>Your own domain</b><span>yourplace.com instead of a github.io address, for $50 once</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6.1 9.1 4.5 4.5 0 0 0 7 18z"/></svg><b>Free hosting</b><span>On GitHub Pages, so no monthly bill</span></li>
-    </ul>
   </div>
 </section>
 
-<section id="prices" class="kraft">
-  <div class="wrap">
-    <h2>Two services, fixed prices</h2>
-    <p class="intro">You get the exact price in writing before any work starts. Where it falls in the range depends on how much there is to build.</p>
-    <div class="offers">
-      <article class="offer">
-        <div class="pic"><img src="img/plate-640.webp" srcset="img/plate-640.webp 640w, img/plate-1200.webp 1200w" sizes="(min-width: 900px) 560px, 100vw" alt="A plated dish seen from above" width="640" height="480" loading="lazy"></div>
-        <div class="offer-body">
-          <div class="price-line"><h3>Restaurant, bar or café website</h3><span class="leader" aria-hidden="true"></span><span class="price">$150 to $300</span></div>
-          <p>One page that loads fast on a phone and shows what people look for before they visit.</p>
-          <ul>
-            <li>Menu, opening hours and map</li>
-            <li>Button to call or book</li>
-            <li>Free hosting on GitHub Pages</li>
-            <li>Your own domain if you want one, for $50 more</li>
-          </ul>
-          <p>The price depends on the length of the menu and how many languages you need.</p>
-          <div class="actions"><a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">Ask for a free preview</a></div>
-        </div>
-      </article>
-      <article class="offer">
-        <div class="pic"><img src="img/pour-640.webp" srcset="img/pour-640.webp 640w, img/pour-1200.webp 1200w" sizes="(min-width: 900px) 560px, 100vw" alt="A bartender pouring a drink into a glass" width="640" height="480" loading="lazy"></div>
-        <div class="offer-body">
-          <div class="price-line"><h3>Vertical promo video</h3><span class="leader" aria-hidden="true"></span><span class="price">$90 to $150</span></div>
-          <p>A 20 to 30 second clip for TikTok, Instagram Reels and YouTube Shorts, cut from your own photos and footage.</p>
-          <ul>
-            <li>9:16, ready to post</li>
-            <li>On-screen text with your name and address</li>
-            <li>Made from the photos, clips and logo you send</li>
-          </ul>
-          <p>The price depends on how much footage there is and how much editing it needs.</p>
-          <div class="actions"><a class="btn line" href="#video">See the video format</a></div>
-        </div>
-      </article>
+<section id="includes" data-scene="includes">
+  <div class="pin">
+    <div class="still" aria-hidden="true"></div>
+    <div class="copy panel">
+      <h2>What guests check before they come</h2>
+      <ul class="parts">
+        <li><b>Menu</b><span>Readable on a phone, with no PDF to download.</span></li>
+        <li><b>Opening hours</b><span>Days and times, plus the holidays you tell me about.</span></li>
+        <li><b>Map</b><span>One tap opens directions in their map app.</span></li>
+        <li><b>Call or book</b><span>One tap to call, or a link to your booking page.</span></li>
+      </ul>
+      <p class="aside">Hosting on GitHub Pages is free, so there is no monthly bill.</p>
     </div>
-    <div class="extras">
-      <h3>Extras for a website</h3>
-      <div class="extras-grid">
-        <article class="extra" id="domain">
-          <div class="price-line"><h4>Your own domain</h4><span class="leader" aria-hidden="true"></span><span class="price">$50 once</span></div>
-          <p>Your site at yourplace.com instead of a github.io address. I register the domain in your name and connect it to the site, so it belongs to you.</p>
-          <p class="fine-print">The registrar charges a yearly renewal on top, usually $10 to $20 for a .com. That fee goes to the registrar, not to me.</p>
-        </article>
-        <article class="extra" id="care">
-          <div class="price-line"><h4>Monthly care plan</h4><span class="leader" aria-hidden="true"></span><span class="price">$20 a month</span></div>
-          <ul>
-            <li>Up to 2 changes a month to your menu, hours, prices or photos</li>
-            <li>A weekly check that the site is online and loads properly</li>
-            <li>Your domain renewed before it expires, with the registrar's fee passed on at cost</li>
-          </ul>
-          <p class="fine-print">Stop any month. The site stays online either way, because the hosting is free.</p>
-        </article>
-      </div>
-    </div>
-    <p class="pay-note">Paid by instant bank transfer (SEPA Instant), or in crypto: Bitcoin, USDC or SOL on Solana, or ETH. Prices are in US dollars. For a bank transfer the invoice shows the amount in euros, and for BTC and ETH the amount at that day's rate.</p>
   </div>
 </section>
 
-<section id="samples">
+<section id="prices" data-scene="prices">
+  <div class="copy panel wide">
+    <h2>What it costs</h2>
+    <dl class="menu-card">
+      <div id="site"><dt>One-page website</dt><dd class="price">$190</dd><dd class="what">Menu, hours, map and a button to call or book.</dd></div>
+      <div id="domain"><dt>Your own domain</dt><dd class="price">+$50 once</dd><dd class="what">yourplace.com, registered in your name. The registrar's yearly renewal, usually $10 to $20 for a .com, goes to them.</dd></div>
+      <div id="care"><dt>Care plan</dt><dd class="price">$20 a month</dd><dd class="what">Up to 2 changes a month, a weekly check that the site is up, and your domain renewed on time. Stop any month.</dd></div>
+      <div id="listing"><dt>Google listing fix</dt><dd class="price">$89</dd><dd class="what">Just your Google Maps listing: hours, categories, description and a list of photos to add.</dd></div>
+      <div><dt>Promo video</dt><dd class="price">$90 to $150</dd><dd class="what">20 to 30 seconds, vertical, cut from your own photos and clips.</dd></div>
+    </dl>
+    <p class="aside">Prices are in US dollars. You get the exact price in writing before any work starts.</p>
+  </div>
+</section>
+
+<section id="samples" class="solid">
   <div class="wrap">
-    <h2>Sample sites</h2>
-    <p class="intro">Three made-up places, each with its own layout, type and colors to match the room. Open one to see the whole site, with a menu, hours, a map and buttons that go somewhere.</p>
+    <h2>Three sample sites</h2>
+    <p class="intro">Made-up places, each with its own layout and type. Open one and try the buttons.</p>
     <div class="samples">
       <article class="sample s-cafe">
         <a class="pic" href="samples/cafe-lumen/index.html">
@@ -196,8 +98,7 @@
           <h3 class="sample-name">Café Lumen</h3>
         </a>
         <div class="sample-body">
-          <p>A morning café in white and ink, with its name set big like a magazine cover, today's bakes and pastry boxes to reserve.</p>
-          <p class="hours">Mon to Sat from 7:30, until 16:00</p>
+          <p>A morning café in white and ink, with today's bakes and pastry boxes to reserve.</p>
           <div class="mock-btns"><a href="samples/cafe-lumen/index.html#contact" aria-label="Call, Café Lumen sample">Call</a><a href="samples/cafe-lumen/index.html#find" aria-label="Directions, Café Lumen sample">Directions</a></div>
           <a class="open-sample" href="samples/cafe-lumen/index.html">Open the sample site</a>
         </div>
@@ -209,8 +110,7 @@
           <h3 class="sample-name">The Amber Room</h3>
         </a>
         <div class="sample-body">
-          <p>A late cocktail bar in dark wood and brass, Art Deco style, with the drinks on a framed card and booth booking.</p>
-          <p class="hours">Wed to Sun from 18:00, until late</p>
+          <p>A late cocktail bar in dark wood and brass, with the drinks on a framed card and booth booking.</p>
           <div class="mock-btns"><a href="samples/the-amber-room/index.html#book" aria-label="Book a table, The Amber Room sample">Book a table</a><a href="samples/the-amber-room/index.html#menu" aria-label="Menu, The Amber Room sample">Menu</a></div>
           <a class="open-sample" href="samples/the-amber-room/index.html">Open the sample site</a>
         </div>
@@ -222,116 +122,79 @@
           <h3 class="sample-name">Tacos Mañana</h3>
         </a>
         <div class="sample-body">
-          <p>A taqueria that looks like a market poster: loud colors, chunky letters, drawn chiles and an order ticket that adds up as you go.</p>
-          <p class="hours">Every day from 12:00</p>
+          <p>A taqueria like a market poster, with an order ticket that adds up as you pick.</p>
           <div class="mock-btns"><a href="samples/tacos-manana/index.html#contact" aria-label="Call, Tacos Mañana sample">Call</a><a href="samples/tacos-manana/index.html#order" aria-label="Order, Tacos Mañana sample">Order</a></div>
           <a class="open-sample" href="samples/tacos-manana/index.html">Open the sample site</a>
         </div>
       </article>
     </div>
-    <p class="samples-note">The places, menus, addresses and phone numbers are invented, and the photos come from Unsplash. A real site uses your own details.</p>
   </div>
 </section>
 
-<section id="video" class="kraft">
+<section id="video" class="solid">
   <div class="wrap reel">
     <div>
       <h2>Short videos for TikTok and Reels</h2>
-      <p class="intro">A vertical clip made from your own material, ready to post on the accounts you already have.</p>
-      <ul class="facts-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span>9:16, the format TikTok, Instagram Reels and YouTube Shorts expect</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>20 to 30 seconds long</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 15l-5-5-8 9"/></svg><span>Cut from the photos, clips and logo you send me</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6h14M12 6v12M9 18h6"/></svg><span>On-screen text with your name, address and offer</span></li>
-      </ul>
-      <p class="price">$90 to $150</p>
+      <p class="intro">A vertical clip of 20 to 30 seconds, cut from your own photos and footage, with your name and address on screen. Ready to post on the accounts you already have.</p>
+      <p class="reel-price">$90 to $150</p>
       <div class="actions"><a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Promo%20video%20request">Ask about a video</a></div>
     </div>
-    <figure class="reel-device">
-      <div class="phone">
-        <div class="screen">
-          <img class="reel-poster" src="img/video-poster-360.webp" srcset="img/video-poster-360.webp 360w, img/video-poster-720.webp 720w" sizes="280px" alt="A plated dish on a wooden table, shown in the 9:16 frame" width="360" height="640" loading="lazy">
-          <video class="reel-video" hidden autoplay muted loop playsinline preload="none" poster="img/video-poster-720.webp" data-src="media/restaurant_tiktok.mp4" aria-label="Sample promo video for a restaurant, 9:16"></video>
-        </div>
-      </div>
-      <figcaption class="reel-caption" data-ready="Sample promo video, 9:16.">Showcase video in production. The frame shows the 9:16 format.</figcaption>
-    </figure>
+    <div class="reel-phone">
+      <img class="reel-poster" src="img/video-poster-360.webp" srcset="img/video-poster-360.webp 360w, img/video-poster-720.webp 720w" sizes="280px" alt="A plated dish on a wooden table in a 9:16 frame" width="360" height="640" loading="lazy">
+      <video class="reel-video" hidden muted loop playsinline preload="none" poster="img/video-poster-720.webp" data-src="media/restaurant_tiktok.mp4" aria-label="Sample promo video for a restaurant, 9:16"></video>
+    </div>
   </div>
 </section>
 
-<section id="process">
-  <div class="wrap">
+<section id="process" data-scene="process">
+  <div class="copy panel">
     <h2>How it works</h2>
-    <p class="intro">You see the work before you spend anything, and you pay in two halves.</p>
     <ol class="steps">
-      <li><h3>I make a preview</h3><p>Free, built for your place from what is already public, like your map listing and menu. I send you the link.</p></li>
-      <li><h3>You decide</h3><p>If you like it, tell me what to change. If you don't, you owe nothing.</p></li>
-      <li><h3>50% to start</h3><p>You pay half by bank transfer or in crypto, and I make your changes and finish the work.</p></li>
-      <li><h3>50% on delivery</h3><p>You pay the rest when the site is live or the video is ready, and the files are yours.</p></li>
+      <li><b>I make a preview</b><span>Free, built from your public listing and menu. I send you the link.</span></li>
+      <li><b>You decide</b><span>Tell me what to change. If you don't like it, you owe nothing.</span></li>
+      <li><b>Half to start</b><span>You pay 50% by bank transfer or in crypto, and I finish the work.</span></li>
+      <li><b>Half on delivery</b><span>The rest when the site is live or the video is ready. The files are yours.</span></li>
     </ol>
   </div>
 </section>
 
-<section id="payment" class="kraft">
+<section id="payment" class="solid">
   <div class="wrap">
     <h2>Two ways to pay</h2>
     <div class="pay">
-      <div class="methods">
-        <article class="method method-bank">
-          <svg class="method-icon" aria-hidden="true"><use href="#bank-mark"/></svg>
-          <h3>Instant bank transfer</h3>
-          <p>SEPA Instant, in euros, sent from your banking app. It arrives within seconds.</p>
-          <p class="fine-print">IBAN is shared on your invoice once you accept the quote.</p>
-        </article>
-        <article class="method method-crypto">
-          <h3>Crypto</h3>
-          <ul class="coins" aria-label="Accepted currencies">
-            <li><img src="img/crypto/btc.svg" alt="" width="40" height="40"><span><b>Bitcoin</b><small>BTC on Bitcoin</small></span></li>
-            <li><img src="img/crypto/usdc.svg" alt="" width="40" height="40"><span><b>USDC</b><small>on Solana</small></span></li>
-            <li><img src="img/crypto/sol.svg" alt="" width="40" height="40"><span><b>SOL</b><small>on Solana</small></span></li>
-            <li><img src="img/crypto/eth.svg" alt="" width="40" height="40"><span><b>Ether</b><small>ETH on Ethereum</small></span></li>
-          </ul>
-        </article>
-      </div>
-      <div class="pay-text">
-        <p>A bank transfer is the easy route for most places. Most banks in the EU offer instant transfers in their app, and under EU rules they cost no more than a normal transfer.</p>
-        <p>If your place already accepts Bitcoin, you can pay from the wallet you use at the till. The payment page has every crypto address with a copy button, a QR code for Solana wallets, and a step-by-step guide for anyone paying in crypto for the first time.</p>
-        <a class="btn line" href="pay.html">Open the payment page</a>
-      </div>
+      <article class="method">
+        <h3>Instant bank transfer</h3>
+        <p>SEPA Instant in euros, from your banking app. It arrives in seconds. The IBAN is shared on your invoice once you accept the quote.</p>
+      </article>
+      <article class="method">
+        <h3>Crypto</h3>
+        <ul class="coins" aria-label="Accepted currencies">
+          <li><img src="img/crypto/btc.svg" alt="" width="32" height="32"><span>Bitcoin <small>BTC</small></span></li>
+          <li><img src="img/crypto/usdc.svg" alt="" width="32" height="32"><span>USDC <small>on Solana</small></span></li>
+          <li><img src="img/crypto/sol.svg" alt="" width="32" height="32"><span>SOL <small>on Solana</small></span></li>
+          <li><img src="img/crypto/eth.svg" alt="" width="32" height="32"><span>Ether <small>ETH</small></span></li>
+        </ul>
+      </article>
     </div>
+    <p class="pay-link"><a class="btn line" href="pay.html">Open the payment page</a><span>Every address with a copy button, and a guide if it's your first crypto payment.</span></p>
   </div>
 </section>
 
-<section id="who" class="who">
-  <div class="wrap">
-    <h2>Who does the work</h2>
-    <p>One person. I use AI tools to draft code, text and video edits, and I check every page and every frame myself before you see it.</p>
-    <p>This is a new service, so you won't find client reviews here yet. The free preview is there so you can judge the work for yourself.</p>
-    <p>I also build open-source tools. <a href="https://github.com/George-Mikaelson/shopfront-audit">shopfront-audit</a> checks a small business website for speed, accessibility, phone layout and local search, and writes a plain-English report. <a href="https://george-mikaelson.github.io/shopfront-audit/">See a sample report</a>.</p>
-  </div>
-</section>
-
-<section id="contact" class="closer">
-  <picture>
-    <source media="(min-width: 768px)" srcset="img/dining-room-1600.webp">
-    <img src="img/dining-room-800.webp" alt="" width="800" height="450" loading="lazy">
-  </picture>
-  <div class="wrap">
+<section id="contact" data-scene="contact">
+  <div class="still" aria-hidden="true"></div>
+  <div class="copy">
     <h2>Want to see your place first?</h2>
-    <p>Send me the name of your place and the city. I reply with a link to your preview.</p>
-    <a class="mail" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request" data-magnet>geroge.mikaelson1@gmail.com</a>
+    <p class="lede">Send me its name and city. I'll reply with a link to your preview.</p>
+    <a class="mail" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">geroge.mikaelson1@gmail.com</a>
+    <p class="about">I'm George. I work alone and check every page myself. The service is new, so there are no client reviews yet. I also make <a href="https://github.com/George-Mikaelson/shopfront-audit">shopfront-audit</a>, an open-source tool that checks a small business website and writes a plain-English report (<a href="https://george-mikaelson.github.io/shopfront-audit/">sample report</a>).</p>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="fine">
-      <a href="pay.html">How to pay</a>
-      <span>Food photos from Unsplash.</span>
-      <span>George Mikaelson is my business name.</span>
-    </div>
-  </div>
+  <a href="pay.html">How to pay</a>
+  <a href="https://github.com/George-Mikaelson">GitHub</a>
+  <span>Sample photos from Unsplash</span>
 </footer>
 
 </body>
