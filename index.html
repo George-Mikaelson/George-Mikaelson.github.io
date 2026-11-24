@@ -1,201 +1,397 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>George Mikaelson - Websites for restaurants, bars and cafés</title>
-<meta name="description" content="One-page websites for restaurants, bars and cafés for $190, your own domain for $50 more, a $20 monthly care plan, Google listing fixes and short promo videos. Free preview first.">
-<meta name="theme-color" content="#151c2e">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Big+Shoulders+Display:wght@600&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&family=Poiret+One&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/home.css">
-<script src="js/gate.js"></script>
-<script src="js/vendor/gsap.min.js" defer></script>
-<script src="js/vendor/ScrollTrigger.min.js" defer></script>
-<script src="js/vendor/lenis.min.js" defer></script>
-<script src="js/motion-core.js" defer></script>
-<script src="js/home.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>George Mikaelson · Websites for restaurants and hospitality brands</title>
+  <meta name="description" content="George Mikaelson designs and builds websites for restaurants, cafés, bars and hospitality groups: custom design, digital menus, fast mobile pages and multi-location sites.">
+  <meta name="theme-color" content="#060403">
+  <link rel="canonical" href="https://george-mikaelson.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="George Mikaelson · Websites for restaurants">
+  <meta property="og:description" content="Custom websites for restaurants, cafés, bars and hospitality groups.">
+  <meta property="og:url" content="https://george-mikaelson.github.io/">
+  <meta property="og:image" content="https://george-mikaelson.github.io/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/Boska-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Switzer-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="js/boot.js"></script>
+  <script type="module" crossorigin src="./assets/main-B1dzcuRV.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Db7Dhz1y.css">
 </head>
-<body id="top">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<canvas class="scene" aria-hidden="true"></canvas>
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__mark">George Mikaelson</span>
+      <span class="loader__line"><span class="loader__fill"></span></span>
+    </div>
+  </div>
 
-<header class="top">
-  <a class="brand" href="#top">George Mikaelson</a>
-  <nav class="links" aria-label="Sections">
-    <a href="#prices">Prices</a>
-    <a href="#samples">Samples</a>
-    <a href="#video">Video</a>
-    <a href="#process">How it works</a>
-    <a href="pay.html">Pay</a>
-  </nav>
-  <details class="menu">
-    <summary>Menu</summary>
-    <nav aria-label="Sections">
-      <a href="#prices">Prices</a>
-      <a href="#samples">Samples</a>
-      <a href="#video">Video</a>
-      <a href="#process">How it works</a>
-      <a href="pay.html">Pay</a>
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+  <header class="nav" data-theme="dark">
+    <a class="nav__brand" href="#top" aria-label="George Mikaelson, back to the top">
+      <svg class="nav__mono" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.25"/><text x="20" y="25.5" text-anchor="middle">GM</text></svg>
+      <span class="nav__name">George Mikaelson</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </details>
-  <a class="btn small" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">Email me</a>
-</header>
+    <a class="nav__cta" href="#contact">Start a project</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="sheet">Menu</button>
+  </header>
 
-<main>
-<section class="hero" id="hero" data-scene="hero">
-  <div class="still" aria-hidden="true"></div>
-  <div class="copy">
-    <h1>Your restaurant, open on every phone</h1>
-    <p class="lede">I build one-page websites for restaurants, bars and cafés. Before you pay anything, I make a free preview of yours.</p>
-    <div class="actions">
-      <a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">Ask for a free preview</a>
-      <a class="btn line" href="#samples">See sample sites</a>
+  <div class="sheet" id="sheet" hidden>
+    <nav class="sheet__nav" aria-label="Main, mobile">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#why">Why us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="sheet__foot">
+      <a href="mailto:geroge.mikaelson1@gmail.com">geroge.mikaelson1@gmail.com</a>
+      <a href="https://t.me/GeorgeMikaelson" target="_blank" rel="noopener">Telegram @GeorgeMikaelson</a>
     </div>
+    <button class="sheet__close" type="button">Close</button>
   </div>
-</section>
 
-<section id="includes" data-scene="includes">
-  <div class="pin">
-    <div class="still" aria-hidden="true"></div>
-    <div class="copy panel">
-      <h2>What guests check before they come</h2>
-      <ul class="parts">
-        <li><b>Menu</b><span>Readable on a phone, with no PDF to download.</span></li>
-        <li><b>Opening hours</b><span>Days and times, plus the holidays you tell me about.</span></li>
-        <li><b>Map</b><span>One tap opens directions in their map app.</span></li>
-        <li><b>Call or book</b><span>One tap to call, or a link to your booking page.</span></li>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__stage">
+        <div class="hero__scene">
+          <picture class="hero__poster">
+            <source media="(max-aspect-ratio: 1/1)" srcset="frames/m/f0001.webp">
+            <img src="frames/d/f0001.webp" width="1600" height="900" fetchpriority="high" decoding="async" alt="A restaurant table by candlelight: a chocolate dome dessert on a stoneware plate, red wine, water, bread and a printed menu card.">
+          </picture>
+          <canvas class="hero__canvas" aria-hidden="true"></canvas>
+          <picture class="hero__still" aria-hidden="true">
+            <source media="(max-aspect-ratio: 1/1)" srcset="frames/m/still.webp">
+            <img src="frames/d/still.webp" alt="" width="2400" height="1350" decoding="async" loading="lazy">
+          </picture>
+          <div class="hero__scrim" aria-hidden="true"></div>
+          <div class="hero__tint" aria-hidden="true"></div>
+          <svg class="hero__marks" aria-hidden="true"></svg>
+        </div>
+
+        <div class="hero__copy">
+          <h1 class="hero__title" id="hero-title">We build digital experiences for the art of hospitality.</h1>
+          <p class="hero__lede">Premium websites for restaurants, hospitality brands and ambitious restaurant groups.</p>
+          <p class="hero__cue" aria-hidden="true"><span class="hero__cue-line"></span>Scroll to take a seat</p>
+        </div>
+
+        <ol class="hero__chapters" aria-hidden="true">
+          <li class="is-active"><span>01</span> The table</li>
+          <li><span>02</span> Closer</li>
+          <li><span>03</span> The layout</li>
+          <li><span>04</span> The website</li>
+        </ol>
+
+        <div class="hero__lines" aria-hidden="true">
+          <p class="hero__line" data-line="2">Before anyone books a table, they look you up.</p>
+          <p class="hero__line" data-line="3">Every table already has a layout.</p>
+        </div>
+
+        <div class="showcase">
+          <div class="showcase__browser">
+            <div class="showcase__bar">
+              <span class="showcase__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="showcase__url">plumb-coffee.pages.dev</span>
+            </div>
+            <div class="showcase__view">
+              <div class="showcase__stack">
+                <img src="img/plumb/home-1440.webp" srcset="img/plumb/home-960.webp 960w, img/plumb/home-1440.webp 1440w, img/plumb/home-2160.webp 2160w" sizes="(min-width: 1024px) 62vw, 92vw" width="1440" height="900" alt="Plumb homepage: the wordmark beside an iced latte in a clear cup." loading="lazy" decoding="async">
+                <img src="img/plumb/intro-1440.webp" srcset="img/plumb/intro-960.webp 960w, img/plumb/intro-1440.webp 1440w, img/plumb/intro-2160.webp 2160w" sizes="(min-width: 1024px) 62vw, 92vw" width="1440" height="900" alt="Plumb brand statement: Measure twice. Pour once." loading="lazy" decoding="async">
+                <img src="img/plumb/menu-1440.webp" srcset="img/plumb/menu-960.webp 960w, img/plumb/menu-1440.webp 1440w, img/plumb/menu-2160.webp 2160w" sizes="(min-width: 1024px) 62vw, 92vw" width="1440" height="900" alt="Plumb menu page: The Level, an iced latte, with its price and a studio render of the drink." loading="lazy" decoding="async">
+                <img src="img/plumb/method-1440.webp" srcset="img/plumb/method-960.webp 960w, img/plumb/method-1440.webp 1440w, img/plumb/method-2160.webp 2160w" sizes="(min-width: 1024px) 62vw, 92vw" width="1440" height="900" alt="Plumb method section: four numbered checks with photographs." loading="lazy" decoding="async">
+                <img src="img/plumb/bar-1440.webp" srcset="img/plumb/bar-960.webp 960w, img/plumb/bar-1440.webp 1440w, img/plumb/bar-2160.webp 2160w" sizes="(min-width: 1024px) 62vw, 92vw" width="1440" height="900" alt="Plumb bar section: a barista at work behind the counter." loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="showcase__phone">
+            <div class="showcase__notch" aria-hidden="true"></div>
+            <div class="showcase__pview">
+              <div class="showcase__pstack">
+                <img src="img/plumb/m-menu-540.webp" width="540" height="1169" alt="Plumb menu on a phone: Plumb Line, a double ristretto over ice." loading="lazy" decoding="async">
+                <img src="img/plumb/m-level-540.webp" width="540" height="1169" alt="Plumb menu on a phone: The Level, an iced latte built in layers." loading="lazy" decoding="async">
+                <img src="img/plumb/m-home-540.webp" width="540" height="1169" alt="Plumb homepage on a phone." loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="showcase__note">
+            <p class="showcase__title">Plumb</p>
+            <p class="showcase__meta">Specialty coffee. A concept project, designed and built by us.</p>
+            <a class="link" href="https://plumb-coffee.pages.dev/" target="_blank" rel="noopener">Visit the live site<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro" id="intro" aria-labelledby="intro-title">
+      <div class="wrap intro__grid">
+        <h2 class="intro__title" id="intro-title" data-scrub-words>We don’t just build websites. We build the digital front door of your restaurant.</h2>
+        <div class="intro__side">
+          <p class="intro__text" data-reveal>Your restaurant deserves more than a template. We create distinctive digital experiences that capture your identity, show your food at its best and make it easier for guests to find you, read the menu and book.</p>
+          <a class="btn btn--brass" href="#contact" data-magnet><span>Let’s build your website</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="wrap work__head">
+        <h2 class="work__title" id="work-title" data-lines>Selected work</h2>
+        <p class="work__intro" data-reveal>Our work so far is concept work: complete, live websites we design and build to show what a restaurant site can be. Each one is labelled as a concept.</p>
+      </div>
+
+      <article class="case" aria-labelledby="case-plumb">
+        <div class="wrap case__grid">
+          <a class="case__preview" href="https://plumb-coffee.pages.dev/" target="_blank" rel="noopener" data-cursor="Visit site" aria-label="Plumb, open the live concept site in a new tab">
+            <span class="case__frame">
+              <span class="case__bar" aria-hidden="true"><i></i><i></i><i></i><span>plumb-coffee.pages.dev</span></span>
+              <span class="case__screen">
+                <video class="case__video" muted playsinline loop preload="none" poster="video/plumb-pour-poster.webp" aria-hidden="true">
+                  <source src="video/plumb-pour.mp4" type="video/mp4">
+                </video>
+                <span class="case__scroll">
+                  <img src="img/plumb/home-1440.webp" srcset="img/plumb/home-960.webp 960w, img/plumb/home-1440.webp 1440w, img/plumb/home-2160.webp 2160w" sizes="(min-width: 1024px) 64vw, 92vw" width="1440" height="900" alt="" loading="lazy" decoding="async">
+                  <img src="img/plumb/menu2-1440.webp" srcset="img/plumb/menu2-960.webp 960w, img/plumb/menu2-1440.webp 1440w, img/plumb/menu2-2160.webp 2160w" sizes="(min-width: 1024px) 64vw, 92vw" width="1440" height="900" alt="" loading="lazy" decoding="async">
+                  <img src="img/plumb/method-1440.webp" srcset="img/plumb/method-960.webp 960w, img/plumb/method-1440.webp 1440w, img/plumb/method-2160.webp 2160w" sizes="(min-width: 1024px) 64vw, 92vw" width="1440" height="900" alt="" loading="lazy" decoding="async">
+                  <img src="img/plumb/loc-1440.webp" srcset="img/plumb/loc-960.webp 960w, img/plumb/loc-1440.webp 1440w, img/plumb/loc-2160.webp 2160w" sizes="(min-width: 1024px) 64vw, 92vw" width="1440" height="900" alt="" loading="lazy" decoding="async">
+                  <img src="img/plumb/end-1440.webp" srcset="img/plumb/end-960.webp 960w, img/plumb/end-1440.webp 1440w, img/plumb/end-2160.webp 2160w" sizes="(min-width: 1024px) 64vw, 92vw" width="1440" height="900" alt="" loading="lazy" decoding="async">
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <div class="case__body">
+            <p class="case__tag">Concept project</p>
+            <h3 class="case__name" id="case-plumb">Plumb</h3>
+            <dl class="case__facts">
+              <div><dt>Industry</dt><dd>Specialty coffee, multi-location</dd></div>
+              <div><dt>Scope</dt><dd>Brand concept, 3D renders, design, development</dd></div>
+              <div><dt>Year</dt><dd>2026</dd></div>
+            </dl>
+            <p class="case__desc">An editorial digital experience for a specialty coffee concept, combining minimalist art direction, product storytelling and a carefully structured menu experience.</p>
+            <h4 class="case__sub">Design highlights</h4>
+            <ul class="case__list">
+              <li>The opening pours an iced latte as you scroll, rendered frame by frame in 3D.</li>
+              <li>Six drinks, one at a time: the menu changes the photograph as you read down the list.</li>
+              <li>One typeface family whose narrow and wide cuts carry the whole identity.</li>
+              <li>Mobile first: the pour, the menu and the bar locations all work on a phone.</li>
+            </ul>
+            <a class="btn btn--ink" href="https://plumb-coffee.pages.dev/" target="_blank" rel="noopener" data-magnet><span>Visit the live site</span><span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+
+        <div class="wrap case__strip">
+          <figure class="case__shot case__shot--phone">
+            <img src="img/plumb/m-level-540.webp" width="540" height="1169" alt="Plumb on a phone: The Level, with its price and description." loading="lazy" decoding="async">
+            <figcaption>The menu on a phone</figcaption>
+          </figure>
+          <figure class="case__shot case__shot--wide">
+            <img src="img/plumb/method-1440.webp" srcset="img/plumb/method-960.webp 960w, img/plumb/method-1440.webp 1440w" sizes="(min-width: 1024px) 44vw, 92vw" width="1440" height="900" alt="Plumb method section: four numbered checks before a cup leaves the bar, each with a photograph." loading="lazy" decoding="async">
+            <figcaption>The method, in four checks</figcaption>
+          </figure>
+          <figure class="case__shot case__shot--phone">
+            <img src="img/plumb/m-bar-540.webp" width="540" height="1169" alt="Plumb on a phone: the bar section with a short film still and photographs." loading="lazy" decoding="async">
+            <figcaption>The bar, filmed</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="study" aria-labelledby="study-title">
+        <div class="wrap study__grid">
+          <div class="study__body">
+            <p class="case__tag">Studio study</p>
+            <h3 class="study__title" id="study-title">From table to screen</h3>
+            <p class="study__desc">The opening of this page. One table, set for dessert and rendered in 3D, turns into a website as you scroll: the plate becomes the hero image, the cutlery sets the grid and the menu card becomes the menu page.</p>
+            <a class="link" href="#top">Watch it again from the top</a>
+          </div>
+          <div class="study__frames">
+            <img src="img/study-low.webp" width="900" height="506" alt="The table at the start of the opening, seen from a diner’s chair." loading="lazy" decoding="async">
+            <img src="img/study-close.webp" width="900" height="506" alt="Close on the dessert plate, the water glass and the wine." loading="lazy" decoding="async">
+            <img src="img/study-top.webp" width="900" height="506" alt="The same table from directly above, laid out like a page." loading="lazy" decoding="async">
+          </div>
+        </div>
+      </article>
+
+      <div class="wrap next">
+        <p class="next__text">The next project in this list could be your restaurant.</p>
+        <a class="link link--big" href="#contact">Tell us about it</a>
+      </div>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="wrap services__head">
+        <h2 class="services__title" id="services-title" data-lines>What we do</h2>
+        <p class="services__intro" data-reveal>Six things, all of them for hospitality. Most projects use several.</p>
+      </div>
+      <ul class="wrap services__list">
+        <li class="svc" tabindex="-1">
+          <svg class="svc__art" viewBox="0 0 120 120" aria-hidden="true"><rect x="14" y="26" width="92" height="68"/><circle cx="60" cy="60" r="22"/><line x1="30" y1="34" x2="30" y2="86"/><line x1="90" y1="34" x2="90" y2="86"/><line x1="14" y1="60" x2="106" y2="60" class="svc__guide"/></svg>
+          <h3 class="svc__name">Website design</h3>
+          <p class="svc__desc">A design drawn from your room, your plates and your guests. Every page is laid out for the way people choose where to eat.</p>
+        </li>
+        <li class="svc" tabindex="-1">
+          <svg class="svc__art" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="62" r="36"/><line x1="60" y1="62" x2="60" y2="34" class="svc__hand"/><line x1="52" y1="18" x2="68" y2="18"/><line x1="60" y1="18" x2="60" y2="26"/><circle cx="60" cy="62" r="2.5"/></svg>
+          <h3 class="svc__name">Web development</h3>
+          <p class="svc__desc">Fast, responsive and technically sound. Pages that open quickly on a phone with weak signal outside your door, and that search engines can read.</p>
+        </li>
+        <li class="svc" tabindex="-1">
+          <svg class="svc__art" viewBox="0 0 120 120" aria-hidden="true"><rect x="38" y="12" width="44" height="96" rx="7"/><line x1="46" y1="34" x2="66" y2="34" class="svc__row"/><line x1="46" y1="48" x2="70" y2="48" class="svc__row"/><line x1="46" y1="62" x2="62" y2="62" class="svc__row"/><line x1="46" y1="76" x2="68" y2="76" class="svc__row"/><circle cx="74" cy="34" r="1.6"/><circle cx="74" cy="48" r="1.6"/><circle cx="74" cy="62" r="1.6"/><circle cx="74" cy="76" r="1.6"/></svg>
+          <h3 class="svc__name">Digital menu experience</h3>
+          <p class="svc__desc">Menus that are a pleasure to browse and easy to keep up to date: readable on a phone, accessible, with prices, allergens and photos where they help.</p>
+        </li>
+        <li class="svc" tabindex="-1">
+          <svg class="svc__art" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 22c7 10 9 17 0 28c-9-11-7-18 0-28z" class="svc__flame"/><rect x="54" y="52" width="12" height="44"/><line x1="40" y1="100" x2="80" y2="100"/></svg>
+          <h3 class="svc__name">Restaurant brand experience</h3>
+          <p class="svc__desc">A digital identity that feels like an evening in your room: the light, the materials, the pace and the voice, carried consistently from homepage to booking.</p>
+        </li>
+        <li class="svc" tabindex="-1">
+          <svg class="svc__art" viewBox="0 0 120 120" aria-hidden="true"><circle cx="28" cy="74" r="12"/><circle cx="60" cy="42" r="12"/><circle cx="92" cy="74" r="12"/><path d="M38 66L50 50M70 50L82 66" class="svc__link"/></svg>
+          <h3 class="svc__name">Multi-location websites</h3>
+          <p class="svc__desc">One system for a group or a chain: shared brand and menus, with a page for each location that carries its own address, hours and booking.</p>
+        </li>
+        <li class="svc" tabindex="-1">
+          <svg class="svc__art" viewBox="0 0 120 120" aria-hidden="true"><circle cx="24" cy="38" r="8"/><path d="M32 38C62 38 52 82 80 82" class="svc__path"/><rect x="80" y="72" width="28" height="20" rx="10"/></svg>
+          <h3 class="svc__name">Conversion optimisation</h3>
+          <p class="svc__desc">Structure that turns a visit into a booking, an order or a walk-in. The menu and the next step are always one tap away.</p>
+        </li>
       </ul>
-      <p class="aside">Hosting on GitHub Pages is free, so there is no monthly bill.</p>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="prices" data-scene="prices">
-  <div class="copy panel wide">
-    <h2>What it costs</h2>
-    <dl class="menu-card">
-      <div id="site"><dt>One-page website</dt><dd class="price">$190</dd><dd class="what">Menu, hours, map and a button to call or book.</dd></div>
-      <div id="domain"><dt>Your own domain</dt><dd class="price">+$50 once</dd><dd class="what">yourplace.com, registered in your name. The registrar's yearly renewal, usually $10 to $20 for a .com, goes to them.</dd></div>
-      <div id="care"><dt>Care plan</dt><dd class="price">$20 a month</dd><dd class="what">Up to 2 changes a month, a weekly check that the site is up, and your domain renewed on time. Stop any month.</dd></div>
-      <div id="listing"><dt>Google listing fix</dt><dd class="price">$89</dd><dd class="what">Just your Google Maps listing: hours, categories, description and a list of photos to add.</dd></div>
-      <div><dt>Promo video</dt><dd class="price">$90 to $150</dd><dd class="what">20 to 30 seconds, vertical, cut from your own photos and clips.</dd></div>
-    </dl>
-    <p class="aside">Prices are in US dollars. You get the exact price in writing before any work starts.</p>
-  </div>
-</section>
-
-<section id="samples" class="solid">
-  <div class="wrap">
-    <h2>Three sample sites</h2>
-    <p class="intro">Made-up places, each with its own layout and type. Open one and try the buttons.</p>
-    <div class="samples">
-      <article class="sample s-cafe">
-        <a class="pic" href="samples/cafe-lumen/index.html">
-          <img src="img/lumen-hero-640.webp" srcset="img/lumen-hero-640.webp 640w, img/lumen-hero-1120.webp 1120w" sizes="(min-width: 1100px) 380px, (min-width: 768px) 50vw, 100vw" alt="" width="640" height="800" loading="lazy">
-          <span class="flag">Sample</span>
-          <h3 class="sample-name">Café Lumen</h3>
-        </a>
-        <div class="sample-body">
-          <p>A morning café in white and ink, with today's bakes and pastry boxes to reserve.</p>
-          <div class="mock-btns"><a href="samples/cafe-lumen/index.html#contact" aria-label="Call, Café Lumen sample">Call</a><a href="samples/cafe-lumen/index.html#find" aria-label="Directions, Café Lumen sample">Directions</a></div>
-          <a class="open-sample" href="samples/cafe-lumen/index.html">Open the sample site</a>
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="process__pin">
+        <div class="wrap process__head">
+          <h2 class="process__title" id="process-title" data-lines>How a project runs</h2>
+          <p class="process__intro">Five steps, in this order. You talk to the person who designs and builds your site at every one of them.</p>
         </div>
-      </article>
-      <article class="sample s-bar">
-        <a class="pic" href="samples/the-amber-room/index.html">
-          <img src="img/amber-glass-480.webp" srcset="img/amber-glass-480.webp 480w, img/amber-glass-900.webp 900w" sizes="(min-width: 1100px) 380px, (min-width: 768px) 50vw, 100vw" alt="" width="480" height="640" loading="lazy">
-          <span class="flag">Sample</span>
-          <h3 class="sample-name">The Amber Room</h3>
-        </a>
-        <div class="sample-body">
-          <p>A late cocktail bar in dark wood and brass, with the drinks on a framed card and booth booking.</p>
-          <div class="mock-btns"><a href="samples/the-amber-room/index.html#book" aria-label="Book a table, The Amber Room sample">Book a table</a><a href="samples/the-amber-room/index.html#menu" aria-label="Menu, The Amber Room sample">Menu</a></div>
-          <a class="open-sample" href="samples/the-amber-room/index.html">Open the sample site</a>
+        <div class="process__track">
+          <span class="process__rail" aria-hidden="true"><span class="process__rail-fill"></span></span>
+          <ol class="process__steps">
+            <li class="step"><span class="step__n">01</span><h3 class="step__name">Discover</h3><p class="step__text">We get to know your restaurant, your brand, your guests and what the website has to achieve.</p></li>
+            <li class="step"><span class="step__n">02</span><h3 class="step__name">Strategize</h3><p class="step__text">We plan the structure of the site, the creative direction and how guests will move from first look to booking.</p></li>
+            <li class="step"><span class="step__n">03</span><h3 class="step__name">Design</h3><p class="step__text">We design a visual experience made for your brand, and you see it before a line of code is written.</p></li>
+            <li class="step"><span class="step__n">04</span><h3 class="step__name">Develop</h3><p class="step__text">We build the design into a responsive, fast website that works on every screen.</p></li>
+            <li class="step"><span class="step__n">05</span><h3 class="step__name">Launch</h3><p class="step__text">We publish, test on real phones and browsers, and refine the details once guests start using it.</p></li>
+          </ol>
         </div>
-      </article>
-      <article class="sample s-taco">
-        <a class="pic" href="samples/tacos-manana/index.html">
-          <img src="img/tm-hero-800.webp" srcset="img/tm-hero-800.webp 800w, img/tm-hero-1400.webp 1400w" sizes="(min-width: 1100px) 380px, (min-width: 768px) 50vw, 100vw" alt="" width="800" height="600" loading="lazy">
-          <span class="flag">Sample</span>
-          <h3 class="sample-name">Tacos Mañana</h3>
-        </a>
-        <div class="sample-body">
-          <p>A taqueria like a market poster, with an order ticket that adds up as you pick.</p>
-          <div class="mock-btns"><a href="samples/tacos-manana/index.html#contact" aria-label="Call, Tacos Mañana sample">Call</a><a href="samples/tacos-manana/index.html#order" aria-label="Order, Tacos Mañana sample">Order</a></div>
-          <a class="open-sample" href="samples/tacos-manana/index.html">Open the sample site</a>
+      </div>
+    </section>
+
+    <section class="why" id="why" aria-labelledby="why-title">
+      <div class="wrap why__grid">
+        <div class="why__lead">
+          <h2 class="why__title" id="why-title" data-lines>Built for hospitality, and only for hospitality.</h2>
+          <figure class="why__media">
+            <img src="img/why-glass.webp" srcset="img/why-glass-640.webp 640w, img/why-glass.webp 1000w" sizes="(min-width: 1024px) 34vw, 92vw" width="1000" height="1250" alt="A glass of red wine and a water glass on a walnut table, close up in warm light." loading="lazy" decoding="async">
+          </figure>
         </div>
-      </article>
-    </div>
-  </div>
-</section>
+        <dl class="why__list">
+          <div class="why__item"><dt>Made for hospitality</dt><dd>We only design for restaurants, cafés, bars and hospitality brands, so we know what guests look for first.</dd></div>
+          <div class="why__item"><dt>Custom, never a template</dt><dd>Every site starts from your identity. We never use a theme or recolour a layout made for another business.</dd></div>
+          <div class="why__item"><dt>Mobile first</dt><dd>Most guests meet you on a phone. We design that screen first and build up from it.</dd></div>
+          <div class="why__item"><dt>Fast pages</dt><dd>Compressed images, careful code and no heavy plugins, so the menu opens before the guest gives up.</dd></div>
+          <div class="why__item"><dt>SEO-conscious structure</dt><dd>Clear headings, real text, location details and metadata that search engines and maps can read.</dd></div>
+          <div class="why__item"><dt>Visual storytelling</dt><dd>Photography, film and 3D used to show your food and your room the way you see them.</dd></div>
+          <div class="why__item"><dt>Ready for groups</dt><dd>Structures that grow from one venue to many without a rebuild.</dd></div>
+          <div class="why__item"><dt>Direct and personal</dt><dd>You deal with the person doing the work, by email or Telegram, from the first message to launch.</dd></div>
+        </dl>
+      </div>
+    </section>
 
-<section id="video" class="solid">
-  <div class="wrap reel">
-    <div>
-      <h2>Short videos for TikTok and Reels</h2>
-      <p class="intro">A vertical clip of 20 to 30 seconds, cut from your own photos and footage, with your name and address on screen. Ready to post on the accounts you already have.</p>
-      <p class="reel-price">$90 to $150</p>
-      <div class="actions"><a class="btn" href="mailto:geroge.mikaelson1@gmail.com?subject=Promo%20video%20request">Ask about a video</a></div>
-    </div>
-    <div class="reel-phone">
-      <img class="reel-poster" src="img/video-poster-360.webp" srcset="img/video-poster-360.webp 360w, img/video-poster-720.webp 720w" sizes="280px" alt="A plated dish on a wooden table in a 9:16 frame" width="360" height="640" loading="lazy">
-      <video class="reel-video" hidden muted loop playsinline preload="none" poster="img/video-poster-720.webp" data-src="media/restaurant_tiktok.mp4" aria-label="Sample promo video for a restaurant, 9:16"></video>
-    </div>
-  </div>
-</section>
+    <section class="cta" id="contact" aria-labelledby="cta-title">
+      <picture class="cta__bg" aria-hidden="true">
+        <source media="(max-aspect-ratio: 1/1)" srcset="img/reserved-m.webp">
+        <img src="img/reserved.webp" width="1600" height="900" alt="" loading="lazy" decoding="async">
+      </picture>
+      <div class="wrap cta__grid">
+        <div class="cta__head">
+          <h2 class="cta__title" id="cta-title" data-lines>Your restaurant deserves a better digital experience.</h2>
+          <p class="cta__sub">Let’s create something worth remembering.</p>
+        </div>
+        <form class="form" id="contact-form" novalidate>
+          <p class="form__intro">Tell us a little about your place. Pressing the button opens your email app with this message ready to send to <a href="mailto:geroge.mikaelson1@gmail.com">geroge.mikaelson1@gmail.com</a>. Nothing is sent until you send it.</p>
+          <div class="form__row">
+            <label class="field">
+              <span class="field__label">Your name</span>
+              <input type="text" name="name" autocomplete="name" required>
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+            <label class="field">
+              <span class="field__label">Restaurant or brand</span>
+              <input type="text" name="venue" autocomplete="organization" required>
+              <span class="field__error" aria-live="polite"></span>
+            </label>
+          </div>
+          <label class="field">
+            <span class="field__label">Current website <span class="field__opt">(optional)</span></span>
+            <input type="url" name="site" inputmode="url" autocomplete="url" placeholder="https://">
+            <span class="field__error" aria-live="polite"></span>
+          </label>
+          <label class="field">
+            <span class="field__label">What do you need?</span>
+            <textarea name="message" rows="4" required></textarea>
+            <span class="field__error" aria-live="polite"></span>
+          </label>
+          <div class="form__actions">
+            <button class="btn btn--brass btn--big" type="submit" data-magnet><span>Start your project</span></button>
+            <a class="link" href="https://t.me/GeorgeMikaelson" target="_blank" rel="noopener">Or message @GeorgeMikaelson on Telegram<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-<section id="process" data-scene="process">
-  <div class="copy panel">
-    <h2>How it works</h2>
-    <ol class="steps">
-      <li><b>I make a preview</b><span>Free, built from your public listing and menu. I send you the link.</span></li>
-      <li><b>You decide</b><span>Tell me what to change. If you don't like it, you owe nothing.</span></li>
-      <li><b>Half to start</b><span>You pay 50% by bank transfer or in crypto, and I finish the work.</span></li>
-      <li><b>Half on delivery</b><span>The rest when the site is live or the video is ready. The files are yours.</span></li>
-    </ol>
-  </div>
-</section>
-
-<section id="payment" class="solid">
-  <div class="wrap">
-    <h2>Two ways to pay</h2>
-    <div class="pay">
-      <article class="method">
-        <h3>Instant bank transfer</h3>
-        <p>SEPA Instant in euros, from your banking app. It arrives in seconds. The IBAN is shared on your invoice once you accept the quote.</p>
-      </article>
-      <article class="method">
-        <h3>Crypto</h3>
-        <ul class="coins" aria-label="Accepted currencies">
-          <li><img src="img/crypto/btc.svg" alt="" width="32" height="32"><span>Bitcoin <small>BTC</small></span></li>
-          <li><img src="img/crypto/usdc.svg" alt="" width="32" height="32"><span>USDC <small>on Solana</small></span></li>
-          <li><img src="img/crypto/sol.svg" alt="" width="32" height="32"><span>SOL <small>on Solana</small></span></li>
-          <li><img src="img/crypto/eth.svg" alt="" width="32" height="32"><span>Ether <small>ETH</small></span></li>
+  <footer class="foot" aria-labelledby="foot-title">
+    <div class="wrap foot__grid">
+      <div class="foot__brand">
+        <p class="foot__mark" id="foot-title">George Mikaelson</p>
+        <p class="foot__desc">Websites for restaurants, cafés, bars and hospitality groups.</p>
+      </div>
+      <nav class="foot__col" aria-label="Footer">
+        <h2 class="foot__h">Studio</h2>
+        <ul>
+          <li><a class="ulink" href="#work">Work</a></li>
+          <li><a class="ulink" href="#services">Services</a></li>
+          <li><a class="ulink" href="#process">Process</a></li>
+          <li><a class="ulink" href="#why">Why us</a></li>
         </ul>
-      </article>
+      </nav>
+      <div class="foot__col">
+        <h2 class="foot__h">Services</h2>
+        <ul>
+          <li>Website design</li>
+          <li>Web development</li>
+          <li>Digital menus</li>
+          <li>Brand experience</li>
+          <li>Multi-location sites</li>
+          <li>Conversion</li>
+        </ul>
+      </div>
+      <div class="foot__col">
+        <h2 class="foot__h">Contact</h2>
+        <ul>
+          <li><a class="ulink" href="mailto:geroge.mikaelson1@gmail.com">geroge.mikaelson1@gmail.com</a></li>
+          <li><a class="ulink" href="https://t.me/GeorgeMikaelson" target="_blank" rel="noopener">Telegram<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a class="ulink" href="https://github.com/George-Mikaelson" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+        </ul>
+      </div>
     </div>
-    <p class="pay-link"><a class="btn line" href="pay.html">Open the payment page</a><span>Every address with a copy button, and a guide if it's your first crypto payment.</span></p>
-  </div>
-</section>
+    <div class="wrap foot__base">
+      <p>© 2026 George Mikaelson</p>
+      <p><a class="ulink" href="credits.html">Credits and licences</a></p>
+      <a class="foot__top" href="#top"><span class="foot__top-ring" aria-hidden="true"></span>Back to top</a>
+    </div>
+  </footer>
 
-<section id="contact" data-scene="contact">
-  <div class="still" aria-hidden="true"></div>
-  <div class="copy">
-    <h2>Want to see your place first?</h2>
-    <p class="lede">Send me its name and city. I'll reply with a link to your preview.</p>
-    <a class="mail" href="mailto:geroge.mikaelson1@gmail.com?subject=Free%20preview%20request">geroge.mikaelson1@gmail.com</a>
-    <p class="about">I'm George. I work alone and check every page myself. The service is new, so there are no client reviews yet. I also make <a href="https://github.com/George-Mikaelson/shopfront-audit">shopfront-audit</a>, an open-source tool that checks a small business website and writes a plain-English report (<a href="https://george-mikaelson.github.io/shopfront-audit/">sample report</a>).</p>
-  </div>
-</section>
-</main>
-
-<footer>
-  <a href="pay.html">How to pay</a>
-  <a href="https://github.com/George-Mikaelson">GitHub</a>
-  <span>Sample photos from Unsplash</span>
-</footer>
-
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
 </body>
 </html>
